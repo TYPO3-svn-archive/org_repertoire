@@ -1,0 +1,9 @@
+plugin.org {
+
+  # cat=Organiser Repertoire/page/302; type=+int; label= page uid repertoire:Uid of your repertoire page
+  pages.repertoire =
+
+  # cat=Organiser Repertoire/page/303; type=+int; label= sysfolder uid repertoire:Uid of the sysfolder with the repertoire data
+  sysfolder.repertoire =
+
+}
