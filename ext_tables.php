@@ -413,6 +413,16 @@ $TCA['tx_org_news']['types']['0']['showitem']  = $str_showitem;
   // 
   // TCA tables
 
+  // cal /////////////////////////////////////////////////////////////////////
+$TCA['tx_org_cal'] = array (
+  'ctrl' => array (
+    'typeicons'         => array(
+      'tx_org_repertoire' => '../typo3conf/ext/org/ext_icon/repertoire.gif',
+    ),
+  ),
+);
+  // cal /////////////////////////////////////////////////////////////////////
+
   // repertoire ///////////////////////////////////////////////////////////////////
 $TCA['tx_org_repertoire'] = array (
   'ctrl' => array (
