@@ -270,7 +270,7 @@ t3lib_div::loadTCA('tx_org_cal');
 
   // typeicons: Add type_icon
 $TCA['tx_org_cal']['ctrl']['typeicons']['tx_org_repertoire'] = 
-  '../typo3conf/ext/org/ext_icon/repertoire.gif';
+  '../typo3conf/ext/org_repertoire/ext_icon/repertoire.gif';
   // typeicons: Add type_icon
 
   // showRecordFieldList: Add field tx_org_repertoire
