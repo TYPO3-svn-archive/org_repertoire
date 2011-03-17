@@ -8,13 +8,16 @@
     <languageKey index="default" type="array">
       <label index="dummy.language">default</label>
       <label index="tca_phrase.repertoire">Repertoire</label>
+
       <label index="fe_users.div_tx_org_repertoire">Repertoire</label>
       <label index="fe_users.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_cal.type.tx_org_repertoire">Take it from the repertoire table</label>
       <label index="tx_org_headquarters.div_tx_org_repertoire">Repertoire</label>
       <label index="tx_org_headquarters.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_news.div_tx_org_repertoire">Repertoire</label>
       <label index="tx_org_news.tx_org_repertoire">Repertoire</label>
+
       <label index="tx_org_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_teaser">Teaser</label>
@@ -61,6 +64,7 @@
       <label index="tx_org_repertoire.others">Other Staff</label>
       <label index="tx_org_repertoire.documents">Documents</label>
       <label index="tx_org_repertoire.tx_org_cal">Calendar</label>
+
       <label index="wizard.tx_org_repertoire.add">Add a new repertoire</label>
       <label index="wizard.tx_org_repertoire.edit">Edit the selected repertoire</label>
       <label index="wizard.tx_org_repertoire.list">Display the repertoire table</label>
@@ -68,13 +72,16 @@
     <languageKey index="de" type="array">
       <label index="dummy.language">de</label>
       <label index="tca_phrase.repertoire">Repertoire</label>
+
       <label index="fe_users.div_tx_org_repertoire">Repertoire</label>
       <label index="fe_users.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_cal.type.tx_org_repertoire">Aus dem Repertoire</label>
       <label index="tx_org_headquarters.div_tx_org_repertoire">Repertoire</label>
       <label index="tx_org_headquarters.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_news.div_tx_org_repertoire">Repertoire</label>
       <label index="tx_org_news.tx_org_repertoire">Repertoire</label>
+
       <label index="tx_org_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_teaser">Kurztitel</label>

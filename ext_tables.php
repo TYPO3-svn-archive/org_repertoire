@@ -268,13 +268,18 @@ if($bool_wizards_wo_add_and_list)
   // tx_org_cal
 t3lib_div::loadTCA('tx_org_cal');
 
-  // Add field tx_org_repertoire
+  // typeicons: Add type_icon
+$TCA['tx_org_cal']['ctrl']['typeicons']['tx_org_repertoire'] = 
+  '../typo3conf/ext/org/ext_icon/repertoire.gif';
+  // typeicons: Add type_icon
+
+  // showRecordFieldList: Add field tx_org_repertoire
 $showRecordFieldList = $TCA['tx_org_cal']['interface']['showRecordFieldList'];
 $showRecordFieldList = $showRecordFieldList.',tx_org_repertoire';
 $TCA['tx_org_cal']['interface']['showRecordFieldList'] = $showRecordFieldList;
-  // Add field tx_org_repertoire
+  // showRecordFieldList: Add field tx_org_repertoire
 
-  // Add field tx_org_repertoire
+  // columns: Add field tx_org_repertoire
 $TCA['tx_org_cal']['columns']['tx_org_repertoire']                                =
   $arr_tx_org_repertoire;
 $TCA['tx_org_cal']['columns']['tx_org_repertoire']['label']                       =
@@ -283,27 +288,27 @@ $TCA['tx_org_cal']['columns']['tx_org_repertoire']['config']['MM']              
   'tx_org_repertoire_mm_tx_org_cal';
 $TCA['tx_org_cal']['columns']['tx_org_repertoire']['config']['MM_opposite_field'] =
   'tx_org_cal';
-  // Add field tx_org_repertoire
+  // columns: Add field tx_org_repertoire
 
-  // Add fields to TCAcolumns: repertoire
-t3lib_extMgm::addTCAcolumns(
-  'tx_org_headquarters', 
-  array
-  (
-    'tx_org_repertoire' => $arr_tx_org_repertoire,
-  )
+  // columns: extend type
+$TCA['tx_org_cal']['columns']['type']['config']['items']['tx_org_repertoire'] = array
+(
+  '0' => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_cal.type.tx_org_repertoire',
+  '1' => 'tx_org_repertoire',
+  '2' => 'EXT:org_repertoire/ext_icon/repertoire.gif',
 );
-$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']['label']                        =
-  'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_headquarters.tx_org_repertoire';
-$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']['config']['MM']                 = 
-  'tx_org_repertoire_mm_tx_org_headquarters';
-$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']['config']['MM_opposite_field']  =
-  'tx_org_cal';
-  // Add fields to TCAcolumns: repertoire
+  // columns: extend type
 
-  // Insert fields to TCAtypes, which haven't an own div
-t3lib_extMgm::addToAllTCAtypes('tx_org_cal', 'tx_org_repertoire', '', 'after:type');
+  // Insert type [repertoire] with fields to TCAtypes
+$TCA['tx_org_cal']['types']['tx_org_repertoire']['showitem'] = 
+  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_cal.div_calendar,    type,tx_org_repertoire,datetime,tx_org_caltype,'.
+  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_cal.div_event,       tx_org_location,tx_org_calentrance,'.
+  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_cal.div_department,  tx_org_department,'.
+  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_cal.div_control,     hidden;;1;;,fe_group'.
+  ''
+;
 
+  // Insert div [repertoire] with fields to TCAtypes
   // tx_org_cal
 
 
@@ -412,16 +417,6 @@ $TCA['tx_org_news']['types']['0']['showitem']  = $str_showitem;
   ////////////////////////////////////////////////////////////////////////////
   // 
   // TCA tables
-
-  // cal /////////////////////////////////////////////////////////////////////
-$TCA['tx_org_cal'] = array (
-  'ctrl' => array (
-    'typeicons'         => array(
-      'tx_org_repertoire' => '../typo3conf/ext/org/ext_icon/repertoire.gif',
-    ),
-  ),
-);
-  // cal /////////////////////////////////////////////////////////////////////
 
   // repertoire ///////////////////////////////////////////////////////////////////
 $TCA['tx_org_repertoire'] = array (
