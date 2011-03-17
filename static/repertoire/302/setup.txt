@@ -18,11 +18,10 @@ plugin.tx_browser_pi1 {
   
   template {
     extensions {
-      tt_news >
       org {
         repertoire {
           name      = Org: Repertoire
-          file      = EXT:org/res/html/repertoire/301/default.tmpl
+          file      = EXT:org_repertoire/res/html/repertoire/302/default.tmpl
           csvViews  = 301
         }
       }

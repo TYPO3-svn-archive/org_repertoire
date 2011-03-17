@@ -1,0 +1,134 @@
+
+
+  ////////////////////////////////////////
+  //
+  // INDEX
+
+  // plugin.tx_browser_pi1
+  //    views
+  //      211: calendar - right column
+
+
+
+  ////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1
+
+plugin.tx_browser_pi1 {
+  
+  template {
+    extensions {
+      tt_news >
+      org {
+        calendar_margin {
+          name      = Org: calendar - margin
+          file      = EXT:org/res/html/calendar/211/default.tmpl
+          csvViews  = 211
+        }
+      }
+    }
+  }
+
+//  general_stdWrap >
+
+  views {
+    list {
+      211 = calendar (margin)
+      211 {
+        name    = calendar - margin
+        showUid = calendarUid
+        marker < plugin.tx_browser_pi1.marker
+        marker {
+          my_listview_title {
+            wrap = <h3>|</h3>
+            value = Playing schedule
+            lang.de = Spielplan
+            typolink {
+              parameter = {$plugin.org.pages.calendar}
+              title {
+                value = All Events
+                lang.de = Alle Veranstaltungen
+              }
+            }
+          }
+          my_listview_page = TEXT
+          my_listview_page {
+            value = All items &raquo;
+            lang.de = Alle Veranstaltungen &raquo;
+            wrap = <p>|</p>
+            typolink {
+              parameter = {$plugin.org.pages.calendar}
+              title {
+                value = All items
+                lang.de = Alle Veranstaltungen
+              }
+            }
+          }
+        }
+        select (
+          tx_org_cal.title,
+          tx_org_cal.short,
+          tx_org_cal.datetime,
+          tx_org_cal.uid
+        )
+        orderBy   = tx_org_cal.datetime
+        andWhere  = tx_org_cal.datetime > UNIX_TIMESTAMP()
+        csvLinkToSingleView = tx_org_cal.datetime
+        tx_org_cal {
+          datetime = COA
+          datetime {
+            wrap = <p>|</p>
+            10 = COA
+            10 {
+              10 = TEXT
+              10 {
+                value = ###TX_ORG_CAL.DATETIME###
+                strftime = %d. %b. %H:%M Uhr
+              }
+            }
+          }
+          short = COA
+          short {
+            wrap = <p>|</p>
+            10 = TEXT
+            10 {
+              if.isTrue = ###TX_ORG_CAL.SHORT###
+              value     = ###TX_ORG_CAL.SHORT###
+              typolink {
+                parameter = {$plugin.org.pages.calendar}
+                title {
+                  value = ###TX_ORG_CAL.TITLE###
+                }
+                additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
+              }
+            }
+            20 = TEXT
+            20 {
+              if.isFalse = ###TX_ORG_CAL.SHORT###
+              value      = ###TX_ORG_CAL.TITLE###
+              typolink {
+                parameter = {$plugin.org.pages.calendar}
+                title {
+                  value = ###TX_ORG_CAL.TITLE###
+                }
+                additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
+              }
+            }
+          }
+        }
+      }
+    }
+    single {
+      211 = calendar (margin)
+      211 {
+        comment = This plugin should not used in the single view!
+        template {
+          file = EXT:org/res/html/calendar/211/default.tmpl
+        }
+        select = tx_org_cal.title
+      }
+    }
+  }
+  
+}
+  // plugin.tx_browser_pi1
