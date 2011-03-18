@@ -74,17 +74,60 @@ class tx_org_repertoire_extmanager
       $str_prompt = null;
 
       $str_prompt = $str_prompt.'
-<div class="typo3-message message-information">
+<div class="typo3-message message-warning">
   <div class="message-body">
-    ' . $GLOBALS['LANG']->sL('LLL:EXT:org_repertoire/lib/locallang.xml:promptQuickstartBody'). '
+    ' . $GLOBALS['LANG']->sL('LLL:EXT:org_repertoire/lib/locallang.xml:promptSaveTwice'). '
   </div>
 </div>
+';
+
+//      $str_prompt = $str_prompt.'
+//<div class="typo3-message message-information">
+//  <div class="message-body">
+//    ' . $GLOBALS['LANG']->sL('LLL:EXT:org_repertoire/lib/locallang.xml:promptQuickstartBody'). '
+//  </div>
+//</div>
+//';
+
+    $confArrRpt = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['org_repertoire']);
+    $confArrOrg = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['org']);
+    
+    if($confArrRpt['store_records'] != $confArrOrg['store_records'])
+    {
+      $str_phrase = $GLOBALS['LANG']->sL('LLL:EXT:org_repertoire/lib/locallang.xml:promptStoreRecordWarn');
+      $str_phrase = str_replace('###RPT_STORERECORD###', $confArrRpt['store_records'], $str_phrase);
+      $str_phrase = str_replace('###ORG_STORERECORD###', $confArrOrg['store_records'], $str_phrase);
+      
+      $str_prompt = $str_prompt.'
+<div class="typo3-message message-information">
+  <div class="message-body">
+    ' . $str_phrase . '
+  </div>
+</div>
+';
+    }
+    if($confArrRpt['store_records'] == $confArrOrg['store_records'])
+    {
+      $str_phrase = $GLOBALS['LANG']->sL('LLL:EXT:org_repertoire/lib/locallang.xml:promptStoreRecordOk');
+      $str_phrase = str_replace('###RPT_STORERECORD###', $confArrRpt['store_records'], $str_phrase);
+      
+      $str_prompt = $str_prompt.'
+<div class="typo3-message message-ok">
+  <div class="message-body">
+    ' . $str_phrase . '
+  </div>
+</div>
+';
+    }
+    
+      $str_prompt = $str_prompt.'
 <div class="typo3-message message-information">
   <div class="message-body">
     ' . $GLOBALS['LANG']->sL('LLL:EXT:org_repertoire/lib/locallang.xml:promptGeneralInfo'). '
   </div>
 </div>
 ';
+
 
     return $str_prompt;
   }
