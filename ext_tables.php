@@ -107,12 +107,16 @@ switch(true) {
   case($llStatic == 'de'):
       // German
     t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/',          '+Org-Repertoire: Basis (immer einbinden!)');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/201',   '+Org-Repertoire: Kalender');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/211',   '+Org-Repertoire: Kalender - Rand');
     t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/302', '+Org: Repertoire');
     t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/312', '+Org: Repertoire - Rand');
     break;
   default:
       // English
     t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/',          '+Org-Repertoire: Basis (obligate!)');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/201',   '+Org-Repertoire: Calendar');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/211',   '+Org-Repertoire: Calendar - Margin');
     t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/302', '+Org: Repertoires');
     t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/312', '+Org: Repertoires - margin');
 }
@@ -167,7 +171,7 @@ t3lib_extMgm::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKE
   // draft field tx_org_repertoire
 $arr_tx_org_repertoire = array (
   'exclude' => 0,
-  'label'   => 'LLL:EXT:org_repertoires/locallang_db.xml:tca_phrase.repertoire',
+  'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire',
   'config'  => array (
     'type'     => 'select', 
     'size'     =>  10, 
@@ -421,7 +425,7 @@ $TCA['tx_org_news']['types']['0']['showitem']  = $str_showitem;
   // repertoire ///////////////////////////////////////////////////////////////////
 $TCA['tx_org_repertoire'] = array (
   'ctrl' => array (
-    'title'             => 'LLL:EXT:org/locallang_db.xml:tx_org_repertoire',
+    'title'             => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire',
     'label'             => 'title',
     'tstamp'            => 'tstamp',
     'crdate'            => 'crdate',
