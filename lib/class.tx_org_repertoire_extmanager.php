@@ -28,7 +28,7 @@
 * @author    Dirk Wildt <http://wildt.at.die-netzmacher.de>
 * @package    TYPO3
 * @subpackage    org
-* @version 0.4.2
+* @version 0.4.4
 * @since 0.4.2
 */
 
@@ -61,7 +61,7 @@ class tx_org_repertoire_extmanager
  *
  * @return  string    message wrapped in HTML
  * @since 0.4.2
- * @version 0.4.2
+ * @version 0.4.4
  */
   function promptQuickstart()
   {

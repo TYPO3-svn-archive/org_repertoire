@@ -14,7 +14,7 @@
         You have to take care of two items:
         <br />
         <br />
-        <ol style="list-style:outside;>
+        <ol style="list-style:outside;">
           <li>
             Linking from a record of a Repertoire table to a record of another Organiser table is possible only, if the records are store in the same directory.
           </li>
@@ -57,7 +57,7 @@
         Managers. Du musst nur zwei Dinge beachten:
         <br />
         <br />
-        <ol style="list-style:outside;>
+        <ol style="list-style:outside;">
           <li>
             Du kannst im Backend nur zwischen Datens&auml;tzen von Organiser Tabellen verlinken, die im selben Verzeichnis liegen.
           </li>
