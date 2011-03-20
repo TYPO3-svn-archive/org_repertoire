@@ -85,7 +85,7 @@ plugin.tx_browser_pi1 {
               tx_org_repertoire {
                 value = ###TX_ORG_REPERTOIRE.TITLE###
                 typolink {
-                  parameter         = {$plugin.org.pages.calendar}
+                  parameter         = {$plugin.org.pages.calendar} - linktosingle
                   additionalParams  = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
                 }
               }
