@@ -28,6 +28,8 @@ plugin.tx_browser_pi1 {
           tx_org_cal.bodytext,
           tx_org_cal.datetime,
           tx_org_cal.type,
+          tx_org_cal.calpage,
+          tx_org_cal.calurl,
           tx_org_caltype.title,
           tx_org_event.title,
           tx_org_event.subtitle,
