@@ -257,7 +257,8 @@ plugin.tx_browser_pi1 {
             }
             18 = TEXT
             18 {
-              value.data = date: U
+              value       = {date: U}
+              insertData  = 1
               wrap        = <li>|</li>
             }
             19 = TEXT
