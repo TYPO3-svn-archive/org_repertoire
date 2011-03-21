@@ -467,12 +467,12 @@ $TCA['tx_org_repertoire'] = array (
       'config'  => $arr_config_feuser,
     ),
     'documents' => array (
-      'exclude' => $bool_exclude_default,
+      'exclude' => $bool_exclude_none,
       'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.documents',
       'config'  => $conf_file_document,
     ),
     'tx_org_news' => array (
-      'exclude' => $bool_exclude_default,
+      'exclude' => $bool_exclude_none,
       'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.news',
       'config'  => array (
         'type'                => 'select', 
