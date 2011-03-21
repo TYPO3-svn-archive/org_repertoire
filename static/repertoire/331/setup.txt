@@ -36,6 +36,7 @@ plugin.tx_browser_pi1 {
         showUid = repertoireUid
         select (
           tx_org_repertoire.title,
+          tx_org_repertoire.producer,
           tx_org_repertoire.subtitle,
           tx_org_repertoire.teaser_short,
           tx_org_repertoire.bodytext,
@@ -114,17 +115,28 @@ plugin.tx_browser_pi1 {
           subtitle = TEXT
           subtitle {
             required  = 1
-            value     = ###TX_ORG_CAL.SUBTITLE###
+            value     = ###TX_ORG_REPERTOIRE.SUBTITLE###
             wrap      = <h3 class="repertoire_subtitle">|</h3>
           }
-          title = TEXT
+          title = COA
           title {
-            value = ###TX_ORG_CAL.TITLE###
-            typolink {
-              parameter         = {$plugin.org.pages.repertoire} - linktosingle
-              additionalParams  = &tx_browser_pi1[repertoireUid]=###TX_ORG_CAL.UID###&###CHASH###
+            wrap = <h2 class="repertoire_title">|</h2>
+            10 = TEXT
+            10 {
+              required  = 1
+              value     = ###TX_ORG_REPERTOIRE.TITLE###
+              typolink {
+                parameter         = {$plugin.org.pages.repertoire} - linktosingle
+                additionalParams  = &tx_browser_pi1[repertoireUid]=###TX_ORG_REPERTOIRE.UID###&###CHASH###
+              }
             }
-            wrap      = <h2 class="repertoire_title">|</h2>
+            20 = TEXT
+            20 {
+              if.isTrue   = ###TX_ORG_REPERTOIRE.PRODUCER###
+              value       = by ###TX_ORG_REPERTOIRE.PRODUCER###
+              lang.de     = von ###TX_ORG_REPERTOIRE.PRODUCER###
+              noTrimWrap  = | <span class="repertoire_producer">|</sapn>|
+            }
           }
         }
       }
@@ -396,9 +408,9 @@ plugin.tx_browser_pi1 {
             10 = TEXT
             10 {
               if {
-                isTrue = ###TX_ORG_REPERTOIRE.SHORT###
+                isTrue = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
               }
-              value = ###TX_ORG_REPERTOIRE.SHORT###
+              value = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
               wrap  = <p><strong>|</strong></p>
             }
             11 = TEXT
