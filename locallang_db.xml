@@ -7,6 +7,7 @@
   <data type="array">
     <languageKey index="default" type="array">
       <label index="dummy.language">default</label>
+      <label index="filter_phrase.schedule">Playing schedule</label>
       <label index="tca_phrase.repertoire">Repertoire</label>
 
       <label index="fe_users.div_tx_org_repertoire">Repertoire</label>
@@ -71,6 +72,7 @@
     </languageKey>
     <languageKey index="de" type="array">
       <label index="dummy.language">de</label>
+      <label index="filter_phrase.schedule">Spielplan</label>
       <label index="tca_phrase.repertoire">Repertoire</label>
 
       <label index="fe_users.div_tx_org_repertoire">Repertoire</label>
