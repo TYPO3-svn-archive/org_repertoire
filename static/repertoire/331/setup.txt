@@ -255,23 +255,36 @@ plugin.tx_browser_pi1 {
               lang.de     = Keine Vorstellungen
               wrap        = <li>|</li>
             }
+            18 = TEXT
+            18 {
+              value.data = date: U
+              wrap        = <li>|</li>
+            }
+            19 = TEXT
+            19 {
+              value = ###TX_ORG_CAL.DATETIME###
+              noTrimWrap = | ||
+              wrap        = <li>|</li>
+            }
             20 = TEXT
             20 {
               value = NEW
               if {
                 value.data = date: U
-                isLessThan = ###TX_ORG_CAL.DATETIME### 
+                isLessThan = ###TX_ORG_CAL.DATETIME###
                 negate = 1
               }
+              wrap        = <li>|</li>
             }
             21 = TEXT
             21 {
               value = OLD
               if {
                 value.data = date: U
-                isGreaterThan = ###TX_ORG_CAL.DATETIME### 
+                isGreaterThan = ###TX_ORG_CAL.DATETIME###
                 negate = 1
               }
+              wrap        = <li>|</li>
             }
           }
         }
