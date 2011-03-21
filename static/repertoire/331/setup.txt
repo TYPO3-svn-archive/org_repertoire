@@ -42,6 +42,7 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.image,
           tx_org_repertoire.imageseo
         )
+        andWhere            = tx_org_cal.datetime > UNIX_TIMESTAMP()
         csvLinkToSingleView = tx_org_repertoire.title
         filter {
           tx_org_cal {
