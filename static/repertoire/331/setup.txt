@@ -164,6 +164,25 @@ plugin.tx_browser_pi1 {
             lang.de = Repertoire
             wrap    = <div class="header01">|</div>
           }
+          my_datesheet_div_begin = TEXT
+          my_datesheet_div_begin {
+            value   = Calendar
+            lang.de = Kalender
+            wrap (
+              <div style="float:left;padding-right:1em;">
+                <div style="background:#EEE;line-height:1em;overflow:hidden;padding:.6em;text-align:center;width:100px;">
+                  |
+                  <ul>
+            )
+          }
+          my_datesheet_div_end = TEXT
+          my_datesheet_div_end {
+            value (
+                  </ul>
+                </div>
+              </div>
+            )
+          }
         }
         select (
           tx_org_repertoire.title,
@@ -211,17 +230,13 @@ plugin.tx_browser_pi1 {
           tx_org_cal.datetime
         )
         orderBy   = tx_org_cal.datetime
-        andWhere  = tx_org_cal.datetime > UNIX_TIMESTAMP()
+        //andWhere  = tx_org_cal.datetime > UNIX_TIMESTAMP()
         tx_org_cal {
           datetime = COA
           datetime {
-            comment (
-              Konfigurations-Trick: Der Kasten "Kalender" erhaelt ein div-wrap und eine Ueberschrift.
-              Siehe unten tx_org_repertoire.tx_org_cal und tx_org_repertoire.keywords
-            )
             10 = TEXT
             10 {
-              if.isTrue = ###TX_ORG_CAL.DATETIME###
+              required  = 1
               value     = ###TX_ORG_CAL.DATETIME###
               strftime  = %a, %d. %b %Y, %H:%M Uhr
               wrap      = <li>|</li>
@@ -413,39 +428,6 @@ plugin.tx_browser_pi1 {
             11 {
               value = ###TX_ORG_REPERTOIRE.BODYTEXT###
               wrap  = <p>|</p>
-            }
-          }
-          tx_org_cal = COA
-          tx_org_cal {
-            comment (
-              Konfigurations-Trick: Der Kasten "Kalender" soll nur angezeigt werden, wenn Datensaetze im Kalender vorhanden
-              sind. Siehe auch unten keywords und oben tx_org_cal.datetime
-            )
-            10 = TEXT
-            10 {
-              value   = Calendar
-              lang.de = Kalender
-              wrap (
-                <div style="float:left;padding-right:1em;">
-                  <div style="background:#EEE;line-height:1em;overflow:hidden;padding:.6em;text-align:center;width:100px;">
-                    |
-                    <ul>
-              )
-            }
-          }
-          keywords = COA
-          keywords {
-            comment (
-              Konfigurations-Trick: Der Kasten "Kalender" soll nur angezeigt werden, wenn Datensaetze im Kalender vorhanden
-              sind. Siehe auch oben tx_org_cal und tx_org_cal.datetime
-            )
-            10 = TEXT
-            10 {
-              value (
-                    </ul>
-                  </div>
-                </div>
-              )
             }
           }
         }
