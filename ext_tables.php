@@ -106,19 +106,21 @@ switch($confArr['store_records'])
 switch(true) {
   case($llStatic == 'de'):
       // German
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/',          '+Org-Repertoire: Basis (immer einbinden!)');
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/201',   '+Org-Repertoire: Kalender');
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/211',   '+Org-Repertoire: Kalender - Rand');
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/302', '+Org-Repertoire: Repertoire');
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/312', '+Org-Repertoire: Repertoire - Rand');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/',                '+Org-Repertoire: Basis (immer einbinden!)');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/201',         '+Org-Repertoire: Kalender');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/201/expired', '+Org-Repertoire: +Kalender Archiv');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/211',         '+Org-Repertoire: Kalender - Rand');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/302',       '+Org-Repertoire: Repertoire');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/312',       '+Org-Repertoire: Repertoire - Rand');
     break;
   default:
       // English
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/',          '+Org-Repertoire: Basis (obligate!)');
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/201',   '+Org-Repertoire: Calendar');
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/211',   '+Org-Repertoire: Calendar - Margin');
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/302', '+Org-Repertoire: Repertoire');
-    t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/312', '+Org-Repertoire: Repertoire - margin');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/',                '+Org-Repertoire: Basis (obligate!)');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/201',         '+Org-Repertoire: Calendar');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/201/expired', '+Org-Repertoire: +Calendar expired');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/calendar/211',         '+Org-Repertoire: Calendar - Margin');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/302',       '+Org-Repertoire: Repertoire');
+    t3lib_extMgm::addStaticFile($_EXTKEY,'static/repertoire/312',       '+Org-Repertoire: Repertoire - margin');
 }
   // Case $llStatic
   // Enables the Include Static Templates

@@ -1,0 +1,53 @@
+
+
+  ////////////////////////////////////////
+  //
+  // INDEX
+
+  // plugin.tx_browser_pi1
+  //    views
+  //      201: calendar +repertoire +expired
+
+
+
+  ////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1
+
+plugin.tx_browser_pi1 {
+  
+  views {
+    list {
+      201 = calendar +repertoire +expired
+      201 {
+        name    = calendar +repertoire +expired
+        tx_org_cal {
+          short {
+            10 {
+              tx_org_repertoire {
+                30 {
+                  typolink {
+                    parameter = {$plugin.org.pages.calendar_expired} - linktosingle
+                  }
+                }
+              }
+            }
+          }
+          title {
+            10 {
+              tx_org_repertoire {
+                typolink {
+                  parameter = {$plugin.org.pages.calendar_expired} - linktosingle
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    single {
+      201 = calendar +repertoire +expired
+    }
+  }
+}
+  // plugin.tx_browser_pi1

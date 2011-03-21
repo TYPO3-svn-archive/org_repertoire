@@ -113,7 +113,7 @@ plugin.tx_browser_pi1 {
       }
     }
     single {
-      201 = calendar
+      201 = calendar +repertoire
       201 {
         select (
           tx_org_cal.title,
