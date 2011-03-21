@@ -246,7 +246,7 @@ plugin.tx_browser_pi1 {
                   value.data = date : U
                   isGreaterThan = ###TX_ORG_CAL.DATETIME###
                 }
-                wrap        = <li>|</li>
+                wrap      = <li>|</li>
                 value     = ###TX_ORG_CAL.DATETIME###
                 strftime  = %a, %d. %b %Y, %H:%M Uhr
                 wrap      = <li>|</li>
@@ -266,7 +266,7 @@ plugin.tx_browser_pi1 {
                   value.data = date : U
                   isLessThan = ###TX_ORG_CAL.DATETIME###
                 }
-                wrap        = <li class="expired">|</li>
+                wrap      = <li class="expired">|</li>
                 value     = ###TX_ORG_CAL.DATETIME###
                 strftime  = %a, %d. %b %Y, %H:%M Uhr
                 wrap      = <li>|</li>
