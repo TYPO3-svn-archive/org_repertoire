@@ -221,19 +221,7 @@ plugin.tx_browser_pi1 {
             )
             10 = TEXT
             10 {
-              if {
-                isTrue = ###TX_ORG_CAL.DATETIME###
-              }
-              value     = ###TX_ORG_CAL.DATETIME###
-              strftime  = %a, %d. %b %Y, %H:%M Uhr
-              wrap      = <li>|</li>
-              typolink {
-                parameter = {$plugin.org.pages.calendar}
-                parameter {
-                  insertData = 1
-                }
-                additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
-              }
+              value = <div class="cal">
             }
             11 = TEXT
             11 {
