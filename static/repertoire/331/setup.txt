@@ -42,7 +42,6 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.image,
           tx_org_repertoire.imageseo
         )
-        andWhere            = tx_org_cal.datetime > UNIX_TIMESTAMP()
         csvLinkToSingleView = tx_org_repertoire.title
         filter {
           tx_org_cal {
@@ -199,7 +198,8 @@ plugin.tx_browser_pi1 {
           tx_org_cal.uid,
           tx_org_cal.datetime
         )
-        orderBy = tx_org_cal.datetime
+        orderBy   = tx_org_cal.datetime
+        andWhere  = tx_org_cal.datetime > UNIX_TIMESTAMP()
         tx_org_cal {
           datetime = COA
           datetime {
