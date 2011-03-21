@@ -35,7 +35,7 @@
       <label index="tx_org_repertoire.subtitle">Subheader</label>
       <label index="tx_org_repertoire.producer">Producer</label>
       <label index="tx_org_repertoire.length">Length of Time</label>
-      <label index="tx_org_repertoire.short">Short</label>
+      <label index="tx_org_repertoire.staff">Staff</label>
       <label index="tx_org_repertoire.bodytext">Bodytext</label>
       <label index="tx_org_repertoire.teaser_title">Title of the Repertoire</label>
       <label index="tx_org_repertoire.teaser_subtitle">Subheader</label>
@@ -99,7 +99,7 @@
       <label index="tx_org_repertoire.subtitle">Untertitel / Dachzeile</label>
       <label index="tx_org_repertoire.producer">Autor</label>
       <label index="tx_org_repertoire.length">Dauer</label>
-      <label index="tx_org_repertoire.short">Kurztext</label>
+      <label index="tx_org_repertoire.staff">Beteiligte</label>
       <label index="tx_org_repertoire.bodytext">Text</label>
       <label index="tx_org_repertoire.teaser_title">Bezeichnung der Produktion</label>
       <label index="tx_org_repertoire.teaser_subtitle">Untertitel / Dachzeile</label>

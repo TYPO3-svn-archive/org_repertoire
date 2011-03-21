@@ -37,7 +37,7 @@ plugin.tx_browser_pi1 {
           tx_org_event.bodytext,
           tx_org_repertoire.title,
           tx_org_repertoire.subtitle,
-          tx_org_repertoire.short,
+          tx_org_repertoire.teaser_short,
           tx_org_repertoire.bodytext
         )
         tx_org_cal {
@@ -46,23 +46,39 @@ plugin.tx_browser_pi1 {
             10 {
               tx_org_repertoire = COA
               tx_org_repertoire {
+                required    = 1
+                wrap        = <div class="cal_short cal_short_repertoire">|</div>
                 10 = TEXT
                 10 {
-                  required    = 1
-                  if.isTrue   = ###TX_ORG_REPERTOIRE.SHORT###
-                  value       = ###TX_ORG_REPERTOIRE.SHORT###
-                  stripHtml   = 1
-                  crop        = 200 | ... | 1
-                  wrap        = <div class="cal_short">|</div>
+                  required    = ###TX_ORG_CALTYPE.TITLE###
+                  value       = ###TX_ORG_CALTYPE.TITLE###
+                  noTrimWrap  = |<strong>|</strong> |
                 }
-                11 = TEXT
-                11 {
+                20 = TEXT
+                20 {
                   required    = 1
-                  if.isFalse  = ###TX_ORG_REPERTOIRE.SHORT###
+                  if.isTrue   = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
+                  value       = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
+                  stripHtml   = 1
+                  crop        = 200 | &nbsp;... | 1
+                }
+                21 = TEXT
+                21 {
+                  required    = 1
+                  if.isFalse  = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
                   value       = ###TX_ORG_REPERTOIRE.BODYTEXT###
                   stripHtml   = 1
-                  crop        = 200 | ... | 1
-                  wrap        = <div class="cal_short">|</div>
+                  crop        = 200 | &nbsp;... | 1
+                }
+                30 = TEXT
+                30 {
+                  value   = more &raquo;
+                  lang.de = mehr &raquo;
+                  typolink {
+                    parameter         = {$plugin.org.pages.calendar} - linktosingle
+                    additionalParams  = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
+                  }
+                  noTrimWrap = | ||
                 }
               }
             }
@@ -74,9 +90,9 @@ plugin.tx_browser_pi1 {
               tx_org_repertoire {
                 required  = 1
                 stripHtml = 1
-                crop      = 200 | ... | 1
+                crop        = 200 | &nbsp;... | 1
                 value     = ###TX_ORG_REPERTOIRE.SUBTITLE###
-                wrap      = <div class="cal_subtitle">|</div>
+                wrap      = <div class="cal_subtitle cal_subtitle_repertoire">|</div>
               }
             }
           }
@@ -128,7 +144,7 @@ plugin.tx_browser_pi1 {
           tx_org_event.uid,
           tx_org_repertoire.title,
           tx_org_repertoire.subtitle,
-          tx_org_repertoire.short,
+          tx_org_repertoire.teaser_short,
           tx_org_repertoire.bodytext,
           tx_org_repertoire.image,
           tx_org_repertoire.imagecaption,
@@ -168,8 +184,8 @@ plugin.tx_browser_pi1 {
               tx_org_repertoire = TEXT
               tx_org_repertoire {
                 required    = 1
-                if.isTrue   = ###TX_ORG_REPERTOIRE.SHORT###
-                value       = ###TX_ORG_REPERTOIRE.SHORT###
+                if.isTrue   = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
+                value       = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
                 stripHtml   = 1
                 wrap        = <div class="cal_short">|</div>
               }

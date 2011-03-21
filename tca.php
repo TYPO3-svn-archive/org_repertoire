@@ -295,7 +295,7 @@ $bool_exclude_feuser = true;
 $TCA['tx_org_repertoire'] = array (
   'ctrl' => $TCA['tx_org_repertoire']['ctrl'],
   'interface' => array (
-    'showRecordFieldList' =>  'title,subtitle,producer,length,short,bodytext,'.
+    'showRecordFieldList' =>  'title,subtitle,producer,length,staff,bodytext,'.
                               'teaser_title,teaser_subtitle,teaser_short,'.
                               'actor,puppeteer,dancer,vocals,musician,video,narrator,'.
                               'director,advisor,assistant,'.
@@ -330,10 +330,10 @@ $TCA['tx_org_repertoire'] = array (
       'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.length',
       'config'  => $conf_input_30_trim,
     ),
-    'short' => array (
+    'staff' => array (
       'exclude' => $bool_exclude_default,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.short',
-      'config'    => $conf_text_50_10,
+      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.staff',
+      'config'  => $conf_text_rte,
     ),
     'bodytext' => array (
       'exclude'   => $bool_exclude_default,
@@ -479,7 +479,7 @@ $TCA['tx_org_repertoire'] = array (
         'size'                => $size_news,
         'minitems'            => 0,
         'maxitems'            => 999,
-        'MM'                  => 'tx_org_repertoire_mm_news',
+        'MM'                  => 'tx_org_repertoire_mm_tx_org_news',
         'foreign_table'       => 'tx_org_news',
         'foreign_table_where' => 'AND tx_org_news.' . $str_store_record_conf . ' ORDER BY tx_org_news.datetime DESC, title',
         'wizards' => array(
@@ -560,7 +560,7 @@ $TCA['tx_org_repertoire'] = array (
         'size'                => $size_calendar,
         'minitems'            => 0,
         'maxitems'            => 999,
-        'MM'                  => 'tx_org_repertoire_mm_cal',
+        'MM'                  => 'tx_org_repertoire_mm_tx_org_cal',
         'foreign_table'       => 'tx_org_cal',
         'foreign_table_where' => 'AND tx_org_cal.' . $str_store_record_conf . ' ORDER BY tx_org_cal.datetime DESC, title',
         'wizards' => array(
@@ -615,7 +615,7 @@ $TCA['tx_org_repertoire'] = array (
     ),
   ),
   'types' => array (
-    '0' => array('showitem' =>  '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_repertoire,   title;;;;1-1-1,subtitle,producer,length,short,bodytext;;;richtext[]:rte_transform[mode=ts];,'.
+    '0' => array('showitem' =>  '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_repertoire,   title;;;;1-1-1,subtitle,producer,length,staff;;;richtext[]:rte_transform[mode=ts];,bodytext;;;richtext[]:rte_transform[mode=ts];,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_teaser,       teaser_title,teaser_subtitle,teaser_short,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_actors,       actor,puppeteer,dancer,vocals,musician,video,narrator,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_direction,    director,advisor,assistant,'.

@@ -178,7 +178,7 @@ $arr_tx_org_repertoire = array (
     'minitems' =>   0,
     'maxitems' =>   1,
     'MM'                  => '%MM%',
-    'MM_opposite_field'   => 'fe_users',
+    'MM_opposite_field'   => '%MM_opposite_field%',
     'foreign_table'       => 'tx_org_repertoire',
     'foreign_table_where' => 'AND tx_org_repertoire.' . $str_store_record_conf . ' ORDER BY tx_org_repertoire.title',
     'wizards' => array(
@@ -305,7 +305,7 @@ $TCA['tx_org_cal']['columns']['type']['config']['items']['tx_org_repertoire'] = 
 
   // Insert type [repertoire] with fields to TCAtypes
 $TCA['tx_org_cal']['types']['tx_org_repertoire']['showitem'] = 
-  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_cal.div_calendar,    type,datetime,tx_org_caltype,tx_org_repertoire,'.
+  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_cal.div_calendar,    type,title,datetime,tx_org_caltype,tx_org_repertoire,'.
   '--div--;LLL:EXT:org/locallang_db.xml:tx_org_cal.div_event,       tx_org_location,tx_org_calentrance,'.
   '--div--;LLL:EXT:org/locallang_db.xml:tx_org_cal.div_department,  tx_org_department,'.
   '--div--;LLL:EXT:org/locallang_db.xml:tx_org_cal.div_control,     hidden;;1;;,fe_group'.

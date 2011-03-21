@@ -26,7 +26,7 @@ CREATE TABLE tx_org_repertoire (
   subtitle tinytext,
   producer tinytext,
   length tinytext,
-  short mediumtext,
+  staff mediumtext,
   teaser_title tinytext,
   teaser_subtitle tinytext,
   teaser_short mediumtext,
