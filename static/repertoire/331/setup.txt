@@ -255,6 +255,16 @@ plugin.tx_browser_pi1 {
               lang.de     = Keine Vorstellungen
               wrap        = <li>|</li>
             }
+            15 = TEXT
+            15 {
+              data  = date:Y-m-d
+              wrap        = <li>|</li>
+            }
+            16 = TEXT
+            16 {
+              data  = date:U
+              wrap        = <li>|</li>
+            }
             17 = TEXT
             17 {
               value.data  = date:Y-m-d
