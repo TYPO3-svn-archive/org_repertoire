@@ -265,16 +265,6 @@ plugin.tx_browser_pi1 {
               data  = date : U
               wrap        = <li>|</li>
             }
-            17 = TEXT
-            17 {
-              value.data  = date : Y-m-d
-              wrap        = <li>|</li>
-            }
-            18 = TEXT
-            18 {
-              value.data  = date : U
-              wrap        = <li>|</li>
-            }
             19 = TEXT
             19 {
               value = ###TX_ORG_CAL.DATETIME###
@@ -285,7 +275,7 @@ plugin.tx_browser_pi1 {
             20 {
               value = NEW
               if {
-                value.data = date : U
+                data = date : U
                 isLessThan = ###TX_ORG_CAL.DATETIME###
                 negate = 1
               }
@@ -295,7 +285,7 @@ plugin.tx_browser_pi1 {
             21 {
               value = OLD
               if {
-                value.data = date : U
+                data = date : U
                 isGreaterThan = ###TX_ORG_CAL.DATETIME###
                 negate = 1
               }
