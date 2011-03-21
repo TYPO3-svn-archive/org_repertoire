@@ -6,7 +6,7 @@
 
   // plugin.tx_browser_pi1
   //    views
-  //      301: Repertoire
+  //      331: Repertoire
 
 
 
@@ -21,8 +21,8 @@ plugin.tx_browser_pi1 {
       org {
         repertoire {
           name      = Org: Repertoire
-          file      = EXT:org_repertoire/res/html/repertoire/302/default.tmpl
-          csvViews  = 301
+          file      = EXT:org_repertoire/res/html/repertoire/331/default.tmpl
+          csvViews  = 331
         }
       }
     }
@@ -30,14 +30,15 @@ plugin.tx_browser_pi1 {
 
   views {
     list {
-      301 = Repertoire
-      301 {
+      331 = Repertoire
+      331 {
         name    = Repertoire
         showUid = repertoireUid
         select (
           tx_org_repertoire.title,
           tx_org_repertoire.subtitle,
-          tx_org_repertoire.short,
+          tx_org_repertoire.teaser_title,
+          tx_org_repertoire.teaser_subtitle,
           tx_org_repertoire.image,
           tx_org_repertoire.imageseo
         )
@@ -45,13 +46,11 @@ plugin.tx_browser_pi1 {
         filter {
           tx_org_cal {
             datetime < plugin.tx_browser_pi1.displayList.master_templates.selectbox
-            //datetime < plugin.tx_browser_pi1.displayList.master_templates.checkbox
-            //datetime < plugin.tx_browser_pi1.displayList.master_templates.radiobuttons
             datetime {
               area < plugin.tx_browser_pi1.displayList.master_templates.areas.sample_period
               first_item {
                 stdWrap {
-                  data = LLL:EXT:org/locallang_db.xml:filter_phrase.schedule
+                  data = LLL:EXT:org_repertoire/locallang_db.xml:filter_phrase.schedule
                 }
               }
               wrap = <span class="selectbox">|</span>
@@ -73,8 +72,8 @@ plugin.tx_browser_pi1 {
       }
     }
     single {
-      301 = Repertoire
-      301 {
+      331 = Repertoire
+      331 {
         marker < plugin.tx_browser_pi1.marker
         marker {
           my_listview_page = TEXT
@@ -98,7 +97,8 @@ plugin.tx_browser_pi1 {
         }
         select (
           tx_org_repertoire.title,
-          tx_org_repertoire.calendar,
+          tx_org_repertoire.subtitle,
+          tx_org_repertoire.tx_org_cal,
           tx_org_repertoire.deleted,
           tx_org_repertoire.producer,
 
@@ -126,7 +126,6 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.others,
 
           tx_org_repertoire.length,
-          tx_org_repertoire.short,
           tx_org_repertoire.bodytext,
           tx_org_repertoire.image,
           tx_org_repertoire.imagecaption,
@@ -395,20 +394,20 @@ plugin.tx_browser_pi1 {
   
   _LOCAL_LANG {
     default {
-      list_mode_301_titleTag      = TYPO3 Organiser: Repertoire
-      list_mode_301_keywords      = TYPO3, Organiser, Repertoire
-      list_mode_301_summary       = TYPO3 Organiser: Repertoire
-      single_mode_301_titleTag    = TYPO3 Organiser: ###TX_ORG_CAL.TITLE###
-      single_mode_301_keywords    = ###TX_ORG_REPERTOIRE.KEYWORDS###
-      single_mode_301_summary     = ###TX_ORG_REPERTOIRE.DESCRIPTION###
+      list_mode_331_titleTag      = TYPO3 Organiser: Repertoire
+      list_mode_331_keywords      = TYPO3, Organiser, Repertoire
+      list_mode_331_summary       = TYPO3 Organiser: Repertoire
+      single_mode_331_titleTag    = TYPO3 Organiser: ###TX_ORG_CAL.TITLE###
+      single_mode_331_keywords    = ###TX_ORG_REPERTOIRE.KEYWORDS###
+      single_mode_331_summary     = ###TX_ORG_REPERTOIRE.DESCRIPTION###
     }
     de {
-      list_mode_301_titleTag      = TYPO3 Organiser: Repertoire und St&uuml;cke
-      list_mode_301_keywords      = TYPO3, Organiser, Repertoire, St&uuml;cke
-      list_mode_301_summary       = TYPO3 Organiser: Repertoire und St&uuml;cke
-      single_mode_301_titleTag    = TYPO3 Organiser: ###TX_ORG_REPERTOIRE.TITLE###
-      single_mode_301_keywords    = ###TX_ORG_REPERTOIRE.KEYWORDS###
-      single_mode_301_summary     = ###TX_ORG_REPERTOIRE.DESCRIPTION###
+      list_mode_331_titleTag      = TYPO3 Organiser: Repertoire und St&uuml;cke
+      list_mode_331_keywords      = TYPO3, Organiser, Repertoire, St&uuml;cke
+      list_mode_331_summary       = TYPO3 Organiser: Repertoire und St&uuml;cke
+      single_mode_331_titleTag    = TYPO3 Organiser: ###TX_ORG_REPERTOIRE.TITLE###
+      single_mode_331_keywords    = ###TX_ORG_REPERTOIRE.KEYWORDS###
+      single_mode_331_summary     = ###TX_ORG_REPERTOIRE.DESCRIPTION###
     }
   }
 }
