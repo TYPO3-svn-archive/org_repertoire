@@ -234,7 +234,7 @@ plugin.tx_browser_pi1 {
         tx_org_cal {
           datetime = COA
           datetime {
-            10 = TEXT
+            10 = COA
             10 {
               10 = TEXT
               10 {
