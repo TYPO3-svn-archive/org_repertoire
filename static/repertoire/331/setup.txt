@@ -37,8 +37,8 @@ plugin.tx_browser_pi1 {
         select (
           tx_org_repertoire.title,
           tx_org_repertoire.subtitle,
-          tx_org_repertoire.teaser_title,
-          tx_org_repertoire.teaser_subtitle,
+          tx_org_repertoire.teaser_short,
+          tx_org_repertoire.bodytext,
           tx_org_repertoire.image,
           tx_org_repertoire.imageseo
         )
@@ -67,6 +67,64 @@ plugin.tx_browser_pi1 {
               }
               order.field = uid
             }
+          }
+        }
+        tx_org_cal {
+          datetime = TEXT
+          datetime {
+            value = ###TX_ORG_CAL.DATETIME### h
+            lang {
+              de = ###TX_ORG_CAL.DATETIME### Uhr
+            }
+            strftime = %A, %d. %B, %H:%M Uhr
+          }
+        }
+        tx_org_repertoire {
+          teaser_short = COA
+          teaser_short {
+            required    = 1
+            wrap        = <div class="repertoire_teasershort">|</div>
+            20 = TEXT
+            20 {
+              required    = 1
+              if.isTrue   = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
+              value       = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
+              stripHtml   = 1
+              crop        = 200 | &nbsp;... | 1
+            }
+            21 = TEXT
+            21 {
+              required    = 1
+              if.isFalse  = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
+              value       = ###TX_ORG_REPERTOIRE.BODYTEXT###
+              stripHtml   = 1
+              crop        = 200 | &nbsp;... | 1
+            }
+            30 = TEXT
+            30 {
+              value   = more &raquo;
+              lang.de = mehr &raquo;
+              typolink {
+                parameter         = {$plugin.org.pages.repertoire} - linktosingle
+                additionalParams  = &tx_browser_pi1[repertoireUid]=###TX_ORG_REPERTOIRE.UID###&###CHASH###
+              }
+              noTrimWrap = | ||
+            }
+          }
+          subtitle = TEXT
+          subtitle {
+            required  = 1
+            value     = ###TX_ORG_CAL.SUBTITLE###
+            wrap      = <h3 class="repertoire_subtitle">|</h3>
+          }
+          title = TEXT
+          title {
+            value = ###TX_ORG_CAL.TITLE###
+            typolink {
+              parameter         = {$plugin.org.pages.repertoire} - linktosingle
+              additionalParams  = &tx_browser_pi1[repertoireUid]=###TX_ORG_CAL.UID###&###CHASH###
+            }
+            wrap      = <h2 class="repertoire_title">|</h2>
           }
         }
       }
