@@ -217,11 +217,23 @@ plugin.tx_browser_pi1 {
           datetime {
             comment (
               Konfigurations-Trick: Der Kasten "Kalender" erhaelt ein div-wrap und eine Ueberschrift.
-              Siehe unten tx_org_repertoire.calendar und tx_org_repertoire.keywords
+              Siehe unten tx_org_repertoire.tx_org_cal und tx_org_repertoire.keywords
             )
             10 = TEXT
             10 {
-              value = <div class="cal">
+              if {
+                isTrue = ###TX_ORG_CAL.DATETIME###
+              }
+              value     = ###TX_ORG_CAL.DATETIME###
+              strftime  = %a, %d. %b %Y, %H:%M Uhr
+              wrap      = <li>|</li>
+              typolink {
+                parameter = {$plugin.org.pages.calendar}
+                parameter {
+                  insertData = 1
+                }
+                additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
+              }
             }
             11 = TEXT
             11 {
@@ -407,8 +419,8 @@ plugin.tx_browser_pi1 {
               wrap  = <p>|</p>
             }
           }
-          calendar = COA
-          calendar {
+          tx_org_cal = COA
+          tx_org_cal {
             comment (
               Konfigurations-Trick: Der Kasten "Kalender" soll nur angezeigt werden, wenn Datensaetze im Kalender vorhanden
               sind. Siehe auch unten keywords und oben tx_org_cal.datetime
@@ -432,7 +444,7 @@ plugin.tx_browser_pi1 {
           keywords {
             comment (
               Konfigurations-Trick: Der Kasten "Kalender" soll nur angezeigt werden, wenn Datensaetze im Kalender vorhanden
-              sind. Siehe auch oben calendar und tx_org_cal.datetime
+              sind. Siehe auch oben tx_org_cal und tx_org_cal.datetime
             )
             if {
               isTrue_XX = ###TX_ORG_CAL.DATETIME###
