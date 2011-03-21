@@ -166,8 +166,9 @@ plugin.tx_browser_pi1 {
           }
           my_datesheet_div_begin = TEXT
           my_datesheet_div_begin {
-            value   = Calendar
-            lang.de = Kalender
+            if.isTrue = ###TX_ORG_CAL.DATETIME###
+            value     = Calendar
+            lang.de   = Kalender
             wrap (
               <div style="float:left;padding-right:1em;">
                 <div style="background:#EEE;line-height:1em;overflow:hidden;padding:.6em;text-align:center;width:100px;">
@@ -177,6 +178,7 @@ plugin.tx_browser_pi1 {
           }
           my_datesheet_div_end = TEXT
           my_datesheet_div_end {
+            if.isTrue = ###TX_ORG_CAL.DATETIME###
             value (
                   </ul>
                 </div>
@@ -229,7 +231,7 @@ plugin.tx_browser_pi1 {
           tx_org_cal.uid,
           tx_org_cal.datetime
         )
-        orderBy   = tx_org_cal.datetime
+        orderBy   = tx_org_cal.datetime DESC
         //andWhere  = tx_org_cal.datetime > UNIX_TIMESTAMP()
         tx_org_cal {
           datetime = COA
@@ -264,7 +266,7 @@ plugin.tx_browser_pi1 {
                   value.data = date : U
                   isLessThan = ###TX_ORG_CAL.DATETIME###
                 }
-                wrap        = <li>|</li>
+                wrap        = <li class="expired">|</li>
                 value     = ###TX_ORG_CAL.DATETIME###
                 strftime  = %a, %d. %b %Y, %H:%M Uhr
                 wrap      = <li>|</li>
@@ -276,13 +278,6 @@ plugin.tx_browser_pi1 {
                   additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
                 }
               }
-            }
-            11 = TEXT
-            11 {
-              if.isFalse  = ###TX_ORG_CAL.DATETIME###
-              value       = No dates
-              lang.de     = Keine Vorstellungen
-              wrap        = <li>|</li>
             }
           }
         }
