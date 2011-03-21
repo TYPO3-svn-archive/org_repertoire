@@ -230,7 +230,7 @@ plugin.tx_browser_pi1 {
           tx_org_cal.datetime
         )
         orderBy   = tx_org_cal.datetime
-        //andWhere  = tx_org_cal.datetime > UNIX_TIMESTAMP()
+        andWhere  = tx_org_cal.datetime > UNIX_TIMESTAMP()
         tx_org_cal {
           datetime = COA
           datetime {
