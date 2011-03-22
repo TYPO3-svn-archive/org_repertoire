@@ -315,7 +315,7 @@ plugin.tx_browser_pi1 {
             }
             10 = TEXT
             10 {
-              data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.actor
+              data = LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.actor
               wrap = <tr><td>|</td>
             }
             11 = COA
