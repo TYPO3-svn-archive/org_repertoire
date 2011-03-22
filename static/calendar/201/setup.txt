@@ -21,7 +21,7 @@ plugin.tx_browser_pi1 {
       201 = calendar +repertoire
       201 {
         name    = calendar +repertoire
-        select (
+/*        select (
           tx_org_cal.title,
           tx_org_cal.subtitle,
           tx_org_cal.short,
@@ -41,8 +41,9 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.teaser_short,
           tx_org_repertoire.bodytext
         )
+*/
+        select := addToList(tx_org_repertoire.title,tx_org_repertoire.subtitle,tx_org_repertoire.producer,tx_org_repertoire.teaser_short,tx_org_repertoire.bodytext)
         tx_org_cal {
-          short = COA
           short {
             10 {
               tx_org_repertoire = COA
@@ -84,7 +85,6 @@ plugin.tx_browser_pi1 {
               }
             }
           }
-          subtitle = COA
           subtitle {
             10 {
               tx_org_repertoire = TEXT
@@ -97,24 +97,26 @@ plugin.tx_browser_pi1 {
               }
             }
           }
-          title = COA
           title {
             10 {
-              tx_org_repertoire = TEXT
+              tx_org_repertoire = COA
               tx_org_repertoire {
-                value = ###TX_ORG_REPERTOIRE.TITLE###
-                typolink {
-                  parameter         = {$plugin.org.pages.calendar} - linktosingle
-                  additionalParams  = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
+                10 = TEXT
+                10 {
+                  value = ###TX_ORG_REPERTOIRE.TITLE###
+                  typolink {
+                    parameter         = {$plugin.org.pages.calendar} - linktosingle
+                    additionalParams  = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
+                  }
+                }
+                20 = TEXT
+                20 {
+                  if.isTrue   = ###TX_ORG_REPERTOIRE.PRODUCER###
+                  value       = by ###TX_ORG_REPERTOIRE.PRODUCER###
+                  lang.de     = von ###TX_ORG_REPERTOIRE.PRODUCER###
+                  noTrimWrap  = | <span class="repertoire_producer">|</span>|
                 }
               }
-            }
-            20 = TEXT
-            20 {
-              if.isTrue   = ###TX_ORG_REPERTOIRE.PRODUCER###
-              value       = by ###TX_ORG_REPERTOIRE.PRODUCER###
-              lang.de     = von ###TX_ORG_REPERTOIRE.PRODUCER###
-              noTrimWrap  = | <span class="repertoire_producer">|</sapn>|
             }
           }
         }
@@ -123,7 +125,7 @@ plugin.tx_browser_pi1 {
     single {
       201 = calendar +repertoire
       201 {
-        select (
+/*        select (
           tx_org_cal.title,
           tx_org_cal.subtitle,
           tx_org_cal.short,
@@ -163,6 +165,8 @@ plugin.tx_browser_pi1 {
           tx_org_location.uid,
           tx_org_location.title
         )
+*/
+        select := addToList(tx_org_repertoire.title,tx_org_repertoire.subtitle,tx_org_repertoire.producer,tx_org_repertoire.teaser_short,tx_org_repertoire.bodytext,tx_org_repertoire.image,tx_org_repertoire.imagecaption,tx_org_repertoire.imageseo,tx_org_repertoire.description,tx_org_repertoire.keywords,tx_org_repertoire.uid)
         tx_org_cal {
           bodytext {
             11 {
@@ -211,10 +215,20 @@ plugin.tx_browser_pi1 {
           }
           title {
             10 {
-              tx_org_repertoire = TEXT
+              tx_org_repertoire = COA
               tx_org_repertoire {
-                value = ###TX_ORG_REPERTOIRE.TITLE###
-                wrap  = <h1>|</h1>
+                10 = TEXT
+                10 {
+                  value = ###TX_ORG_REPERTOIRE.TITLE###
+                  wrap  = <h1 class="repertoire_title">|</h1>
+                }
+                20 = TEXT
+                20 {
+                  if.isTrue   = ###TX_ORG_REPERTOIRE.PRODUCER###
+                  value       = by ###TX_ORG_REPERTOIRE.PRODUCER###
+                  lang.de     = von ###TX_ORG_REPERTOIRE.PRODUCER###
+                  wrap        = <h2 class="repertoire_producer">|</h2>
+                }
               }
             }
           }
