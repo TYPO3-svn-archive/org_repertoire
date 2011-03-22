@@ -242,71 +242,69 @@ plugin.tx_browser_pi1 {
             // Date isn't expired, date is expired
           datetime = COA
           datetime {
+              // 10: date isn't expired 
             10 = COA
             10 {
-                // 10: date isn't expired, 20: date is expired 
-              10 = COA
+              required  = 1
+              wrap      = <div class="my_datesheet">|</div>
+              if {
+                value.data = date : U
+                isGreaterThan = ###TX_ORG_CAL.DATETIME###
+              }
+                // day (01 ... 31)
+              10 = TEXT
               10 {
-                required  = 1
-                wrap      = <div class="my_datesheet">|</div>
-                if {
-                  value.data = date : U
-                  isGreaterThan = ###TX_ORG_CAL.DATETIME###
-                }
-                  // day (01 ... 31)
-                10 = TEXT
-                10 {
-                  wrap      = <div class="day">|</div>
-                  value     = ###TX_ORG_CAL.DATETIME###
-                    // %d (01 ... 31)
-                  strftime = %d
-                  typolink {
-                    parameter = {$plugin.org.pages.calendar}
-                    parameter {
-                      insertData = 1
-                    }
-                    additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
+                wrap      = <div class="day">|</div>
+                value     = ###TX_ORG_CAL.DATETIME###
+                  // %d (01 ... 31)
+                strftime = %d
+                typolink {
+                  parameter = {$plugin.org.pages.calendar}
+                  parameter {
+                    insertData = 1
                   }
-                }
-                  // month (Jan ... Dec) 
-                20 = TEXT
-                20 {
-                  wrap      = <div class="month">|</div>
-                  value     = ###TX_ORG_CAL.DATETIME###
-                    // %b (Jan ... Dec)
-                  strftime = %b
-                  typolink {
-                    parameter = {$plugin.org.pages.calendar}
-                    parameter {
-                      insertData = 1
-                    }
-                    additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
-                  }
-                }
-                  // year (i.e: 2011)
-                30 = TEXT
-                30 {
-                  wrap      = <div class="year">|</div>
-                  value     = ###TX_ORG_CAL.DATETIME###
-                    // %Y (11)
-                  strftime = %Y
-                  typolink {
-                    parameter = {$plugin.org.pages.calendar}
-                    parameter {
-                      insertData = 1
-                    }
-                    additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
-                  }
+                  additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
                 }
               }
-              20 < .10
+                // month (Jan ... Dec) 
+              20 = TEXT
               20 {
-                if {
-                  isGreaterThan >
-                  isLessThan    = ###TX_ORG_CAL.DATETIME###
+                wrap      = <div class="month">|</div>
+                value     = ###TX_ORG_CAL.DATETIME###
+                  // %b (Jan ... Dec)
+                strftime = %b
+                typolink {
+                  parameter = {$plugin.org.pages.calendar}
+                  parameter {
+                    insertData = 1
+                  }
+                  additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
                 }
-                wrap      = <div class="my_datesheet my_datesheet_expired">|</div>
               }
+                // year (i.e: 2011)
+              30 = TEXT
+              30 {
+                wrap      = <div class="year">|</div>
+                value     = ###TX_ORG_CAL.DATETIME###
+                  // %Y (11)
+                strftime = %Y
+                typolink {
+                  parameter = {$plugin.org.pages.calendar}
+                  parameter {
+                    insertData = 1
+                  }
+                  additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
+                }
+              }
+            }
+              // 20: date is expired 
+            20 < .10
+            20 {
+              if {
+                isGreaterThan >
+                isLessThan    = ###TX_ORG_CAL.DATETIME###
+              }
+              wrap      = <div class="my_datesheet my_datesheet_expired">|</div>
             }
           }
         }
