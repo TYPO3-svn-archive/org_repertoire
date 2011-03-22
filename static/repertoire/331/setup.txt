@@ -233,8 +233,8 @@ plugin.tx_browser_pi1 {
         )
         orderBy {
           tx_org_cal (
-            SELECT    tx_org_cal.uid   AS 'uid', 
-                      tx_org_cal.title AS 'title'
+            SELECT    tx_org_cal.uid      AS 'uid', 
+                      tx_org_cal.datetime AS 'datetime'
             FROM      tx_org_cal,
                       tx_org_repertoire_mm_tx_org_cal
             WHERE     tx_org_repertoire_mm_tx_org_cal.uid_local    = ###UID_LOCAL###
