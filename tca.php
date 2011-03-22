@@ -191,6 +191,7 @@ switch($confArr['store_records'])
     'internal_type' => 'file',
     'allowed'       => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'], 
     'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'], 
+      // Don't change uploads/tx_org!
     'uploadfolder'  => 'uploads/tx_org',
     'show_thumbs'   => 1,
     'size'          => 3,
@@ -303,7 +304,7 @@ $TCA['tx_org_repertoire'] = array (
                               'stage_manager,technical_manager,technique,light,sound,'.
                               'otherslabel,others,'.
                               'documents,documentscaption,documentslayout,tx_org_news,'.
-                              'image,imagecaption,imageseo,imagewidth,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
+                              'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
                               'embeddedcode,print,printcaption,printseo,'.
                               'tx_org_cal,'.
                               'hidden,pages,fe_group,'.
@@ -852,7 +853,7 @@ $TCA['tx_org_repertoire'] = array (
      '1'  => array('showitem' => 'starttime,endtime,'),
      '2'  => Array('showitem' => 'imagecols, image_noRows, imageborder'),
      '5'  => Array('showitem' => 'imagecaption_position'),
-     '6'  => Array('showitem' => 'imagewidth,image_link'),
+     '6'  => Array('showitem' => 'imagewidth,imageheight,image_link'),
      '7'  => Array('showitem' => 'image_link, image_zoom','canNotCollapse' => 1),
     '11'  => Array('showitem' => 'image_compression, image_effects, image_frames','canNotCollapse' => 1),
     '13'  => Array('showitem' => 'imagewidth, imageheight','canNotCollapse' => 1),
