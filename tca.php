@@ -302,7 +302,7 @@ $TCA['tx_org_repertoire'] = array (
                               'stage_design,tailoring,requisite,garment,makeup,'.
                               'stage_manager,technical_manager,technique,light,sound,'.
                               'otherslabel,others,'.
-                              'documents,tx_org_news,'.
+                              'documents,documentscaption,documentslayout,tx_org_news,'.
                               'image,imagecaption,imageseo,embeddedcode,print,printcaption,printseo,'.
                               'tx_org_cal,'.
                               'hidden,pages,fe_group,'.
@@ -467,9 +467,28 @@ $TCA['tx_org_repertoire'] = array (
       'config'  => $arr_config_feuser,
     ),
     'documents' => array (
-      'exclude' => $bool_exclude_none,
+      'exclude' => $bool_exclude_default,
       'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.documents',
       'config'  => $conf_file_document,
+    ),
+    'documentscaption' => array (
+      'exclude' => $bool_exclude_default,
+      'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.documentscaption',
+      'config'  => $conf_text_30_05,
+    ),
+    'documentslayout' => array (
+      'exclude' => $bool_exclude_default,
+      'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.documentslayout',
+      'config'  => array (
+        'type'      => 'select',
+        'size'      => 1,
+        'maxitems'  => 1,
+        'items' => array (
+          array('LLL:EXT:org/locallang_db.xml:tca_phrase.documentslayout.0', 0),
+          array('LLL:EXT:org/locallang_db.xml:tca_phrase.documentslayout.1', 1),
+          array('LLL:EXT:org/locallang_db.xml:tca_phrase.documentslayout.2', 2),
+        ),
+      )
     ),
     'tx_org_news' => array (
       'exclude' => $bool_exclude_none,
@@ -622,7 +641,7 @@ $TCA['tx_org_repertoire'] = array (
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_requirements, stage_design,tailoring,requisite,garment,makeup,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_technique,    stage_manager,technical_manager,technique,light,sound,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_others,       otherslabel,others,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_doc,          documents,tx_org_news,'.
+                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_doc,          documents,documentscaption,documentslayout,tx_org_news,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_media,        image,imagecaption,imageseo,embeddedcode,print,printcaption,printseo,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_calendar,     tx_org_cal,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_control,      hidden,pages,fe_group,'.

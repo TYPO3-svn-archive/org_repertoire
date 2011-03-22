@@ -54,6 +54,8 @@ CREATE TABLE tx_org_repertoire (
   otherslabel tinytext,
   others tinytext,
   documents text,
+  documentscaption tinytext,
+  documentslayout tinyint(4) unsigned DEFAULT '0' NOT NULL,
   tx_org_news text,
   image text,
   imagecaption text,
