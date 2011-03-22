@@ -218,6 +218,7 @@ plugin.tx_browser_pi1 {
 
           tx_org_repertoire.length,
           tx_org_repertoire.bodytext,
+          tx_org_repertoire.staff,
           tx_org_repertoire.image,
           tx_org_repertoire.imagecaption,
           tx_org_repertoire.imageseo,
@@ -463,6 +464,7 @@ plugin.tx_browser_pi1 {
             10 = TEXT
             10 {
               required  = 1
+              value     = ###TX_ORG_REPERTOIRE.BODYTEXT###
               wrap      = <div class="repertoire_bodytext">|</div>
               stdWrap {
                 parseFunc < lib.parseFunc_RTE
