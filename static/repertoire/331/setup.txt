@@ -462,16 +462,20 @@ plugin.tx_browser_pi1 {
           bodytext {
             10 = TEXT
             10 {
-              if {
-                isTrue = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
+              required  = 1
+              wrap      = <div class="repertoire_bodytext">|</div>
+              stdWrap {
+                parseFunc < lib.parseFunc_RTE
               }
-              value = ###TX_ORG_REPERTOIRE.TEASER_SHORT###
-              wrap  = <p><strong>|</strong></p>
             }
-            11 = TEXT
-            11 {
-              value = ###TX_ORG_REPERTOIRE.BODYTEXT###
-              wrap  = <p>|</p>
+            20 = TEXT
+            20 {
+              required  = 1
+              value     = ###TX_ORG_REPERTOIRE.STAFF###
+              wrap      = <div class="repertoire_staff">|</div>
+              stdWrap {
+                parseFunc < lib.parseFunc_RTE
+              }
             }
           }
           image  < tt_content.image.20
