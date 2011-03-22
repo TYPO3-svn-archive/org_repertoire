@@ -369,6 +369,10 @@ plugin.tx_browser_pi1 {
               }
             }
           }
+          document < tt_content.uploads.20
+          document {
+            value = ###TX_ORG_REPERTOIRE.DOCUMENT###
+          }
           image  < tt_content.image.20
           image {
             imgList.field >
