@@ -144,6 +144,8 @@ plugin.tx_browser_pi1 {
     single {
       331 = +Org-Repertoire: Repertoire
       331 {
+        advanced < plugin.tx_browser_pi1.advanced
+        advanced.sql.devider.childrenRecords >
         marker < plugin.tx_browser_pi1.marker
         marker {
           my_listview_page = TEXT
@@ -173,14 +175,12 @@ plugin.tx_browser_pi1 {
               <div style="float:left;padding-right:1em;">
                 <div style="background:#EEE;line-height:1em;overflow:hidden;padding:.6em;text-align:center;width:100px;">
                   |
-                  <ul>
             )
           }
           my_datesheet_div_end = TEXT
           my_datesheet_div_end {
             if.isTrue = ###TX_ORG_CAL.DATETIME###
             value (
-                  </ul>
                 </div>
               </div>
             )
@@ -243,10 +243,12 @@ plugin.tx_browser_pi1 {
 )
         }
         tx_org_cal {
+            // Date isn't expired, date is expired
           datetime = COA
           datetime {
             10 = COA
             10 {
+                // Date isn't expired
               10 = TEXT
               10 {
                 required  = 1
@@ -255,10 +257,14 @@ plugin.tx_browser_pi1 {
                   value.data = date : U
                   isGreaterThan = ###TX_ORG_CAL.DATETIME###
                 }
-                wrap      = <li>|</li>
+                wrap      = <div class="datesheet">|</div>
                 value     = ###TX_ORG_CAL.DATETIME###
-                strftime  = %a, %d. %b %Y, %H:%M Uhr
-                wrap      = <li>|</li>
+                  // weekday: %a (Mo), month: %d (09), 
+                strftime  (
+                  <div class="weekday">%a</div>
+                  <div class="day_of_month">%d</div>
+                  <div class="month month_year">%b %y</div>
+)
                 typolink {
                   parameter = {$plugin.org.pages.calendar}
                   parameter {
@@ -267,17 +273,23 @@ plugin.tx_browser_pi1 {
                   additionalParams = &tx_browser_pi1[calendarUid]=###TX_ORG_CAL.UID###&###CHASH###
                 }
               }
+                // Date is expired
               20 = TEXT
               20 {
                 required  = 1
-                //value = OLD
                 if {
                   value.data = date : U
                   isLessThan = ###TX_ORG_CAL.DATETIME###
                 }
-                wrap      = <li class="expired">|</li>
                 value     = ###TX_ORG_CAL.DATETIME###
-                strftime  = %a, %d. %b %Y, %H:%M Uhr
+                wrap      = <div class="datesheet datesheet_expired">|</div>
+                value     = ###TX_ORG_CAL.DATETIME###
+                  // weekday: %a (Mo), month: %d (09), 
+                strftime  (
+                  <div class="weekday">%a</div>
+                  <div class="day_of_month">%d</div>
+                  <div class="month month_year">%b %y</div>
+)
                 typolink {
                   parameter = {$plugin.org.pages.calendar_expired}
                   parameter {
