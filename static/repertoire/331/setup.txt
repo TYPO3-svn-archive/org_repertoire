@@ -441,6 +441,8 @@ plugin.tx_browser_pi1 {
               }
                 // bodytext, staff
               text {
+                required  = 1
+                wrap      = <div class="bodytext">|</div>
                   // bodytext
                 10 = TEXT
                 10 {
