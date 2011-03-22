@@ -171,21 +171,12 @@ plugin.tx_browser_pi1 {
           my_datesheet_div_begin = TEXT
           my_datesheet_div_begin {
             if.isTrue = ###TX_ORG_CAL.DATETIME###
-            value     = Calendar
-            lang.de   = Kalender
-            wrap (
-              <div style="float:left;padding-right:1em;">
-                <div style="background:#EEE;line-height:1em;overflow:hidden;padding:.6em;text-align:center;width:100px;">
-                  |
-            )
+            value     = <div class="my_datesheet_box">
           }
           my_datesheet_div_end = TEXT
           my_datesheet_div_end {
             if.isTrue = ###TX_ORG_CAL.DATETIME###
-            value (
-                </div>
-              </div>
-            )
+            value     = </div>
           }
         }
         advanced < plugin.tx_browser_pi1.advanced
@@ -262,13 +253,13 @@ plugin.tx_browser_pi1 {
                   value.data = date : U
                   isGreaterThan = ###TX_ORG_CAL.DATETIME###
                 }
-                wrap      = <div class="datesheet">|</div>
+                wrap      = <div class="my_datesheet">|</div>
                 value     = ###TX_ORG_CAL.DATETIME###
-                  // weekday: %a (Mo), month: %d (09), 
+                  // %a (Mo) %d (31) %b (Jan) %y (11)
                 strftime  (
-                  <div class="weekday">%a</div>
-                  <div class="day_of_month">%d</div>
-                  <div class="month month_year">%b %y</div>
+                  <div class="day">%d</div>
+                  <div class="month">%b</div>
+                  <div class="year">%y</div>
 )
                 typolink {
                   parameter = {$plugin.org.pages.calendar}

@@ -7,7 +7,7 @@
   // SEO - Search Engine Optimisation
   //    page
   // plugin.tx_linkhandler
-  // Header Comment
+  // page
 
 
 
@@ -70,11 +70,14 @@ plugin.tx_linkhandler {
 
 
 
-  ////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////
   //
-  // Header Comment
+  // page
 
-page.config.headerComment (
-        TYPO3-Programmierung: die-netzmacher.de
-)
-  // Header Comment
+page {
+  //includeCSS.org_repertoire = EXT:org_repertoire/res/html/org_repertoire.css
+  config.headerComment (
+          TYPO3-Programmierung: die-netzmacher.de
+  )
+}
+  // page
