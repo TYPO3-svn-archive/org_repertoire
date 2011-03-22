@@ -442,10 +442,14 @@ plugin.tx_browser_pi1 {
                 // bodytext, staff
               text {
                 required  = 1
-                wrap      = <div class="bodytext">|</div>
-                  // bodytext
+                  // clearer
                 10 = TEXT
                 10 {
+                  value = <div class="csc-textpic-clear"><!-- --></div>|
+                }
+                  // bodytext
+                20 = TEXT
+                20 {
                   required  = 1
                   value     = ###TX_ORG_REPERTOIRE.BODYTEXT###
                   wrap      = <div class="repertoire_bodytext">|</div>
@@ -454,8 +458,8 @@ plugin.tx_browser_pi1 {
                   }
                 }
                   // staff
-                20 = TEXT
-                20 {
+                21 = TEXT
+                21 {
                   required  = 1
                   value     = ###TX_ORG_REPERTOIRE.STAFF###
                   wrap      = <div class="repertoire_staff">|</div>
