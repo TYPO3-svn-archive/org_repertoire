@@ -574,12 +574,8 @@ $TCA['tx_org_repertoire'] = array (
         'type' => 'input',
         'size' => '4',
         'max' => '4',
-        'eval' => 'int',
+        'eval' => 'trim',
         'checkbox' => '0',
-        'range' => array (
-          'upper' => '999',
-          'lower' => '25'
-        ),
         'default' => 0
       )
     ),
@@ -590,12 +586,8 @@ $TCA['tx_org_repertoire'] = array (
         'type' => 'input',
         'size' => '4',
         'max' => '4',
-        'eval' => 'int',
+        'eval' => 'trim',
         'checkbox' => '0',
-        'range' => array (
-          'upper' => '700',
-          'lower' => '25'
-        ),
         'default' => 0
       )
     ),
