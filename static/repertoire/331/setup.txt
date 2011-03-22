@@ -305,7 +305,7 @@ plugin.tx_browser_pi1 {
                   isGreaterThan >
                   isLessThan    = ###TX_ORG_CAL.DATETIME###
                 }
-                wrap      = <div class="datesheet datesheet_expired">|</div>
+                wrap      = <div class="my_datesheet my_datesheet_expired">|</div>
               }
             }
           }
