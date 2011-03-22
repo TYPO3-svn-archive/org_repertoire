@@ -307,167 +307,39 @@ plugin.tx_browser_pi1 {
           }
         }
         tx_org_repertoire {
-            // actor ... others
           actor = COA
           actor {
-            required = 1
             wrap     = <table class="repertoire">|<table>
-            10 = COA
+            if {
+              isTrue = ###TX_ORG_REPERTOIRE.ACTOR###
+            }
+            10 = TEXT
             10 {
-              if {
-                isTrue = ###TX_ORG_REPERTOIRE.ACTOR###
-              }
+              data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.actor
+              wrap = <tr><td>|</td>
+            }
+            11 = COA
+            11 {
+              wrap = <td>|</td></tr>
               10 = TEXT
               10 {
-                data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.actor
-                wrap = <tr><td>|</td>
-              }
-              11 = COA
-              11 {
-                wrap = <td>|</td></tr>
-                10 = TEXT
-                10 {
-                  browser {
-                    handleRelation  = 1
-                    orderBy         = fe_users.last_name
-                    devider = TEXT
-                    devider {
-                      value       = ,
-                      noTrimWrap  = || |
-                    }
-                  }
-                  value = ###FE_USERS.FIRST_NAME### ###FE_USERS.LAST_NAME###
-                  typolink {
-                    parameter = {$plugin.org.pages.staff}
-                    parameter {
-                      insertData = 1
-                    }
-                    additionalParams = &tx_browser_pi1[staffUid]=###FE_USERS.UID###&###CHASH###
+                browser {
+                  handleRelation  = 1
+                  orderBy         = fe_users.last_name
+                  devider = TEXT
+                  devider {
+                    value       = ,
+                    noTrimWrap  = || |
                   }
                 }
-              }
-            }
-              // puppeteer
-            20 < .10
-            20 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.PUPPETEER###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.puppeteer
-            }
-              // dancer
-            30 < .10
-            30 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.DANCER###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.dancer
-            }
-              // vocals
-            40 < .10
-            40 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.VOCALS###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.vocals
-            }
-              // musician
-            50 < .10
-            50 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.MUSICIAN###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.musician
-            }
-              // video
-            60 < .10
-            60 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.VIDEO###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.video
-            }
-              // narrator
-            70 < .10
-            70 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.NARRATOR###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.narrator
-            }
-              // director
-            80 < .10
-            80 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.DIRECTOR###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.director
-            }
-              // advisor
-            90 < .10
-            90 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.ADVISOR###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.advisor
-            }
-              // assistant
-            100 < .10
-            100 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.ASSISTANT###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.assistant
-            }
-              // stage_design
-            110 < .10
-            110 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.STAGE_DESIGN###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.stage_design
-            }
-              // tailoring
-            120 < .10
-            120 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.TAILORING###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.tailoring
-            }
-              // requisite
-            130 < .10
-            130 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.REQUISITE###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.requisite
-            }
-              // garment
-            140 < .10
-            140 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.GARMENT###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.garment
-            }
-              // makeup
-            150 < .10
-            150 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.MAKEUP###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.makeup
-            }
-              // stage_manager
-            160 < .10
-            160 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.STAGE_MANAGER###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.stage_manager
-            }
-              // technical_manager
-            170 < .10
-            170 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.TECHNICAL_MANAGER###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.technical_manager
-            }
-              // technique
-            180 < .10
-            180 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.TECHNIQUE###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.technique
-            }
-              // light
-            190 < .10
-            190 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.LIGHT###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.light
-            }
-              // sound
-            200 < .10
-            200 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.SOUND###
-              10.data = LLL:EXT:org/locallang_db.xml:tx_org_repertoire.sound
-            }
-              // others
-            210 < .10
-            210 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.OTHERS###
-              10 {
-                data >
-                value = ###TX_ORG_REPERTOIRE.OTHERSLABEL###
+                value = ###FE_USERS.FIRST_NAME### ###FE_USERS.LAST_NAME###
+                typolink {
+                  parameter = {$plugin.org.pages.staff}
+                  parameter {
+                    insertData = 1
+                  }
+                  additionalParams = &tx_browser_pi1[staffUid]=###FE_USERS.UID###&###CHASH###
+                }
               }
             }
           }
