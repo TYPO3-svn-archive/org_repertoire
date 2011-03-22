@@ -474,6 +474,45 @@ plugin.tx_browser_pi1 {
               wrap  = <p>|</p>
             }
           }
+          image  < tt_content.image.20
+          image {
+            imgList.field >
+            imgList = ###TX_ORG_REPERTOIRE.IMAGE###
+            imgPath = uploads/tx_org/
+            1 {
+              file {
+                width.field >
+                width   = 160c;
+                height  = 110c;
+              }
+              altText.field   >
+              altText         = ###TX_ORG_REPERTOIRE.IMAGESEO###
+              titleText.field >
+              titleText       = ###TX_ORG_REPERTOIRE.IMAGESEO###
+              imageLinkWrap {
+                enable.field >
+                enable = 1
+                width   = 1000;
+                height  = 800m;
+                //JSwindow = 0
+              }
+            }
+            layout {
+              key.field >
+                // above-left
+              key = 2
+            }
+            cols.field >
+            cols = 3
+            caption.1 {
+              field >
+              value = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+            }
+            stdWrap {
+              prefixComment >
+              wrap          = <div class="image image_default">|</div>
+            }
+          }
         }
       }
     }
@@ -484,7 +523,7 @@ plugin.tx_browser_pi1 {
       list_mode_331_titleTag      = TYPO3 Organiser: Repertoire
       list_mode_331_keywords      = TYPO3, Organiser, Repertoire
       list_mode_331_summary       = TYPO3 Organiser: Repertoire
-      single_mode_331_titleTag    = TYPO3 Organiser: ###TX_ORG_CAL.TITLE###
+      single_mode_331_titleTag    = TYPO3 Organiser: ###TX_ORG_REPERTOIRE.TITLE###
       single_mode_331_keywords    = ###TX_ORG_REPERTOIRE.KEYWORDS###
       single_mode_331_summary     = ###TX_ORG_REPERTOIRE.DESCRIPTION###
     }
