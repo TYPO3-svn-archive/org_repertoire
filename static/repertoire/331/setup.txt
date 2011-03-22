@@ -231,8 +231,17 @@ plugin.tx_browser_pi1 {
           tx_org_cal.uid,
           tx_org_cal.datetime
         )
-        orderBy   = tx_org_cal.datetime DESC
-        //andWhere  = tx_org_cal.datetime > UNIX_TIMESTAMP()
+        orderBy {
+          tx_org_cal (
+            SELECT    tx_org_cal.uid   AS 'uid', 
+                      tx_org_cal.title AS 'title'
+            FROM      tx_org_cal,
+                      tx_org_repertoire_mm_tx_org_cal
+            WHERE     tx_org_repertoire_mm_tx_org_cal.uid_local    = ###UID_LOCAL###
+              AND     tx_org_repertoire_mm_tx_org_cal.uid_foreign  = tx_org_cal.uid
+            ORDER BY  tx_org_cal.datetime DESC
+)
+        }
         tx_org_cal {
           datetime = COA
           datetime {
@@ -269,7 +278,6 @@ plugin.tx_browser_pi1 {
                 wrap      = <li class="expired">|</li>
                 value     = ###TX_ORG_CAL.DATETIME###
                 strftime  = %a, %d. %b %Y, %H:%M Uhr
-                wrap      = <li>|</li>
                 typolink {
                   parameter = {$plugin.org.pages.calendar_expired}
                   parameter {
