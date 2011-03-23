@@ -1,9 +1,9 @@
 <?php
 
 ########################################################################
-# Extension Manager/Repository config file for ext "org_workshops".
+# Extension Manager/Repository config file for ext "org_repertoire".
 #
-# Auto generated 01-02-2011 01:17
+# Auto generated 22-03-2011 02:15
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
@@ -11,39 +11,39 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-  'title' => 'Org +Repertoire',
-  'description' => 'Extend the Organiser with a repertoire database!',
-  'category' => 'plugin',
-  'shy' => 0,
-  'version' => '0.4.5',
-  'dependencies' => 'org',
-  'conflicts' => '',
-  'priority' => '',
-  'loadOrder' => '',
-  'module' => '',
-  'state' => 'beta',
-  'uploadfolder' => 1,
-  'createDirs' => '',
-  'modify_tables' => '',
-  'clearcacheonload' => 1,
-  'lockType' => '',
-  'author' => 'Dirk Wildt (Die Netzmacher)',
-  'author_email' => 'http://wildt.at.die-netzmacher.de',
-  'author_company' => '',
-  'CGLcompliance' => '',
-  'CGLcompliance_note' => '',
-  'constraints' => array(
-    'depends' => array(
-      'org' => '0.4.4-0.0.0',
-    ),
-    'conflicts' => array(
-    ),
-    'suggests' => array(
-    ),
-  ),
-  'suggests' => array(
-  ),
-  '_md5_values_when_last_written' => 'a:26:{s:9:"ChangeLog";s:4:"27f6";s:21:"ext_conf_template.txt";s:4:"bb5b";s:12:"ext_icon.gif";s:4:"ec42";s:14:"ext_tables.php";s:4:"2b67";s:14:"ext_tables.sql";s:4:"df29";s:16:"locallang_db.xml";s:4:"7297";s:7:"tca.php";s:4:"dc19";s:16:"ext_icon/cat.gif";s:4:"ec42";s:19:"ext_icon/degree.gif";s:4:"ec42";s:19:"ext_icon/sector.gif";s:4:"ec42";s:17:"ext_icon/type.gif";s:4:"ec42";s:21:"ext_icon/workshop.gif";s:4:"ec42";s:41:"lib/class.tx_org_workshops_extmanager.php";s:4:"5deb";s:17:"lib/locallang.xml";s:4:"0346";s:20:"res/realurl_conf.php";s:4:"d41d";s:42:"res/html/workshop/351/datepicker_test.tmpl";s:4:"0ca0";s:34:"res/html/workshop/351/default.tmpl";s:4:"1b32";s:34:"res/html/workshop/361/default.tmpl";s:4:"c118";s:25:"static/base/constants.txt";s:4:"ca49";s:21:"static/base/setup.txt";s:4:"219b";s:33:"static/workshop/351/constants.txt";s:4:"d41d";s:29:"static/workshop/351/setup.txt";s:4:"9c42";s:33:"static/workshop/361/constants.txt";s:4:"d41d";s:29:"static/workshop/361/setup.txt";s:4:"1dbd";s:20:"tsConfig/de/page.txt";s:4:"8c2b";s:25:"tsConfig/default/page.txt";s:4:"cdcd";}',
+	'title' => 'Org +Repertoire',
+	'description' => 'Extend the Organiser with a repertoire database!',
+	'category' => 'plugin',
+	'shy' => 0,
+	'version' => '0.5.0',
+	'dependencies' => 'org',
+	'conflicts' => '',
+	'priority' => '',
+	'loadOrder' => '',
+	'module' => '',
+	'state' => 'beta',
+	'uploadfolder' => 1,
+	'createDirs' => '',
+	'modify_tables' => '',
+	'clearcacheonload' => 1,
+	'lockType' => '',
+	'author' => 'Dirk Wildt (Die Netzmacher)',
+	'author_email' => 'http://wildt.at.die-netzmacher.de',
+	'author_company' => '',
+	'CGLcompliance' => '',
+	'CGLcompliance_note' => '',
+	'constraints' => array(
+		'depends' => array(
+			'org' => '0.4.4-0.0.0',
+		),
+		'conflicts' => array(
+		),
+		'suggests' => array(
+		),
+	),
+	'suggests' => array(
+	),
+	'_md5_values_when_last_written' => 'a:24:{s:9:"ChangeLog";s:4:"21aa";s:21:"ext_conf_template.txt";s:4:"70bb";s:12:"ext_icon.gif";s:4:"ec42";s:14:"ext_tables.php";s:4:"095d";s:14:"ext_tables.sql";s:4:"fd1c";s:16:"locallang_db.xml";s:4:"88f3";s:7:"tca.php";s:4:"263e";s:23:"ext_icon/repertoire.gif";s:4:"1dc3";s:42:"lib/class.tx_org_repertoire_extmanager.php";s:4:"4cf8";s:17:"lib/locallang.xml";s:4:"a968";s:20:"res/realurl_conf.php";s:4:"5203";s:36:"res/html/repertoire/331/default.tmpl";s:4:"b9c6";s:25:"static/base/constants.txt";s:4:"41fc";s:21:"static/base/setup.txt";s:4:"0134";s:33:"static/calendar/201/constants.txt";s:4:"d41d";s:29:"static/calendar/201/setup.txt";s:4:"4eaa";s:41:"static/calendar/201/expired/constants.txt";s:4:"d41d";s:37:"static/calendar/201/expired/setup.txt";s:4:"adef";s:33:"static/calendar/211/constants.txt";s:4:"d41d";s:29:"static/calendar/211/setup.txt";s:4:"7d21";s:35:"static/repertoire/331/constants.txt";s:4:"d41d";s:31:"static/repertoire/331/setup.txt";s:4:"ad79";s:20:"tsConfig/de/page.txt";s:4:"6526";s:25:"tsConfig/default/page.txt";s:4:"6526";}',
 );
 
 ?>
