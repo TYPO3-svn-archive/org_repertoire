@@ -53,6 +53,7 @@ CREATE TABLE tx_org_repertoire (
   sound tinytext,
   otherslabel tinytext,
   others tinytext,
+  documents_from_path tinytext,
   documents text,
   documentscaption tinytext,
   documentslayout tinyint(4) unsigned DEFAULT '0' NOT NULL,
