@@ -843,27 +843,28 @@ $TCA['tx_org_repertoire'] = array (
     ),
   ),
   'types' => array (
-    '0' => array('showitem' =>  '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_repertoire,   title;;;;1-1-1,subtitle,producer,length,staff;;;richtext[]:rte_transform[mode=ts];,bodytext;;;richtext[]:rte_transform[mode=ts];,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_teaser,       teaser_title,teaser_subtitle,teaser_short,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_actors,       actor,puppeteer,dancer,vocals,musician,video,narrator,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_direction,    director,advisor,assistant,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_requirements, stage_design,tailoring,requisite,garment,makeup,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_technique,    stage_manager,technical_manager,technique,light,sound,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_others,       otherslabel,others,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_doc,          ' .
-                                  '--palette--;LLL:EXT:cms/locallang_ttc.xml:media;documents_upload,' .
-                                  '--palette--;LLL:EXT:org/locallang_db.xml:palette.appearance;documents_appearance,' .
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_news,         tx_org_news,'.
-                                '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
-                                  '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
-                                  '--palette--;LLL:EXT:org/locallang_db.xml:palette.image_accessibility;image_accessibility,' .
-                                  '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,' .
-                                  '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,' .
-                                  '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,' .
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_calendar,     tx_org_cal,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_control,      hidden,pages,fe_group,'.
-                                '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_seo,          keywords,description'.
-                                ''),
+    '0' => array('showitem' =>  
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_repertoire,   title;;;;1-1-1,subtitle,producer,length,staff;;;richtext[]:rte_transform[mode=ts];,bodytext;;;richtext[]:rte_transform[mode=ts];,'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_teaser,       teaser_title,teaser_subtitle,teaser_short,'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_actors,       actor,puppeteer,dancer,vocals,musician,video,narrator,'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_direction,    director,advisor,assistant,'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_requirements, stage_design,tailoring,requisite,garment,makeup,'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_technique,    stage_manager,technical_manager,technique,light,sound,'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_others,       otherslabel,others,'.
+      '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
+        '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
+        '--palette--;LLL:EXT:org/locallang_db.xml:palette.image_accessibility;image_accessibility,' .
+        '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,' .
+        '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,' .
+        '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,' .
+      '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.media,' .
+        '--palette--;LLL:EXT:cms/locallang_ttc.xml:media;documents_upload,' .
+        '--palette--;LLL:EXT:org/locallang_db.xml:palette.appearance;documents_appearance,' .
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_news,         tx_org_news,'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_calendar,     tx_org_cal,'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_control,      hidden,pages,fe_group,'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_seo,          keywords,description'.
+                          ''),
   ),
   'palettes' => array (
      '1'  => array('showitem' => 'starttime,endtime,'),
