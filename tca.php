@@ -572,7 +572,7 @@ $TCA['tx_org_repertoire'] = array (
       'config'  => $conf_text_30_05,
     ),
     'imagecaption_position' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_none,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:imagecaption_position',
       'config' => array (
         'type' => 'select',
@@ -591,7 +591,7 @@ $TCA['tx_org_repertoire'] = array (
       'config'  => $conf_text_30_05,
     ),
     'imagewidth' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_default,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:imagewidth',
       'config' => array (
         'type' => 'input',
@@ -603,7 +603,7 @@ $TCA['tx_org_repertoire'] = array (
       )
     ),
     'imageheight' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_default,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:imageheight',
       'config' => array (
         'type' => 'input',
@@ -637,21 +637,21 @@ $TCA['tx_org_repertoire'] = array (
       )
     ),
     'imageborder' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_none,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:imageborder',
       'config' => array (
         'type' => 'check'
       )
     ),
     'image_noRows' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_none,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:image_noRows',
       'config' => array (
         'type' => 'check'
       )
     ),
     'image_link' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_default,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:image_link',
       'config' => array (
         'type' => 'text',
@@ -671,14 +671,14 @@ $TCA['tx_org_repertoire'] = array (
       )
     ),
     'image_zoom' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_default,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:image_zoom',
       'config' => array (
         'type' => 'check'
       )
     ),
     'image_effects' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_default,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:image_effects',
       'config' => array (
         'type' => 'select',
@@ -697,7 +697,7 @@ $TCA['tx_org_repertoire'] = array (
       )
     ),
     'image_frames' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_none,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:image_frames',
       'config' => array (
         'type' => 'select',
@@ -715,7 +715,7 @@ $TCA['tx_org_repertoire'] = array (
       )
     ),
     'image_compression' => array (
-      'exclude' => 1,
+      'exclude' => $bool_exclude_none,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:image_compression',
       'config' => array (
         'type' => 'select',
@@ -744,6 +744,7 @@ $TCA['tx_org_repertoire'] = array (
       )
     ),
     'imagecols' => array (
+      'exclude' => $bool_exclude_default,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:imagecols',
       'config' => array (
         'type' => 'select',
