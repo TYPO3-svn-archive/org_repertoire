@@ -27,7 +27,8 @@
       <label index="tx_org_repertoire.div_requirements">Requirements</label>
       <label index="tx_org_repertoire.div_technique">Technique</label>
       <label index="tx_org_repertoire.div_others">Other Staff</label>
-      <label index="tx_org_repertoire.div_doc"><![CDATA[Documents & News]]></label>
+      <label index="tx_org_repertoire.div_doc">Documents</label>
+      <label index="tx_org_repertoire.div_news">News</label>
       <label index="tx_org_repertoire.div_media">Media</label>
       <label index="tx_org_repertoire.div_calendar">Calendar</label>
       <label index="tx_org_repertoire.div_control">Controlling</label>
@@ -92,8 +93,9 @@
       <label index="tx_org_repertoire.div_requirements">Austattung</label>
       <label index="tx_org_repertoire.div_technique">Technik</label>
       <label index="tx_org_repertoire.div_others">Andere Beteiligte</label>
+      <label index="tx_org_repertoire.div_doc">Dokumente</label>
+      <label index="tx_org_repertoire.div_news">Nachrichten</label>
       <label index="tx_org_repertoire.div_media">Medien</label>
-      <label index="tx_org_repertoire.div_doc"><![CDATA[Dokumente & News]]></label>
       <label index="tx_org_repertoire.div_calendar">Spieltermine</label>
       <label index="tx_org_repertoire.div_control">Steuerung</label>
       <label index="tx_org_repertoire.div_seo">Suchmaschinen</label>
