@@ -387,8 +387,8 @@ plugin.tx_browser_pi1 {
                 }
                 30 {
                   if {
-                    isPositive.field >
-                    isPositive = ###TX_ORG_REPERTOIRE.DOCUMENTSSIZE###
+                    isTrue.field >
+                    isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTSSIZE###
                   }
                 }
               }
@@ -399,9 +399,9 @@ plugin.tx_browser_pi1 {
                 caption   = ###TX_ORG_REPERTOIRE.DOCUMENTSCAPTION###
                 layout    = ###TX_ORG_REPERTOIRE.DOCUMENTSLAYOUT###
               }
-            }
-            stdWrap {
-              if.isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTS######TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
+              stdWrap {
+                if.isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTS######TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
+              }
             }
           }
             // object with image, bodytext and staff
