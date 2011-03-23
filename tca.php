@@ -855,9 +855,9 @@ $TCA['tx_org_repertoire'] = array (
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_news,         tx_org_news,'.
                                 '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
                                   '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
+                                  '--palette--;LLL:EXT:org/locallang_db.xml:palette.image_accessibility;image_accessibility,' .
                                   '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,' .
                                   '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,' .
-//                                  '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_accessibility;image_accessibility,' .
                                   '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,' .
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_calendar,     tx_org_cal,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_control,      hidden,pages,fe_group,'.
@@ -867,7 +867,7 @@ $TCA['tx_org_repertoire'] = array (
   'palettes' => array (
      '1'  => array('showitem' => 'starttime,endtime,'),
     'image_accessibility' => array(
-      'showitem' => 'imageseo;LLL:EXT:cms/locallang_ttc.xml:titleText_formlabel,',
+      'showitem' => 'imageseo;LLL:EXT:org/locallang_db.xml:tca_phrase.imageseo,',
       'canNotCollapse' => 1,
     ),
     'imageblock' => array(
@@ -876,7 +876,7 @@ $TCA['tx_org_repertoire'] = array (
       'canNotCollapse' => 1,
     ),
     'imagefiles' => array(
-      'showitem' => 'image;LLL:EXT:cms/locallang_ttc.xml:image_formlabel, imagecaption;LLL:EXT:cms/locallang_ttc.xml:imagecaption_formlabel,LLL:EXT:cms/locallang_ttc.xml:palette.image_accessibility;image_accessibility,imageseo;LLL:EXT:cms/locallang_ttc.xml:titleText_formlabel,;;nowrap',
+      'showitem' => 'image;LLL:EXT:cms/locallang_ttc.xml:image_formlabel, imagecaption;LLL:EXT:cms/locallang_ttc.xml:imagecaption_formlabel,',
       'canNotCollapse' => 1,
     ),
     'imagelinks' => array(
