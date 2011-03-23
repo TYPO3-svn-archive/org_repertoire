@@ -876,7 +876,7 @@ $TCA['tx_org_repertoire'] = array (
       'canNotCollapse' => 1,
     ),
     'imagefiles' => array(
-      'showitem' => 'image;LLL:EXT:cms/locallang_ttc.xml:image_formlabel, imagecaption;LLL:EXT:cms/locallang_ttc.xml:imagecaption_formlabel,imageseo;LLL:EXT:cms/locallang_ttc.xml:titleText_formlabel,;;nowrap',
+      'showitem' => 'image;LLL:EXT:cms/locallang_ttc.xml:image_formlabel, imagecaption;LLL:EXT:cms/locallang_ttc.xml:imagecaption_formlabel,LLL:EXT:cms/locallang_ttc.xml:palette.image_accessibility;image_accessibility,imageseo;LLL:EXT:cms/locallang_ttc.xml:titleText_formlabel,;;nowrap',
       'canNotCollapse' => 1,
     ),
     'imagelinks' => array(
