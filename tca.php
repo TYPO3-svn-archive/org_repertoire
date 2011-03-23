@@ -852,6 +852,7 @@ $TCA['tx_org_repertoire'] = array (
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_others,       otherslabel,others,'.
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_doc,          ' .
                                   '--palette--;LLL:EXT:cms/locallang_ttc.xml:media;uploads,' .
+                                  '--palette--;LLL:EXT:org/locallang_db.xml:palette.appearance;documents_appearance,' .
                                 '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_news,         tx_org_news,'.
                                 '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
                                   '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
@@ -866,6 +867,10 @@ $TCA['tx_org_repertoire'] = array (
   ),
   'palettes' => array (
      '1'  => array('showitem' => 'starttime,endtime,'),
+    'documents_appearance' => array(
+      'showitem' => 'documentslayout;LLL:EXT:org/locallang_db.xml:tca_phrase.documentslayout,documentssize;LLL:EXT:cms/locallang_ttc.xml:filelink_size_formlabel',
+      'canNotCollapse' => 1,
+    ),
     'image_accessibility' => array(
       'showitem' => 'imageseo;LLL:EXT:org/locallang_db.xml:tca_phrase.imageseo,',
       'canNotCollapse' => 1,
@@ -890,8 +895,7 @@ $TCA['tx_org_repertoire'] = array (
     ),
     'uploads' => array(
       'showitem' => 'documents_from_path;LLL:EXT:cms/locallang_ttc.xml:select_key.ALT.uploads_formlabel, --linebreak--,' .
-                    'documents;LLL:EXT:cms/locallang_ttc.xml:media.ALT.uploads_formlabel, documentscaption;LLL:EXT:cms/locallang_ttc.xml:imagecaption.ALT.uploads_formlabel;;nowrap, --linebreak--,' .
-                    'documentslayout;DOKU_LAYOUT,documentssize;LLL:EXT:cms/locallang_ttc.xml:filelink_size_formlabel',
+                    'documents;LLL:EXT:cms/locallang_ttc.xml:media.ALT.uploads_formlabel, documentscaption;LLL:EXT:cms/locallang_ttc.xml:imagecaption.ALT.uploads_formlabel;;nowrap, --linebreak--,',
       'canNotCollapse' => 1,
     ),
   )
