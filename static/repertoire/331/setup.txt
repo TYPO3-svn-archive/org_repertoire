@@ -168,6 +168,26 @@ plugin.tx_browser_pi1 {
             lang.de = Repertoire
             wrap    = <div class="header01">|</div>
           }
+          my_content_div_begin = COA
+          my_content_div_begin {
+              // With datesheet
+            10 = TEXT
+            10 {
+              if.isTrue = ###TX_ORG_CAL.DATETIME###
+              value     = <div class="repertoire_content repertoire_content_wi_datesheet">
+            }
+              // Without datesheet
+            20 = TEXT
+            20 {
+              if.isTrue = ###TX_ORG_CAL.DATETIME###
+              value     = <div class="repertoire_content repertoire_content_wo_datesheet">
+            }
+          }
+          my_content_div_end = TEXT
+          my_content_div_end {
+            if.isTrue = ###TX_ORG_CAL.DATETIME###
+            value     = </div>
+          }
           my_datesheet_div_begin = TEXT
           my_datesheet_div_begin {
             if.isTrue = ###TX_ORG_CAL.DATETIME###
@@ -446,6 +466,7 @@ plugin.tx_browser_pi1 {
               textPos                 = ###TX_ORG_REPERTOIRE.IMAGEORIENT###
               equalH.field            >
               equalH                  = ###TX_ORG_REPERTOIRE.IMAGEHEIGHT###
+equalH >
               image_compression.field >
               image_compression       = ###TX_ORG_REPERTOIRE.IMAGE_COMPRESSION###
               image_effects.field     >

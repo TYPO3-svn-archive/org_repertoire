@@ -170,7 +170,7 @@ t3lib_extMgm::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKE
 
   // draft field tx_org_repertoire
 $arr_tx_org_repertoire = array (
-  'exclude' => 0,
+  'exclude' => $bool_exclude_default,
   'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire',
   'config'  => array (
     'type'     => 'select', 

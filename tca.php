@@ -592,26 +592,26 @@ $TCA['tx_org_repertoire'] = array (
     ),
     'imagewidth' => array (
       'exclude' => $bool_exclude_default,
-      'label' => 'LLL:EXT:cms/locallang_ttc.xml:imagewidth',
-      'config' => array (
-        'type' => 'input',
-        'size' => '10',
-        'max' => '10',
-        'eval' => 'trim',
-        'checkbox' => '0',
-        'default' => '160c'
+      'label'   => 'LLL:EXT:cms/locallang_ttc.xml:imagewidth',
+      'config'  => array (
+        'type'      => 'input',
+        'size'      => '10',
+        'max'       => '10',
+        'eval'      => 'trim',
+        'checkbox'  => '0',
+        'default'   => '160c'
       )
     ),
     'imageheight' => array (
       'exclude' => $bool_exclude_default,
-      'label' => 'LLL:EXT:cms/locallang_ttc.xml:imageheight',
-      'config' => array (
-        'type' => 'input',
-        'size' => '10',
-        'max' => '10',
-        'eval' => 'trim',
-        'checkbox' => '0',
-        'default' => '120c'
+      'label'   => 'LLL:EXT:cms/locallang_ttc.xml:imageheight',
+      'config'  => array (
+        'type'      => 'input',
+        'size'      => '10',
+        'max'       => '10',
+        'eval'      => 'trim',
+        'checkbox'  => '0',
+        'default'   => '120c'
       )
     ),
     'imageorient' => array (
