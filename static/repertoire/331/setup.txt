@@ -504,18 +504,6 @@ plugin.tx_browser_pi1 {
               }
             }
           }
-            // bodytext, staff without any image
-          bodytextXX < .image
-          bodytextXX {
-            if {
-              isTrue >
-              isFalse = ###TX_ORG_REPERTOIRE.IMAGE###
-            }
-            10 {
-              imgList >
-              imgPath >
-            }
-          }
             // subtitle, title, producer
           title = COA
           title {
