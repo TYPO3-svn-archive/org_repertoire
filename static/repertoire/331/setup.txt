@@ -383,47 +383,6 @@ plugin.tx_browser_pi1 {
               }
             }
           }
-          documents = COA
-          documents {
-              // title
-            10 = TEXT
-            10 {
-              if.isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTS######TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
-              value     = Documents
-              lang.de   = Dokumente
-              wrap      = <h2 class="repertoire_documents">|</h2>
-            }
-              // documents
-            20 < tt_content.uploads.20
-            20 {
-              userFunc = tx_browser_cssstyledcontent->render_uploads
-              filePath >
-              itemRendering {
-                10 {
-                  if {
-                    isPositive.field >
-                    isPositive = ###TX_ORG_REPERTOIRE.DOCUMENTSLAYOUT###
-                  }
-                }
-                30 {
-                  if {
-                    isTrue.field >
-                    isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTSSIZE###
-                  }
-                }
-              }
-              tableField = tx_org_repertoire.documents
-              fields {
-                from_path = ###TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
-                files     = ###TX_ORG_REPERTOIRE.DOCUMENTS###
-                caption   = ###TX_ORG_REPERTOIRE.DOCUMENTSCAPTION###
-                layout    = ###TX_ORG_REPERTOIRE.DOCUMENTSLAYOUT###
-              }
-              stdWrap {
-                if.isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTS######TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
-              }
-            }
-          }
             // bodytext, staff and image
           bodytext < tt_content.image.20
           bodytext {
@@ -501,6 +460,47 @@ plugin.tx_browser_pi1 {
                 stdWrap {
                   parseFunc < lib.parseFunc_RTE
                 }
+              }
+            }
+          }
+          documents = COA
+          documents {
+              // title
+            10 = TEXT
+            10 {
+              if.isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTS######TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
+              value     = Documents
+              lang.de   = Dokumente
+              wrap      = <h2 class="repertoire_documents">|</h2>
+            }
+              // documents
+            20 < tt_content.uploads.20
+            20 {
+              userFunc = tx_browser_cssstyledcontent->render_uploads
+              filePath >
+              itemRendering {
+                10 {
+                  if {
+                    isPositive.field >
+                    isPositive = ###TX_ORG_REPERTOIRE.DOCUMENTSLAYOUT###
+                  }
+                }
+                30 {
+                  if {
+                    isTrue.field >
+                    isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTSSIZE###
+                  }
+                }
+              }
+              tableField = tx_org_repertoire.documents
+              fields {
+                from_path = ###TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
+                files     = ###TX_ORG_REPERTOIRE.DOCUMENTS###
+                caption   = ###TX_ORG_REPERTOIRE.DOCUMENTSCAPTION###
+                layout    = ###TX_ORG_REPERTOIRE.DOCUMENTSLAYOUT###
+              }
+              stdWrap {
+                if.isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTS######TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
               }
             }
           }
