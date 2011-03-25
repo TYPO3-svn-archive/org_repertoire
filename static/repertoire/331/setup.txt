@@ -185,7 +185,6 @@ plugin.tx_browser_pi1 {
           }
           my_content_div_end = TEXT
           my_content_div_end {
-            if.isTrue = ###TX_ORG_CAL.DATETIME###
             value     = </div>
           }
           my_datesheet_div_begin = TEXT
