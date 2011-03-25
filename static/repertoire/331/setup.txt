@@ -174,7 +174,7 @@ plugin.tx_browser_pi1 {
             10 = TEXT
             10 {
               if.isTrue = ###TX_ORG_CAL.DATETIME###
-              value     = <div class="repertoire_content repertoire_content_wi_datesheet">
+              value     = <div class="repertoire_content repertoire_content_wi_datesheet" style="padding-left:70px;">
             }
               // Without datesheet
             20 = TEXT
