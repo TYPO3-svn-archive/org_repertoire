@@ -6,7 +6,7 @@
 
   // plugin.tx_browser_pi1
   //    views
-  //      201: calendar +repertoire
+  //      201: +Org-Repertoire: Calendar
 
 
 
@@ -18,9 +18,9 @@ plugin.tx_browser_pi1 {
   
   views {
     list {
-      201 = calendar +repertoire
+      201 = +Org-Repertoire: Calendar
       201 {
-        name    = calendar +repertoire
+        name    = +Org-Repertoire: Calendar
 /*        select (
           tx_org_cal.title,
           tx_org_cal.subtitle,
@@ -42,7 +42,27 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.bodytext
         )
 */
-        select := addToList(tx_org_repertoire.title,tx_org_repertoire.subtitle,tx_org_repertoire.producer,tx_org_repertoire.teaser_short,tx_org_repertoire.bodytext)
+        select := addToList(
+          tx_org_repertoire.title,
+          tx_org_repertoire.subtitle,
+          tx_org_repertoire.producer,
+          tx_org_repertoire.teaser_short,
+          tx_org_repertoire.bodytext,
+          tx_org_repertoire.image,
+          tx_org_repertoire.imagecaption,
+          tx_org_repertoire.imageseo,
+          tx_org_repertoire.imagewidth,
+          tx_org_repertoire.imageheight,
+          tx_org_repertoire.imageorient,
+          tx_org_repertoire.imagecols,
+          tx_org_repertoire.imageborder,
+          tx_org_repertoire.image_frames,
+          tx_org_repertoire.image_link,
+          tx_org_repertoire.image_zoom,
+          tx_org_repertoire.image_noRows,
+          tx_org_repertoire.image_effects,
+          tx_org_repertoire.image_compression,
+)
         tx_org_cal {
           short {
             10 {
@@ -123,50 +143,43 @@ plugin.tx_browser_pi1 {
       }
     }
     single {
-      201 = calendar +repertoire
+      201 = +Org-Repertoire: Calendar
       201 {
-/*        select (
-          tx_org_cal.title,
-          tx_org_cal.subtitle,
-          tx_org_cal.short,
-          tx_org_cal.bodytext,
+        select >
+        select (
           tx_org_cal.datetime,
-          tx_org_cal.image,
-          tx_org_cal.imagecaption,
-          tx_org_cal.imageseo,
-          tx_org_cal.description,
-          tx_org_cal.keywords,
           tx_org_cal.uid,
-          tx_org_cal.type,
           tx_org_caltype.title,
           tx_org_calentrance.title,
           tx_org_calentrance.value,
           tx_org_calentrance.uid,
-          tx_org_event.title,
-          tx_org_event.subtitle,
-          tx_org_event.short,
-          tx_org_event.bodytext,
-          tx_org_event.image,
-          tx_org_event.imagecaption,
-          tx_org_event.imageseo,
-          tx_org_event.description,
-          tx_org_event.keywords,
-          tx_org_event.uid,
+          tx_org_repertoire.uid,
           tx_org_repertoire.title,
           tx_org_repertoire.subtitle,
-          tx_org_repertoire.teaser_short,
           tx_org_repertoire.bodytext,
+          tx_org_repertoire.staff,
+          tx_org_repertoire.producer,
+
           tx_org_repertoire.image,
           tx_org_repertoire.imagecaption,
           tx_org_repertoire.imageseo,
+          tx_org_repertoire.imagewidth,
+          tx_org_repertoire.imageheight,
+          tx_org_repertoire.imageorient,
+          tx_org_repertoire.imagecols,
+          tx_org_repertoire.imageborder,
+          tx_org_repertoire.image_frames,
+          tx_org_repertoire.image_link,
+          tx_org_repertoire.image_zoom,
+          tx_org_repertoire.image_noRows,
+          tx_org_repertoire.image_effects,
+          tx_org_repertoire.image_compression,
+
           tx_org_repertoire.description,
           tx_org_repertoire.keywords,
-          tx_org_repertoire.uid,
           tx_org_location.uid,
           tx_org_location.title
         )
-*/
-        select := addToList(tx_org_repertoire.title,tx_org_repertoire.subtitle,tx_org_repertoire.producer,tx_org_repertoire.teaser_short,tx_org_repertoire.bodytext,tx_org_repertoire.image,tx_org_repertoire.imagecaption,tx_org_repertoire.imageseo,tx_org_repertoire.description,tx_org_repertoire.keywords,tx_org_repertoire.uid)
         tx_org_cal {
           bodytext {
             11 {
