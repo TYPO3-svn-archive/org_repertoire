@@ -42,7 +42,61 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.bodytext
         )
 */
-        select := addToList(
+        select (
+          tx_org_cal.title,
+          tx_org_cal.subtitle,
+          tx_org_cal.short,
+          tx_org_cal.bodytext,
+          tx_org_cal.datetime,
+
+          tx_org_cal.image,
+          tx_org_cal.imagecaption,
+          tx_org_cal.imageseo,
+          tx_org_cal.imagewidth,
+          tx_org_cal.imageheight,
+          tx_org_cal.imageorient,
+          tx_org_cal.imagecols,
+          tx_org_cal.imageborder,
+          tx_org_cal.image_frames,
+          tx_org_cal.image_link,
+          tx_org_cal.image_zoom,
+          tx_org_cal.image_noRows,
+          tx_org_cal.image_effects,
+          tx_org_cal.image_compression,
+
+          tx_org_cal.description,
+          tx_org_cal.keywords,
+          tx_org_cal.uid,
+          tx_org_caltype.title,
+
+          tx_org_calentrance.title,
+          tx_org_calentrance.value,
+          tx_org_calentrance.uid,
+
+          tx_org_event.title,
+          tx_org_event.subtitle,
+          tx_org_event.short,
+          tx_org_event.bodytext,
+
+          tx_org_event.image,
+          tx_org_event.imagecaption,
+          tx_org_event.imageseo,
+          tx_org_event.imagewidth,
+          tx_org_event.imageheight,
+          tx_org_event.imageorient,
+          tx_org_event.imagecols,
+          tx_org_event.imageborder,
+          tx_org_event.image_frames,
+          tx_org_event.image_link,
+          tx_org_event.image_zoom,
+          tx_org_event.image_noRows,
+          tx_org_event.image_effects,
+          tx_org_event.image_compression,
+
+          tx_org_event.description,
+          tx_org_event.keywords,
+          tx_org_event.uid,
+
           tx_org_repertoire.title,
           tx_org_repertoire.subtitle,
           tx_org_repertoire.producer,
@@ -62,7 +116,13 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.image_noRows,
           tx_org_repertoire.image_effects,
           tx_org_repertoire.image_compression,
-)
+
+          tx_org_repertoire.description,
+          tx_org_repertoire.keywords,
+
+          tx_org_location.uid,
+          tx_org_location.title
+        )
         tx_org_cal {
           short {
             10 {
