@@ -36,8 +36,10 @@ plugin.tx_browser_pi1 {
           title {
             10 {
               tx_org_repertoire {
-                typolink {
-                  parameter = {$plugin.org.pages.calendar_expired} - linktosingle
+                10 {
+                  typolink {
+                    parameter = {$plugin.org.pages.calendar_expired} - linktosingle
+                  }
                 }
               }
             }
