@@ -22,7 +22,7 @@ plugin.tx_browser_pi1 {
       201 {
         name    = +Org-Repertoire: Calendar +expired
         tx_org_cal {
-          short {
+          teaser_short {
             10 {
               tx_org_repertoire {
                 30 {
