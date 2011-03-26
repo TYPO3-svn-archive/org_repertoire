@@ -41,7 +41,7 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.teaser_short,
           tx_org_repertoire.bodytext
         )
-        tx_org_repertoire {
+        tx_org_cal {
           short {
             10 {
               tx_org_repertoire = COA
