@@ -21,7 +21,7 @@ plugin.tx_browser_pi1 {
       201 = +Org-Repertoire: Calendar
       201 {
         name    = +Org-Repertoire: Calendar
-/*        select (
+        select (
           tx_org_cal.title,
           tx_org_cal.subtitle,
           tx_org_cal.short,
@@ -37,91 +37,8 @@ plugin.tx_browser_pi1 {
           tx_org_event.bodytext,
           tx_org_repertoire.title,
           tx_org_repertoire.subtitle,
-          tx_org_repertoire.producer,
-          tx_org_repertoire.teaser_short,
+          tx_org_repertoire.short,
           tx_org_repertoire.bodytext
-        )
-*/
-        select (
-          tx_org_cal.title,
-          tx_org_cal.subtitle,
-          tx_org_cal.short,
-          tx_org_cal.bodytext,
-          tx_org_cal.datetime,
-
-          tx_org_cal.image,
-          tx_org_cal.imagecaption,
-          tx_org_cal.imageseo,
-          tx_org_cal.imagewidth,
-          tx_org_cal.imageheight,
-          tx_org_cal.imageorient,
-          tx_org_cal.imagecols,
-          tx_org_cal.imageborder,
-          tx_org_cal.image_frames,
-          tx_org_cal.image_link,
-          tx_org_cal.image_zoom,
-          tx_org_cal.image_noRows,
-          tx_org_cal.image_effects,
-          tx_org_cal.image_compression,
-
-          tx_org_cal.description,
-          tx_org_cal.keywords,
-          tx_org_cal.uid,
-          tx_org_caltype.title,
-
-          tx_org_calentrance.title,
-          tx_org_calentrance.value,
-          tx_org_calentrance.uid,
-
-          tx_org_event.title,
-          tx_org_event.subtitle,
-          tx_org_event.short,
-          tx_org_event.bodytext,
-
-          tx_org_event.image,
-          tx_org_event.imagecaption,
-          tx_org_event.imageseo,
-          tx_org_event.imagewidth,
-          tx_org_event.imageheight,
-          tx_org_event.imageorient,
-          tx_org_event.imagecols,
-          tx_org_event.imageborder,
-          tx_org_event.image_frames,
-          tx_org_event.image_link,
-          tx_org_event.image_zoom,
-          tx_org_event.image_noRows,
-          tx_org_event.image_effects,
-          tx_org_event.image_compression,
-
-          tx_org_event.description,
-          tx_org_event.keywords,
-          tx_org_event.uid,
-
-          tx_org_repertoire.title,
-          tx_org_repertoire.subtitle,
-          tx_org_repertoire.producer,
-          tx_org_repertoire.teaser_short,
-          tx_org_repertoire.bodytext,
-          tx_org_repertoire.image,
-          tx_org_repertoire.imagecaption,
-          tx_org_repertoire.imageseo,
-          tx_org_repertoire.imagewidth,
-          tx_org_repertoire.imageheight,
-          tx_org_repertoire.imageorient,
-          tx_org_repertoire.imagecols,
-          tx_org_repertoire.imageborder,
-          tx_org_repertoire.image_frames,
-          tx_org_repertoire.image_link,
-          tx_org_repertoire.image_zoom,
-          tx_org_repertoire.image_noRows,
-          tx_org_repertoire.image_effects,
-          tx_org_repertoire.image_compression,
-
-          tx_org_repertoire.description,
-          tx_org_repertoire.keywords,
-
-          tx_org_location.uid,
-          tx_org_location.title
         )
         tx_org_cal {
           short {
@@ -207,18 +124,81 @@ plugin.tx_browser_pi1 {
       201 {
         select >
         select (
+          tx_org_cal.title,
+          tx_org_cal.subtitle,
+          tx_org_cal.short,
+          tx_org_cal.bodytext,
           tx_org_cal.datetime,
+          tx_org_cal.type,
+
+          tx_org_cal.image,
+          tx_org_cal.imagecaption,
+          tx_org_cal.imageseo,
+          tx_org_cal.imagewidth,
+          tx_org_cal.imageheight,
+          tx_org_cal.imageorient,
+          tx_org_cal.imagecols,
+          tx_org_cal.imageborder,
+          tx_org_cal.image_frames,
+          tx_org_cal.image_link,
+          tx_org_cal.image_zoom,
+          tx_org_cal.image_noRows,
+          tx_org_cal.image_effects,
+          tx_org_cal.image_compression,
+
+          tx_org_cal.description,
+          tx_org_cal.keywords,
           tx_org_cal.uid,
+
           tx_org_caltype.title,
+
           tx_org_calentrance.title,
           tx_org_calentrance.value,
           tx_org_calentrance.uid,
-          tx_org_repertoire.uid,
+
+          tx_org_event.title,
+          tx_org_event.subtitle,
+          tx_org_event.short,
+          tx_org_event.bodytext,
+
+          tx_org_event.documents_from_path,
+          tx_org_event.documents,
+          tx_org_event.documentslayout,
+          tx_org_event.documentscaption,
+          tx_org_event.documentssize, 
+
+          tx_org_event.image,
+          tx_org_event.imagecaption,
+          tx_org_event.imageseo,
+          tx_org_event.imagewidth,
+          tx_org_event.imageheight,
+          tx_org_event.imageorient,
+          tx_org_event.imagecols,
+          tx_org_event.imageborder,
+          tx_org_event.image_frames,
+          tx_org_event.image_link,
+          tx_org_event.image_zoom,
+          tx_org_event.image_noRows,
+          tx_org_event.image_effects,
+          tx_org_event.image_compression,
+
+          tx_org_event.description,
+          tx_org_event.keywords,
+          tx_org_event.uid,
+
+          tx_org_location.uid,
+          tx_org_location.title
+
           tx_org_repertoire.title,
           tx_org_repertoire.subtitle,
+          tx_org_repertoire.short,
           tx_org_repertoire.bodytext,
-          tx_org_repertoire.staff,
-          tx_org_repertoire.producer,
+
+          tx_org_repertoire.documents_from_path,
+          tx_org_repertoire.documents,
+          tx_org_repertoire.documentslayout,
+          tx_org_repertoire.documentscaption,
+          tx_org_repertoire.documentssize, 
 
           tx_org_repertoire.image,
           tx_org_repertoire.imagecaption,
@@ -237,30 +217,46 @@ plugin.tx_browser_pi1 {
 
           tx_org_repertoire.description,
           tx_org_repertoire.keywords,
-          tx_org_location.uid,
-          tx_org_location.title
+          tx_org_repertoire.uid,
+
         )
         tx_org_cal {
           bodytext {
-            11 {
-              tx_org_repertoire = TEXT
-              tx_org_repertoire {
-                required    = 1
-                if.isTrue   = ###TX_ORG_REPERTOIRE.BODYTEXT###
-                value       = ###TX_ORG_REPERTOIRE.BODYTEXT###
-                stripHtml   = 1
-                wrap        = <div class="cal_bodytext">|</div>
+            tx_org_repertoire < .default
+            tx_org_repertoire {
+              imgList                   = ###TX_ORG_REPERTOIRE.IMAGE###
+              1 {
+                file {
+                  width                 = ###TX_ORG_REPERTOIRE.IMAGEWIDTH###
+                  height                = ###TX_ORG_REPERTOIRE.IMAGEHEIGHT###
+                }
+                altText                 = ###TX_ORG_REPERTOIRE.IMAGESEO###
+                titleText               = ###TX_ORG_REPERTOIRE.IMAGESEO###
+                imageLinkWrap {
+                  ifEmpty {
+                    typolink.parameter  = ###TX_ORG_REPERTOIRE.IMAGE_LINK###
+                  }
+                  typolink.parameter    = ###TX_ORG_REPERTOIRE.IMAGE_LINK###
+                  enable                = ###TX_ORG_REPERTOIRE.IMAGE_ZOOM###
+                }
               }
-            }
-          }
-          image {
-            10 {
-              tx_org_repertoire < .default
-              tx_org_repertoire {
-                imgList         = ###TX_ORG_REPERTOIRE.IMAGE###
-                1.altText       = ###TX_ORG_REPERTOIRE.IMAGESEO###
-                1.titleText     = ###TX_ORG_REPERTOIRE.IMAGESEO###
-                caption.1.value = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+              textPos                   = ###TX_ORG_REPERTOIRE.IMAGEORIENT###
+              image_compression         = ###TX_ORG_REPERTOIRE.IMAGE_COMPRESSION###
+              image_effects             = ###TX_ORG_REPERTOIRE.IMAGE_EFFECTS###
+              noRows                    = ###TX_ORG_REPERTOIRE.IMAGE_NOROWS###
+              cols                      = ###TX_ORG_REPERTOIRE.IMAGECOLS###
+              border                    = ###TX_ORG_REPERTOIRE.IMAGEBORDER###
+              caption.1.value           = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+              captionAlign              = ###TX_ORG_REPERTOIRE.IMAGECAPTION_POSITION###
+              layout {
+                key                     = ###TX_ORG_REPERTOIRE.IMAGEORIENT###
+              }
+              text {
+                wrap      = <div class="cal_bodytext cal_bodytext_repertoire">|</div>
+                20 {
+                  if.isTrue   = ###TX_ORG_REPERTOIRE.BODYTEXT###
+                  value       = ###TX_ORG_REPERTOIRE.BODYTEXT###
+                }
               }
             }
           }
@@ -301,6 +297,34 @@ plugin.tx_browser_pi1 {
                   value       = by ###TX_ORG_REPERTOIRE.PRODUCER###
                   lang.de     = von ###TX_ORG_REPERTOIRE.PRODUCER###
                   wrap        = <h2 class="repertoire_producer">|</h2>
+                }
+              }
+            }
+          }
+        }
+        tx_org_event {
+          documents {
+              // repertoire
+            tx_org_repertoire < .tx_org_event
+            tx_org_repertoire {
+                // header
+              10 {
+                if.isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTS######TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
+                wrap      = <h2 class="repertoire_documents">|</h2>
+              }
+                // documents
+              20 {
+                itemRendering.10.if.isPositive  = ###TX_ORG_REPERTOIRE.DOCUMENTSLAYOUT###
+                itemRendering.30.if.isTrue      = ###TX_ORG_REPERTOIRE.DOCUMENTSSIZE###
+                tableField = tx_org_repertoire.documents
+                fields {
+                  from_path = ###TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
+                  files     = ###TX_ORG_REPERTOIRE.DOCUMENTS###
+                  caption   = ###TX_ORG_REPERTOIRE.DOCUMENTSCAPTION###
+                  layout    = ###TX_ORG_REPERTOIRE.DOCUMENTSLAYOUT###
+                }
+                stdWrap {
+                  if.isTrue = ###TX_ORG_REPERTOIRE.DOCUMENTS######TX_ORG_REPERTOIRE.DOCUMENTS_FROM_PATH###
                 }
               }
             }
