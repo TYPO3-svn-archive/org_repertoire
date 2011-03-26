@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "org_repertoire".
 #
-# Auto generated 22-03-2011 02:15
+# Auto generated 26-03-2011 01:56
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
@@ -43,7 +43,7 @@ $EM_CONF[$_EXTKEY] = array(
 	),
 	'suggests' => array(
 	),
-	'_md5_values_when_last_written' => 'a:24:{s:9:"ChangeLog";s:4:"21aa";s:21:"ext_conf_template.txt";s:4:"70bb";s:12:"ext_icon.gif";s:4:"ec42";s:14:"ext_tables.php";s:4:"095d";s:14:"ext_tables.sql";s:4:"fd1c";s:16:"locallang_db.xml";s:4:"88f3";s:7:"tca.php";s:4:"263e";s:23:"ext_icon/repertoire.gif";s:4:"1dc3";s:42:"lib/class.tx_org_repertoire_extmanager.php";s:4:"4cf8";s:17:"lib/locallang.xml";s:4:"a968";s:20:"res/realurl_conf.php";s:4:"5203";s:36:"res/html/repertoire/331/default.tmpl";s:4:"b9c6";s:25:"static/base/constants.txt";s:4:"41fc";s:21:"static/base/setup.txt";s:4:"0134";s:33:"static/calendar/201/constants.txt";s:4:"d41d";s:29:"static/calendar/201/setup.txt";s:4:"4eaa";s:41:"static/calendar/201/expired/constants.txt";s:4:"d41d";s:37:"static/calendar/201/expired/setup.txt";s:4:"adef";s:33:"static/calendar/211/constants.txt";s:4:"d41d";s:29:"static/calendar/211/setup.txt";s:4:"7d21";s:35:"static/repertoire/331/constants.txt";s:4:"d41d";s:31:"static/repertoire/331/setup.txt";s:4:"ad79";s:20:"tsConfig/de/page.txt";s:4:"6526";s:25:"tsConfig/default/page.txt";s:4:"6526";}',
+	'_md5_values_when_last_written' => 'a:24:{s:9:"ChangeLog";s:4:"7e7c";s:21:"ext_conf_template.txt";s:4:"70bb";s:12:"ext_icon.gif";s:4:"ec42";s:14:"ext_tables.php";s:4:"038a";s:14:"ext_tables.sql";s:4:"b482";s:16:"locallang_db.xml";s:4:"2f6c";s:7:"tca.php";s:4:"5dae";s:23:"ext_icon/repertoire.gif";s:4:"1dc3";s:42:"lib/class.tx_org_repertoire_extmanager.php";s:4:"4cf8";s:17:"lib/locallang.xml";s:4:"a968";s:20:"res/realurl_conf.php";s:4:"5203";s:36:"res/html/repertoire/331/default.tmpl";s:4:"dc7d";s:25:"static/base/constants.txt";s:4:"41fc";s:21:"static/base/setup.txt";s:4:"c0e8";s:33:"static/calendar/201/constants.txt";s:4:"d41d";s:29:"static/calendar/201/setup.txt";s:4:"0151";s:41:"static/calendar/201/expired/constants.txt";s:4:"d41d";s:37:"static/calendar/201/expired/setup.txt";s:4:"adef";s:33:"static/calendar/211/constants.txt";s:4:"d41d";s:29:"static/calendar/211/setup.txt";s:4:"7d21";s:35:"static/repertoire/331/constants.txt";s:4:"d41d";s:31:"static/repertoire/331/setup.txt";s:4:"9fd9";s:20:"tsConfig/de/page.txt";s:4:"6526";s:25:"tsConfig/default/page.txt";s:4:"6526";}',
 );
 
 ?>
