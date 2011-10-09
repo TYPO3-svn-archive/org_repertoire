@@ -266,7 +266,7 @@ if($bool_wizards_wo_add_and_list)
 {
   unset($TCA['fe_users']['columns']['tx_org_repertoire']['config']['wizards']['add']);
   unset($TCA['fe_users']['columns']['tx_org_repertoire']['config']['wizards']['list']);
-}  
+}
   // fe_users
 
   // tx_org_cal
@@ -292,6 +292,12 @@ $TCA['tx_org_cal']['columns']['tx_org_repertoire']['config']['MM']              
   'tx_org_repertoire_mm_tx_org_cal';
 $TCA['tx_org_cal']['columns']['tx_org_repertoire']['config']['MM_opposite_field'] =
   'tx_org_cal';
+
+if($bool_wizards_wo_add_and_list)
+{
+  unset($TCA['tx_org_cal']['columns']['tx_org_repertoire']['config']['wizards']['add']);
+  unset($TCA['tx_org_cal']['columns']['tx_org_repertoire']['config']['wizards']['list']);
+}
   // columns: Add field tx_org_repertoire
 
   // columns: extend type
@@ -328,11 +334,13 @@ $TCA['tx_org_headquarters']['interface']['showRecordFieldList'] = $showRecordFie
   // Add fields to TCAshowReacordFieldList
 
   // Add fields to TCAcolumns: repertoire
-$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']['label']                        =
+$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']                                =
+  $arr_tx_org_repertoire;
+$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']['label']                       =
   'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_headquarters.tx_org_repertoire';
-$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']['config']['MM']                 = 
+$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']['config']['MM']                =
   'tx_org_repertoire_mm_tx_org_headquarters';
-$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']['config']['MM_opposite_field']  =
+$TCA['tx_org_headquarters']['columns']['tx_org_repertoire']['config']['MM_opposite_field'] =
   'tx_org_headquarters';
   // Add fields to TCAcolumns: repertoire
 
