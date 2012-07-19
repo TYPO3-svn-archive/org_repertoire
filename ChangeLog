@@ -1,3 +1,15 @@
+1.0.1
+  12-07-19
+  Improvement
+  * $ICON_TYPES replaced by SpriteManager method
+    * uherrmann
+
+1.0.0
+  11-10-09
+  Improvement
+  * Manual added
+  TER initial Release
+
 0.5.0
   11-03-23
   Improvement

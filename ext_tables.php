@@ -143,7 +143,8 @@ switch(true) {
 }
   // Case $llStatic
 
-$ICON_TYPES['org_reptr'] = array('icon' => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/repertoire.gif');
+  //  @see #34858, 120719, uherrmann
+t3lib_SpriteManager::addTcaTypeIcon('pages', 'contains-org_reptr', $_EXTKEY) . 'ext/org/ext_icon.gif');
 
   // Add pagetree icons
 
