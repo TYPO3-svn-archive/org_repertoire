@@ -8,6 +8,9 @@
   * #43978: tt_content.image: improve enable property
   Bug
   * #43983: tt_content.image: alt- and title tags aren't rendered proper
+  Effected Files:
+  * static/calendar/201/setup.txt
+  * static/repertoire/331/setup.txt
 
 
 1.0.1
