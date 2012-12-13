@@ -395,10 +395,11 @@ plugin.tx_browser_pi1 {
                 width   = ###TX_ORG_REPERTOIRE.IMAGEWIDTH###
                 height  = ###TX_ORG_REPERTOIRE.IMAGEHEIGHT###
               }
-              altText.field                 >
-              altText                       = ###TX_ORG_REPERTOIRE.IMAGESEO###
-              titleText.field               >
-              titleText                     = ###TX_ORG_REPERTOIRE.IMAGESEO###
+                // #43983, 4-
+              //altText.field                 >
+              //altText                       = ###TX_ORG_REPERTOIRE.IMAGESEO###
+              //titleText.field               >
+              //titleText                     = ###TX_ORG_REPERTOIRE.IMAGESEO###
               imageLinkWrap {
                 ifEmpty {
                   typolink.parameter.field  >
@@ -426,8 +427,9 @@ plugin.tx_browser_pi1 {
             cols                    = ###TX_ORG_REPERTOIRE.IMAGECOLS###
             border.field            >
             border                  = ###TX_ORG_REPERTOIRE.IMAGEBORDER###
-            caption.1.field         >
-            caption.1.value         = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                // #43979
+            caption.1.1.field         >
+            caption.1.1.value         = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
             captionAlign.field      >
             captionAlign            = ###TX_ORG_REPERTOIRE.IMAGECAPTION_POSITION###
             layout {
@@ -438,9 +440,101 @@ plugin.tx_browser_pi1 {
             stdWrap {
               prefixComment >
             }
+              // #43979, #43982
+            rendering {
+              singleNoCaption {
+                allStdWrap {
+                  innerWrap {
+                    cObject {
+                      key = ###TX_ORG_REPERTOIRE.IMAGEORIENT###
+                      key {
+                        field > 
+                      }
+                    }
+                  }
+                }
+                fallbackRendering {
+                  10 {
+                    if {
+                      isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                      isTrue {
+                        field >
+                      }
+                    }
+                  }
+                  20 {
+                    if {
+                      isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                      isTrue {
+                        field >
+                      }
+                    }
+                  }
+                  30 {
+                    if {
+                      isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                      isTrue {
+                        field >
+                      }
+                    }
+                  }
+                  40 {
+                    if {
+                      isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                      isTrue {
+                        field >
+                      }
+                    }
+                  }
+                }
+              }
+              noCaption {
+                fallbackRendering {
+                  if {
+                    isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                    isTrue {
+                      field >
+                    }
+                  }
+                }
+              }
+              singleCaption {
+                fallbackRendering {
+                  if {
+                    isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                    isTrue {
+                      field >
+                    }
+                  }
+                }
+              }
+              splitCaption {
+                fallbackRendering {
+                  if {
+                    isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                    isTrue {
+                      field >
+                    }
+                  }
+                }
+              }
+              globalCaption {
+                fallbackRendering {
+                  if {
+                    isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                    isTrue {
+                      field >
+                    }
+                  }
+                }
+              }
+            }
               // bodytext, staff
+            text = COA
             text {
               required  = 1
+                // #43980
+              wrap = <div class="csc-textpic-text">|</div>
                 // bodytext
               10 = TEXT
               10 {
