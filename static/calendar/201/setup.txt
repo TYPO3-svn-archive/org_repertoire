@@ -232,8 +232,9 @@ plugin.tx_browser_pi1 {
                   width                 = ###TX_ORG_REPERTOIRE.IMAGEWIDTH###
                   height                = ###TX_ORG_REPERTOIRE.IMAGEHEIGHT###
                 }
-                altText                 = ###TX_ORG_REPERTOIRE.IMAGESEO###
-                titleText               = ###TX_ORG_REPERTOIRE.IMAGESEO###
+                  // #43983
+                //altText                 = ###TX_ORG_REPERTOIRE.IMAGESEO###
+                //titleText               = ###TX_ORG_REPERTOIRE.IMAGESEO###
                 imageLinkWrap {
                   ifEmpty {
                     typolink.parameter  = ###TX_ORG_REPERTOIRE.IMAGE_LINK###
@@ -248,13 +249,104 @@ plugin.tx_browser_pi1 {
               noRows                    = ###TX_ORG_REPERTOIRE.IMAGE_NOROWS###
               cols                      = ###TX_ORG_REPERTOIRE.IMAGECOLS###
               border                    = ###TX_ORG_REPERTOIRE.IMAGEBORDER###
-              caption.1.value           = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                // #43979
+              caption.1.1.value           = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
               captionAlign              = ###TX_ORG_REPERTOIRE.IMAGECAPTION_POSITION###
               layout {
                 key                     = ###TX_ORG_REPERTOIRE.IMAGEORIENT###
               }
+                // #43979, #43982
+              rendering {
+                singleNoCaption {
+                  allStdWrap {
+                    innerWrap {
+                      cObject {
+                        key = ###TX_ORG_REPERTOIRE.IMAGEORIENT###
+                        key {
+                          field > 
+                        }
+                      }
+                    }
+                  }
+                  fallbackRendering {
+                    10 {
+                      if {
+                        isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                        isTrue {
+                          field >
+                        }
+                      }
+                    }
+                    20 {
+                      if {
+                        isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                        isTrue {
+                          field >
+                        }
+                      }
+                    }
+                    30 {
+                      if {
+                        isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                        isTrue {
+                          field >
+                        }
+                      }
+                    }
+                    40 {
+                      if {
+                        isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                        isTrue {
+                          field >
+                        }
+                      }
+                    }
+                  }
+                }
+                noCaption {
+                  fallbackRendering {
+                    if {
+                      isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                      isTrue {
+                        field >
+                      }
+                    }
+                  }
+                }
+                singleCaption {
+                  fallbackRendering {
+                    if {
+                      isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                      isTrue {
+                        field >
+                      }
+                    }
+                  }
+                }
+                splitCaption {
+                  fallbackRendering {
+                    if {
+                      isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                      isTrue {
+                        field >
+                      }
+                    }
+                  }
+                }
+                globalCaption {
+                  fallbackRendering {
+                    if {
+                      isTrue = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+                      isTrue {
+                        field >
+                      }
+                    }
+                  }
+                }
+              }
               text {
-                wrap      = <div class="cal_bodytext cal_bodytext_repertoire">|</div>
+                  // #43980
+                wrap = <div class="csc-textpic-text cal_bodytext cal_bodytext_repertoire">|</div>
                 20 {
                   if.isTrue   = ###TX_ORG_REPERTOIRE.BODYTEXT###
                   value       = ###TX_ORG_REPERTOIRE.BODYTEXT###

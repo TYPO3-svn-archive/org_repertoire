@@ -1,3 +1,15 @@
+3.0.0
+  12-12-14
+  Features
+  * #43982: tt_content.image: improve fields with ...orient
+  * #43980: tt_content.image: improve text property
+  * #43979: tt_content.image: improve caption property
+  Improvement
+  * #43978: tt_content.image: improve enable property
+  Bug
+  * #43983: tt_content.image: alt- and title tags aren't rendered proper
+
+
 1.0.1
   12-07-19
   Improvement
