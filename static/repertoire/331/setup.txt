@@ -57,7 +57,8 @@ plugin.tx_browser_pi1 {
         csvLinkToSingleView = tx_org_repertoire.title
         filter {
           tx_org_cal {
-            datetime < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+//            datetime < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            datetime < plugin.tx_browser_pi1.displayList.master_templates.category_menu
             datetime {
               count_hits = 0
               first_item {
