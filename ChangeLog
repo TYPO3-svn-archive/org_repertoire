@@ -1,5 +1,3 @@
-  * #44004: TYPO3 4.7: page icon is missing
-
 3.0.0
   12-12-14
   Features
@@ -11,6 +9,7 @@
   Improvement
   * #43978: tt_content.image: improve enable property
   Bug
+  * #44004: TYPO3 4.7: page icon is missing
   * #43983: tt_content.image: alt- and title tags aren't rendered proper
   Effected Files:
   * static/calendar/201/setup.txt
