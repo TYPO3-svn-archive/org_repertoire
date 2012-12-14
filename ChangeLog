@@ -1,7 +1,10 @@
+  * #44004: TYPO3 4.7: page icon is missing
+
 3.0.0
   12-12-14
   Features
   * #43982: tt_content.image: improve fields with ...orient
+  * #43981: TypoScript snippets for HTML templates
   * #43980: tt_content.image: improve text property
   * #43979: tt_content.image: improve caption property
   Improvement
