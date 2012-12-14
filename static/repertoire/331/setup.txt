@@ -20,7 +20,7 @@ plugin.tx_browser_pi1 {
     extensions {
       org {
         default {
-          csvViews := addToList(311)
+          csvViews := addToList(331)
         }
       }
     }
