@@ -62,7 +62,6 @@ plugin.tx_browser_pi1 {
           tx_org_cal {
             datetime < plugin.tx_browser_pi1.displayList.master_templates.selectbox
             datetime {
-              count_hits = 0
               first_item {
                 cObject {
                   20 {

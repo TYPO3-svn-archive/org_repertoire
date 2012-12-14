@@ -3,6 +3,7 @@
 3.0.0
   12-12-14
   Features
+  * #44024: Backwards compatibility < TYPO3 4.7
   * #43982: tt_content.image: improve fields with ...orient
   * #43981: TypoScript snippets for HTML templates
   * #43980: tt_content.image: improve text property
