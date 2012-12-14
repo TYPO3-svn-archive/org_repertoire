@@ -72,7 +72,7 @@ plugin.tx_browser_pi1 {
                 item {
                   cObject {
                     20 {
-                      strftime = %a, %m.%d.%y %H:%M
+//                      strftime = %a, %m.%d.%y %H:%M
 //                      crop = 30 | ... | 1
                     }
                   }
