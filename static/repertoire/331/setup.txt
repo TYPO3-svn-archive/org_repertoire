@@ -53,9 +53,11 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.bodytext,
           tx_org_repertoire.image,
           tx_org_repertoire.imageseo,
-          tx_org_cal.datetime
+          tx_org_cal.datetime,
+          tx_org_cal.type
         )
-        andWhere = tx_org_cal.datetime > UNIX_TIMESTAMP() AND tx_org_cal.type LIKE 'tx_org_repertoire'        csvLinkToSingleView = tx_org_repertoire.title
+        andWhere = tx_org_cal.datetime > UNIX_TIMESTAMP() AND tx_org_cal.type LIKE 'tx_org_repertoire'        
+        csvLinkToSingleView = tx_org_repertoire.title
         filter {
           tx_org_cal {
 //            datetime < plugin.tx_browser_pi1.displayList.master_templates.selectbox
