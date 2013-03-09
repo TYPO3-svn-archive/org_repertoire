@@ -1,3 +1,15 @@
+3.0.2
+  13-03-09
+  Feature
+  * #i0001: use teaser_subtitle and teaser_title
+  Effected Files:
+  * static/calendar/201/setup.txt
+
+3.0.1
+  12-12-26
+  Bug
+  * #00000: plugin.tx_browser_pi1.views.single.331 is moved from org to org_repertoire
+
 3.0.0
   12-12-14
   Features

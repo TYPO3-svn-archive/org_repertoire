@@ -6,6 +6,7 @@
 
   // plugin.tx_browser_pi1.views.single.101
   // plugin.tx_browser_pi1.views.single.201
+  // plugin.tx_browser_pi1.views.single.331
   // plugin.tx_browser_pi1.views.single.401
   // plugin.tx_browser_pi1.views.single.501
   // plugin.tx_browser_pi1.views.single.601
@@ -98,6 +99,38 @@ plugin.tx_browser_pi1 {
   }
 }
   // plugin.tx_browser_pi1.views.single.201
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1.views.single.331
+
+plugin.tx_browser_pi1 {
+  views {
+    single {
+      331 {
+        tx_org_repertoire {
+          bodytext {
+            caption.1.1 >
+            caption.1 {
+              field >
+              value = ###TX_ORG_REPERTOIRE.IMAGECAPTION###
+            }
+            rendering {
+              singleNoCaption >
+              noCaption       >
+              singleCaption   >
+              splitCaption    >
+              globalCaption   >
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  // plugin.tx_browser_pi1.views.single.331
 
 
 
