@@ -259,7 +259,7 @@ $TCA[ 'tx_org_cal' ][ 'types' ][ 'tx_org_repertoire' ][ 'showitem' ] = ''
         . '  type,'
         . '  title,subtitle,'
         . '  --palette--;LLL:EXT:org/Configuration/Tca/Locallang/tx_org_cal.xml:palette.datetime_datetimeend;datetime_datetimeend,'
-        . '  tx_org_caltype,bodytext;;;richtext[]:rte_transform[mode=ts];,' .
+        . '  tx_org_caltype,tx_org_repertoire,' .
         '--div--;LLL:EXT:org/Configuration/Tca/Locallang/tx_org_cal.xml:tx_org_cal.div_event,       tx_org_location,tx_org_calentrance,' .
         '--div--;LLL:EXT:org/Configuration/Tca/Locallang/tx_org_cal.xml:tx_org_cal.div_control,     hidden;;1;;,pages,fe_group,' .
         ''
