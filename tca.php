@@ -609,9 +609,10 @@ $TCA['tx_org_repertoire'] = array (
   ),
   'types' => array (
     '0' => array('showitem' =>
-      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_repertoire,   title;;;;1-1-1,subtitle,producer,length,staff;;;richtext[]:rte_transform[mode=ts];,bodytext;;;richtext[]:rte_transform[mode=ts];,'.
-      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_teaser,       teaser_title,teaser_subtitle,teaser_short,'.
-      '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_repertoire, '
+      . '  title;;;;1-1-1,subtitle,producer,length,staff;;;richtext[]:rte_transform[mode=ts];,bodytext;;;richtext[]:rte_transform[mode=ts];,'
+      . '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_teaser,       teaser_title,teaser_subtitle,teaser_short,'
+      . '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
         '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
         '--palette--;LLL:EXT:org/locallang_db.xml:palette.image_accessibility;image_accessibility,' .
         '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,' .
