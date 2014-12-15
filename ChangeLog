@@ -1,8 +1,7 @@
-
-
-
 6.0.7
   14-12-15
+  Feature
+  * #i0006: Fields for backend search are added
   Upgrade for Org 6.0.7
   * #i0005: Removed: relations to fe_users: actor, advisor, assistant, dancer, director,
                       garment, light, makeup, musician, narrator, others, otherslabel,

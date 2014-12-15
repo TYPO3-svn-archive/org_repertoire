@@ -1,4 +1,4 @@
-
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/static/calendar/201/list/list/_setup.ts">
 
   ////////////////////////////////////////
   //
@@ -15,34 +15,10 @@
   // plugin.tx_browser_pi1
 
 plugin.tx_browser_pi1 {
-  
+
   views {
     list {
-      201 = +Org-Repertoire: Calendar
-      201 {
-        name    = +Org-Repertoire: Calendar
-        select (
-          tx_org_cal.title,
-          tx_org_cal.subtitle,
-          tx_org_cal.teaser_short,
-          tx_org_cal.bodytext,
-          tx_org_cal.datetime,
-          tx_org_cal.type,
-          tx_org_cal.calpage,
-          tx_org_cal.calurl,
-          tx_org_caltype.title,
-          tx_org_event.title,
-          tx_org_event.subtitle,
-          tx_org_event.teaser_short,
-          tx_org_event.bodytext,
-          tx_org_repertoire.title,
-          tx_org_repertoire.subtitle,
-          tx_org_repertoire.producer,
-          tx_org_repertoire.teaser_subtitle,
-          tx_org_repertoire.teaser_short,
-          tx_org_repertoire.teaser_title,
-          tx_org_repertoire.bodytext
-        )
+      XXX201 {
         tx_org_cal {
           teaser_short {
             10 {
@@ -125,8 +101,8 @@ plugin.tx_browser_pi1 {
       }
     }
     single {
-      201 = +Org-Repertoire: Calendar
-      201 {
+      XXX201 = +Org-Repertoire: Calendar
+      XXX201 {
         select >
         select (
           tx_org_cal.title,
@@ -170,7 +146,7 @@ plugin.tx_browser_pi1 {
           tx_org_event.documents,
           tx_org_event.documentslayout,
           tx_org_event.documentscaption,
-          tx_org_event.documentssize, 
+          tx_org_event.documentssize,
 
           tx_org_event.image,
           tx_org_event.imagecaption,
@@ -204,7 +180,7 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.documents,
           tx_org_repertoire.documentslayout,
           tx_org_repertoire.documentscaption,
-          tx_org_repertoire.documentssize, 
+          tx_org_repertoire.documentssize,
 
           tx_org_repertoire.image,
           tx_org_repertoire.imagecaption,
@@ -267,7 +243,7 @@ plugin.tx_browser_pi1 {
                       cObject {
                         key = ###TX_ORG_REPERTOIRE.IMAGEORIENT###
                         key {
-                          field > 
+                          field >
                         }
                       }
                     }
