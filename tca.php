@@ -567,7 +567,7 @@ $TCA['tx_org_repertoire'] = array (
       'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.tx_org_cal',
       'config' => array(
         'type' => 'select',
-        'size' => $size_calendar,
+        'size' => 20,
         'minitems' => 0,
         'maxitems' => 999,
         'MM' => 'tx_org_mm_all',
@@ -587,8 +587,8 @@ $TCA['tx_org_repertoire'] = array (
         . ' AND tx_org_cal.sys_language_uid=###REC_FIELD_sys_language_uid###'
         . ' ORDER BY datetime DESC, title'
         ,
-        'selectedListStyle' => $listStyleWidth,
-        'itemListStyle' => $listStyleWidth,
+        'selectedListStyle' => 'width:500px;',
+        'itemListStyle' => 'width:500px;',
       ),
     ),
     'hidden'    => $conf_hidden,
