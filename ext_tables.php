@@ -9,7 +9,7 @@ if ( !defined( 'TYPO3_MODE' ) )
 
 ////////////////////////////////////////////////////////////////////////////
 //
-  // INDEX
+// INDEX
 // Set TYPO3 version
 // Configuration by the extension manager
 //    Localization support
@@ -23,7 +23,7 @@ if ( !defined( 'TYPO3_MODE' ) )
 //    org_repertoire
 ////////////////////////////////////////////////////////////////////////////
 //
-  // Set TYPO3 version
+// Set TYPO3 version
 // Set TYPO3 version as integer (sample: 4.7.7 -> 4007007)
 list( $main, $sub, $bugfix ) = explode( '.', TYPO3_version );
 $version = ( ( int ) $main ) * 1000000;
@@ -53,7 +53,7 @@ if ( $typo3Version < 3000000 )
 // Set TYPO3 version
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-  // Configuration by the extension manager
+// Configuration by the extension manager
 
 $confArr = unserialize( $GLOBALS[ 'TYPO3_CONF_VARS' ][ 'EXT' ][ 'extConf' ][ $_EXTKEY ] );
 
@@ -121,7 +121,7 @@ switch ( $confArr[ 'store_records' ] )
 // Configuration of the extension manager
 ////////////////////////////////////////////////////////////////////////////
 //
-  // Enables the Include Static Templates
+// Enables the Include Static Templates
 // Case $llStatic
 switch ( true )
 {
@@ -145,7 +145,7 @@ switch ( true )
 // Enables the Include Static Templates
 ////////////////////////////////////////////////////////////////////////////
 //
-  // Add pagetree icons
+// Add pagetree icons
 // Case $llStatic
 switch ( true )
 {
@@ -164,13 +164,13 @@ t3lib_SpriteManager::addTcaTypeIcon( 'pages', 'contains-org_reptr', t3lib_extMgm
 // Add pagetree icons
 /////////////////////////////////////////////////
 //
-  // Add default page and user TSconfig
+// Add default page and user TSconfig
 
 t3lib_extMgm::addPageTSConfig( '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/tsConfig/' . $llStatic . '/page.txt">' );
 // Add default page and user TSconfig
 ////////////////////////////////////////////////////////////////////////////
 //
-  // Configure third party tables
+// Configure third party tables
 t3lib_div::loadTCA( 'tx_org_cal' );
 
 // typeicons: Add type_icon
@@ -187,7 +187,7 @@ $TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ] = array(
   'label' => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_cal.tx_org_repertoire',
   'config' => array(
     'type' => 'select',
-    'size' => 30,
+    'size' => 20,
     'minitems' => 0,
     'maxitems' => 1,
     'MM' => 'tx_org_mm_all',
@@ -247,7 +247,7 @@ $TCA[ 'tx_org_cal' ][ 'types' ][ 'tx_org_repertoire' ][ 'showitem' ] = ''
 // Configure third party tables
 ////////////////////////////////////////////////////////////////////////////
 //
-  // TCA tables
+// TCA tables
 // repertoire ///////////////////////////////////////////////////////////////////
 $TCA[ 'tx_org_repertoire' ] = array(
   'ctrl' => array(
@@ -267,6 +267,14 @@ $TCA[ 'tx_org_repertoire' ] = array(
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'thumbnail' => 'image',
     'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon/repertoire.gif',
+    'searchFields' => 'title,subtitle,producer,length,staff,bodytext,' .
+    'teaser_title,teaser_subtitle,teaser_short,' .
+    'documents_from_path,documents,documentscaption,documentslayout,documentssize,' .
+    'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
+    'embeddedcode,print,printcaption,printseo,' .
+    'tx_org_cal,' .
+    'hidden,pages,fe_group,' .
+    'keywords,description'
   ),
 );
 // repertoire ///////////////////////////////////////////////////////////////////
