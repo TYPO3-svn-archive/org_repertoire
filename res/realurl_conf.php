@@ -3,7 +3,7 @@
   //////////////////////////////////
   //
   // TEMPLATE
-  
+
   // Template file for
   // typo3conf/realurl_conf.php
 
@@ -57,17 +57,17 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array
 
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT']['postVarSets'] = array
 (
-  '_DEFAULT' => array 
+  '_DEFAULT' => array
   (
-    // news: organiser_news
-    'news' => array 
+    // repertoire: tx_org_repertoire
+    'repertoire' => array
     (
       array
       (
-        'GETvar' => 'tx_browser_pi1[showUid]',
+        'GETvar' => 'tx_browser_pi1[repertoireUid]',
         'lookUpTable' => array
         (
-          'table'               => 'tx_organiser_news',
+          'table'               => 'tx_org_repertoire',
           'id_field'            => 'uid',
           'alias_field'         => 'title',
           'addWhereClause'      => ' AND NOT deleted AND NOT hidden',
@@ -78,31 +78,6 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT']['postVarSets'] = array
             'spaceCharacter'  => '-',
           ),
         )
-      ),
-    ),
-    'browse' => array 
-    (
-      array 
-      (
-        'GETvar' => 'tx_browser_pi1[azTab]',
-      ),
-      array 
-      (
-        'GETvar' => 'tx_browser_pi1[pointer]',
-      ),
-    ),
-    'sort' => array 
-    (
-      array 
-      (
-        'GETvar' => 'tx_browser_pi1[sort]',
-      ),
-    ),
-    'suche' => array 
-    (
-      array 
-      (
-        'GETvar' => 'tx_browser_pi1[sword]',
       ),
     ),
   ),

@@ -2,13 +2,9 @@
 # -----
 # tx_org_repertoire
 # tx_org_repertoire_mm_tx_org_cal
-# tx_org_repertoire_mm_tx_org_headquarters
-# tx_org_repertoire_mm_tx_org_news
 
 # fe_users
 # tx_org_tx_org_cal
-# tx_org_tx_org_headquarters
-# tx_org_tx_org_news
 
 
 
@@ -31,34 +27,11 @@ CREATE TABLE tx_org_repertoire (
   teaser_subtitle tinytext,
   teaser_short mediumtext,
   bodytext mediumtext NOT NULL,
-  actor tinytext,
-  puppeteer tinytext,
-  dancer tinytext,
-  vocals tinytext,
-  musician tinytext,
-  video tinytext,
-  narrator tinytext,
-  director tinytext,
-  advisor tinytext,
-  assistant tinytext,
-  stage_design tinytext,
-  tailoring tinytext,
-  requisite tinytext,
-  garment tinytext,
-  makeup tinytext,
-  stage_manager tinytext,
-  technical_manager tinytext,
-  technique tinytext,
-  light tinytext,
-  sound tinytext,
-  otherslabel tinytext,
-  others tinytext,
   documents_from_path tinytext,
   documents text,
   documentscaption tinytext,
   documentslayout tinyint(4) unsigned DEFAULT '0' NOT NULL,
   documentssize tinyint(4) unsigned DEFAULT '0' NOT NULL,
-  tx_org_news text,
   image text,
   imagecaption text,
   imageseo text,
@@ -85,7 +58,7 @@ CREATE TABLE tx_org_repertoire (
   fe_group int(11) DEFAULT '0' NOT NULL,
   keywords text,
   description text,
-  
+
   PRIMARY KEY (uid),
   KEY parent (pid)
 );
@@ -108,36 +81,6 @@ CREATE TABLE tx_org_repertoire_mm_tx_org_cal (
 
 
 #
-# Table structure for table 'tx_org_repertoire_mm_tx_org_headquarters'
-#
-CREATE TABLE tx_org_repertoire_mm_tx_org_headquarters (
-  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  tablenames varchar(30) DEFAULT '' NOT NULL,
-  sorting         int(11) unsigned DEFAULT '0' NOT NULL,
-  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  KEY uid_local (uid_local),
-  KEY uid_foreign (uid_foreign)
-);
-
-
-
-#
-# Table structure for table 'tx_org_repertoire_mm_tx_org_news'
-#
-CREATE TABLE tx_org_repertoire_mm_tx_org_news (
-  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  tablenames varchar(30) DEFAULT '' NOT NULL,
-  sorting int(11) unsigned DEFAULT '0' NOT NULL,
-  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  KEY uid_local (uid_local),
-  KEY uid_foreign (uid_foreign)
-);
-
-
-
-#
 # Table structure for table 'fe_users'
 #
 CREATE TABLE fe_users (
@@ -150,24 +93,5 @@ CREATE TABLE fe_users (
 # Table structure for table 'tx_org_cal'
 #
 CREATE TABLE tx_org_cal (
-  tx_org_repertoire tinytext
-);
-
-
-
-#
-# Table structure for table 'tx_org_headquarters'
-#
-CREATE TABLE tx_org_headquarters (
-  tx_org_repertoire_premium tinytext,
-  tx_org_repertoire tinytext
-);
-
-
-
-#
-# Table structure for table 'tx_org_news'
-#
-CREATE TABLE tx_org_news (
   tx_org_repertoire tinytext
 );

@@ -1,3 +1,17 @@
+
+
+
+6.0.7
+  14-12-15
+  Upgrade for Org 6.0.7
+  * #i0005: Removed: relations to fe_users: actor, advisor, assistant, dancer, director,
+                      garment, light, makeup, musician, narrator, others, otherslabel,
+                      puppeteer, requisite, sound, stage_design, stage_manager, tailoring,
+                      technical_manager, technique, video, vocals,
+  * #i0004: Removed: relation to headquarters
+  * #i0003: Removed: relation to news
+  * #i0002: Removed: static/base/typo3/4.6
+
 3.0.2
   13-03-09
   Feature

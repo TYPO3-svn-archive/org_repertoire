@@ -8,14 +8,13 @@ if (!defined ('TYPO3_MODE'))
 
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // 
+  //
   // INDEX
   // -----
   // Configuration by the extension manager
   //    Localization support
   //    Store record configuration
   // General Configuration
-  // Wizard fe_users
   // Other wizards and config drafts
   // TCA
   //   tx_org_repertoire
@@ -23,7 +22,7 @@ if (!defined ('TYPO3_MODE'))
 
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // 
+  //
   // Configuration by the extension manager
 
 $bool_LL = false;
@@ -78,7 +77,7 @@ if (strtolower(substr($confArr['full_wizardSupport'], 0, strlen('no'))) == 'no')
 
   // Store record configuration
 $bool_full_wizardSupport_allTables = true;
-switch($confArr['store_records']) 
+switch($confArr['store_records'])
 {
   case('Multi grouped: record groups in different directories'):
     $str_store_record_conf              = 'pid IN (###PAGE_TSCONFIG_IDLIST###)';
@@ -102,9 +101,9 @@ switch($confArr['store_records'])
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // 
+    //
     // General Configuration
-    
+
     // JSopenParams for all wizards
   $JSopenParams     = 'height=680,width=800,status=0,menubar=0,scrollbars=1';
     // Rows of fe_group select box
@@ -114,72 +113,15 @@ switch($confArr['store_records'])
 
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // 
-  // Wizard fe_users
-
-  // Wizard for fe_users
-  $arr_config_feuser = array(
-    'type'                => 'select', 
-    'size'                => $size_feuser, 
-    'minitems'            => 0,
-    'maxitems'            => 999,
-    'foreign_table'       => 'fe_users',
-    'foreign_table_where' => 'AND fe_users.' . $str_store_record_conf . ' ORDER BY fe_users.last_name',
-    'wizards' => array(
-      '_PADDING'  => 2,
-      '_VERTICAL' => 0,
-      'add' => array(
-        'type'   => 'script',
-        'title'  => 'LLL:EXT:org_repertoire/locallang_db.xml:wizard.fe_user.add',
-        'icon'   => 'add.gif',
-        'params' => array(
-          'table'    => 'fe_users',
-          'pid'      => $str_marker_pid,
-          'setValue' => 'prepend'
-        ),
-        'script' => 'wizard_add.php',
-      ),
-      'list' => array(
-        'type'   => 'script',
-        'title'  => 'LLL:EXT:org_repertoire/locallang_db.xml:wizard.fe_user.list',
-        'icon'   => 'list.gif',
-        'params' => array(
-          'table' => 'fe_users',
-          'pid'   => $str_marker_pid,
-        ),
-        'script' => 'wizard_list.php',
-      ),
-      'edit' => array(
-        'type'                      => 'popup',
-        'title'                     => 'LLL:EXT:org_repertoire/locallang_db.xml:wizard.fe_user.edit',
-        'script'                    => 'wizard_edit.php',
-        'popup_onlyOpenIfSelected'  => 1,
-        'icon'                      => 'edit2.gif',
-        'JSopenParams'              => $JSopenParams,
-      ),
-    ),
-  );
-  if(!$bool_full_wizardSupport_allTables)
-  {
-    unset($arr_config_feuser['wizards']['add']);
-    unset($arr_config_feuser['wizards']['list']);
-  }
-  // Wizard for fe_users
-
-  // Wizard fe_users
-
-
-
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // 
+  //
   // Other wizards and config drafts
 
   $conf_file_document = array (
     'type'          => 'group',
     'internal_type' => 'file',
     'allowed'       => '',
-    'disallowed'    => 'php,php3', 
-    'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'], 
+    'disallowed'    => 'php,php3',
+    'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
     'uploadfolder'  => 'uploads/tx_org',
     'size'          => 10,
     'minitems'      => 0,
@@ -189,8 +131,8 @@ switch($confArr['store_records'])
   $conf_file_image = array (
     'type'          => 'group',
     'internal_type' => 'file',
-    'allowed'       => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'], 
-    'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'], 
+    'allowed'       => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
+    'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
       // Don't change uploads/tx_org!
     'uploadfolder'  => 'uploads/tx_org',
     'show_thumbs'   => 1,
@@ -198,7 +140,7 @@ switch($confArr['store_records'])
     'minitems'      => 0,
     'maxitems'      => 20,
   );
-  
+
   $conf_input_30_trim = array (
     'type' => 'input',
     'size' => '30',
@@ -210,7 +152,7 @@ switch($confArr['store_records'])
     'size' => '30',
     'eval' => 'trim,required'
   );
-  
+
   $conf_input_80_trim = array (
     'type' => 'input',
     'size' => '80',
@@ -218,15 +160,15 @@ switch($confArr['store_records'])
   );
   $conf_text_30_05 = array (
     'type' => 'text',
-    'cols' => '30', 
+    'cols' => '30',
     'rows' => '5',
   );
   $conf_text_50_10 = array (
     'type' => 'text',
-    'cols' => '50', 
+    'cols' => '50',
     'rows' => '10',
   );
-  
+
   $conf_text_rte = array (
     'type' => 'text',
     'cols' => '30',
@@ -290,7 +232,7 @@ switch($confArr['store_records'])
   //
   // tx_org_repertoire - without any localisation support
 
-  // Don't display relations to feuser by default 
+  // Don't display relations to feuser by default
 $bool_exclude_feuser = true;
 
 $TCA['tx_org_repertoire'] = array (
@@ -298,13 +240,7 @@ $TCA['tx_org_repertoire'] = array (
   'interface' => array (
     'showRecordFieldList' =>  'title,subtitle,producer,length,staff,bodytext,'.
                               'teaser_title,teaser_subtitle,teaser_short,'.
-                              'actor,puppeteer,dancer,vocals,musician,video,narrator,'.
-                              'director,advisor,assistant,'.
-                              'stage_design,tailoring,requisite,garment,makeup,'.
-                              'stage_manager,technical_manager,technique,light,sound,'.
-                              'otherslabel,others,'.
                               'documents_from_path,documents,documentscaption,documentslayout,documentssize,' .
-                              'tx_org_news,'.
                               'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
                               'embeddedcode,print,printcaption,printseo,'.
                               'tx_org_cal,'.
@@ -359,116 +295,6 @@ $TCA['tx_org_repertoire'] = array (
       'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.teaser_short',
       'config'    => $conf_text_50_10,
     ),
-    'actor' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.actor',
-      'config'  => $arr_config_feuser,
-    ),
-    'puppeteer' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.puppeteer',
-      'config'  => $arr_config_feuser,
-    ),
-    'dancer' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.dancer',
-      'config'  => $arr_config_feuser,
-    ),
-    'vocals' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.vocals',
-      'config'  => $arr_config_feuser,
-    ),
-    'musician' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.musician',
-      'config'  => $arr_config_feuser,
-    ),
-    'video' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.video',
-      'config'  => $arr_config_feuser,
-    ),
-    'narrator' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.narrator',
-      'config'  => $arr_config_feuser,
-    ),
-    'director' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.director',
-      'config'  => $arr_config_feuser,
-    ),
-    'advisor' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.advisor',
-      'config'  => $arr_config_feuser,
-    ),
-    'assistant' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.assistant',
-      'config'  => $arr_config_feuser,
-    ),
-    'stage_design' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.stage_design',
-      'config'  => $arr_config_feuser,
-    ),
-    'tailoring' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.tailoring',
-      'config'  => $arr_config_feuser,
-    ),
-    'requisite' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.requisite',
-      'config'  => $arr_config_feuser,
-    ),
-    'garment' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.garment',
-      'config'  => $arr_config_feuser,
-    ),
-    'makeup' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.makeup',
-      'config'  => $arr_config_feuser,
-    ),
-    'stage_manager' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.stage_manager',
-      'config'  => $arr_config_feuser,
-    ),
-    'technical_manager' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.technical_manager',
-      'config'  => $arr_config_feuser,
-    ),
-    'technique' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.technique',
-      'config'  => $arr_config_feuser,
-    ),
-    'light' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.light',
-      'config'  => $arr_config_feuser,
-    ),
-    'sound' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.sound',
-      'config'  => $arr_config_feuser,
-    ),
-    'otherslabel' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.otherslabel',
-      'config'  => $conf_input_30_trim,
-    ),
-    'others' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.others',
-      'config'  => $arr_config_feuser,
-    ),
     'documents_from_path' => array(
       'exclude' => $bool_exclude_default,
       'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.code',
@@ -511,52 +337,6 @@ $TCA['tx_org_repertoire'] = array (
         'items' => array (
           '1'     => array(
             '0' => 'LLL:EXT:lang/locallang_core.xml:labels.enabled',
-          ),
-        ),
-      ),
-    ),
-    'tx_org_news' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.news',
-      'config'  => array (
-        'type'                => 'select', 
-        'size'                => $size_news,
-        'minitems'            => 0,
-        'maxitems'            => 999,
-        'MM'                  => 'tx_org_repertoire_mm_tx_org_news',
-        'foreign_table'       => 'tx_org_news',
-        'foreign_table_where' => 'AND tx_org_news.' . $str_store_record_conf . ' ORDER BY tx_org_news.datetime DESC, title',
-        'wizards' => array(
-          '_PADDING'  => 2,
-          '_VERTICAL' => 0,
-          'add' => array(
-            'type'   => 'script',
-            'title'  => 'LLL:EXT:org_repertoire/locallang_db.xml:wizard.tx_org_news.add',
-            'icon'   => 'add.gif',
-            'params' => array(
-              'table'    => 'tx_org_news',
-              'pid'      => $str_marker_pid,
-              'setValue' => 'prepend'
-            ),
-            'script' => 'wizard_add.php',
-          ),
-          'list' => array(
-            'type'   => 'script',
-            'title'  => 'LLL:EXT:org_repertoire/locallang_db.xml:wizard.tx_org_news.list',
-            'icon'   => 'list.gif',
-            'params' => array(
-              'table' => 'tx_org_news',
-              'pid'   => $str_marker_pid,
-            ),
-            'script' => 'wizard_list.php',
-          ),
-          'edit' => array(
-            'type'                      => 'popup',
-            'title'                     => 'LLL:EXT:org_repertoire/locallang_db.xml:wizard.tx_org_news.edit',
-            'script'                    => 'wizard_edit.php',
-            'popup_onlyOpenIfSelected'  => 1,
-            'icon'                      => 'edit2.gif',
-            'JSopenParams'              => $JSopenParams,
           ),
         ),
       ),
@@ -785,7 +565,7 @@ $TCA['tx_org_repertoire'] = array (
       'exclude' => $bool_exclude_default,
       'label'   => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.tx_org_cal',
       'config'  => array (
-        'type'                => 'select', 
+        'type'                => 'select',
         'size'                => $size_calendar,
         'minitems'            => 0,
         'maxitems'            => 999,
@@ -844,14 +624,9 @@ $TCA['tx_org_repertoire'] = array (
     ),
   ),
   'types' => array (
-    '0' => array('showitem' =>  
+    '0' => array('showitem' =>
       '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_repertoire,   title;;;;1-1-1,subtitle,producer,length,staff;;;richtext[]:rte_transform[mode=ts];,bodytext;;;richtext[]:rte_transform[mode=ts];,'.
       '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_teaser,       teaser_title,teaser_subtitle,teaser_short,'.
-      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_actors,       actor,puppeteer,dancer,vocals,musician,video,narrator,'.
-      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_direction,    director,advisor,assistant,'.
-      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_requirements, stage_design,tailoring,requisite,garment,makeup,'.
-      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_technique,    stage_manager,technical_manager,technique,light,sound,'.
-      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_others,       otherslabel,others,'.
       '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
         '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
         '--palette--;LLL:EXT:org/locallang_db.xml:palette.image_accessibility;image_accessibility,' .
@@ -861,7 +636,6 @@ $TCA['tx_org_repertoire'] = array (
       '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.media,' .
         '--palette--;LLL:EXT:cms/locallang_ttc.xml:media;documents_upload,' .
         '--palette--;LLL:EXT:org/locallang_db.xml:palette.appearance;documents_appearance,' .
-      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_news,         tx_org_news,'.
       '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_calendar,     tx_org_cal,'.
       '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_control,      hidden,pages,fe_group,'.
       '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_seo,          keywords,description'.
@@ -906,7 +680,5 @@ if(!$bool_full_wizardSupport_allTables)
 {
   unset($TCA['tx_org_repertoire']['columns']['tx_org_cal']['config']['wizards']['add']);
   unset($TCA['tx_org_repertoire']['columns']['tx_org_cal']['config']['wizards']['list'] );
-  unset($TCA['tx_org_repertoire']['columns']['tx_org_news']['config']['wizards']['add']);
-  unset($TCA['tx_org_repertoire']['columns']['tx_org_news']['config']['wizards']['list'] );
 }
   // tx_org_repertoire - without any localisation support

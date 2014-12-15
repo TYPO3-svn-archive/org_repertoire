@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'Extend the Organiser with a repertoire database!',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '3.0.2',
+	'version' => '6.0.7',
 	'dependencies' => 'org',
 	'conflicts' => '',
 	'priority' => '',
@@ -34,7 +34,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
-			'org' => '3.0.0-3.0.0',
+			'org' => '',
+			'typo3' => '4.5.0-6.2.99',
 		),
 		'conflicts' => array(
 		),
