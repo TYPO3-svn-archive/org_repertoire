@@ -35,7 +35,6 @@ plugin.tx_browser_pi1 {
                     tx_org_repertoire < .default
                   }
                     // day of month as number
-                  20 < .10
                   20 {
                     tx_org_repertoire {
                       strftime  = %d
@@ -43,13 +42,8 @@ plugin.tx_browser_pi1 {
                     }
                   }
                     // month year
-                  30 < .10
                   30 {
                     tx_org_repertoire {
-                      strftime  = %b %y
-                      wrap      = <li class="month">|</li>
-                    }
-                    url {
                       strftime  = %b %y
                       wrap      = <li class="month">|</li>
                     }
