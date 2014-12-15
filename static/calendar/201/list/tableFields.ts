@@ -20,7 +20,6 @@ plugin.tx_browser_pi1 {
                   }
                 }
               }
-              40 < plugin.tx_browser_pi1.displayList.master_templates.tableFields.text.0
               40 {
                   // link to tx_org_repertoire
                 tx_org_repertoire < .default
