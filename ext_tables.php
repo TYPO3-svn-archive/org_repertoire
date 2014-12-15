@@ -171,58 +171,6 @@ t3lib_extMgm::addPageTSConfig( '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTK
 ////////////////////////////////////////////////////////////////////////////
 //
   // Configure third party tables
-// draft field tx_org_repertoire
-// tx_org_cal
-// draft field tx_org_repertoire
-$arr_tx_org_repertoire = array(
-  'exclude' => $bool_exclude_default,
-  'label' => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire',
-  'config' => array(
-    'type' => 'select',
-    'size' => 30,
-    'minitems' => 0,
-    'maxitems' => 1,
-    'MM' => '%MM%',
-    'MM_opposite_field' => '%MM_opposite_field%',
-    'foreign_table' => 'tx_org_repertoire',
-    'foreign_table_where' => 'AND tx_org_repertoire.' . $str_store_record_conf . ' ORDER BY tx_org_repertoire.title',
-    'wizards' => array(
-      '_PADDING' => 2,
-      '_VERTICAL' => 0,
-      'add' => array(
-        'type' => 'script',
-        'title' => 'LLL:EXT:org_repertoire/locallang_db.xml:wizard.tx_org_repertoire.add',
-        'icon' => 'add.gif',
-        'params' => array(
-          'table' => 'tx_org_repertoire',
-          'pid' => $str_marker_pid,
-          'setValue' => 'prepend'
-        ),
-        'script' => 'wizard_add.php',
-      ),
-      'list' => array(
-        'type' => 'script',
-        'title' => 'LLL:EXT:org_repertoire/locallang_db.xml:wizard.tx_org_repertoire.list',
-        'icon' => 'list.gif',
-        'params' => array(
-          'table' => 'tx_org_repertoire',
-          'pid' => $str_marker_pid,
-        ),
-        'script' => 'wizard_list.php',
-      ),
-      'edit' => array(
-        'type' => 'popup',
-        'title' => 'LLL:EXT:org_repertoire/locallang_db.xml:wizard.tx_org_repertoire.edit',
-        'script' => 'wizard_edit.php',
-        'popup_onlyOpenIfSelected' => 1,
-        'icon' => 'edit2.gif',
-        'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
-      ),
-    ),
-  ),
-);
-// draft field tx_org_repertoire
-// tx_org_cal
 t3lib_div::loadTCA( 'tx_org_cal' );
 
 // typeicons: Add type_icon
@@ -234,10 +182,39 @@ $showRecordFieldList = $showRecordFieldList . ',tx_org_repertoire';
 $TCA[ 'tx_org_cal' ][ 'interface' ][ 'showRecordFieldList' ] = $showRecordFieldList;
 // showRecordFieldList: Add field tx_org_repertoire
 // columns: Add field tx_org_repertoire
-$TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ] = $arr_tx_org_repertoire;
-$TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ][ 'label' ] = 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_cal.tx_org_repertoire';
-$TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ][ 'config' ][ 'MM' ] = 'tx_org_repertoire_mm_tx_org_cal';
-$TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ][ 'config' ][ 'MM_opposite_field' ] = 'tx_org_cal';
+$TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ] = array(
+  'exclude' => $bool_exclude_default,
+  'label' => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_cal.tx_org_repertoire',
+  'config' => array(
+    'type' => 'select',
+    'size' => 30,
+    'minitems' => 0,
+    'maxitems' => 1,
+    'MM' => 'tx_org_mm_all',
+    "MM_match_fields" => array(
+      'table_local' => 'tx_org_cal',
+      'table_foreign' => 'tx_org_repertoire'
+    ),
+    "MM_insert_fields" => array(
+      'table_local' => 'tx_org_cal',
+      'table_foreign' => 'tx_org_repertoire'
+    ),
+    'foreign_table' => 'tx_org_repertoire',
+    'foreign_table_where' => 'AND tx_org_repertoire.' . $str_store_record_conf
+    . ' AND tx_org_repertoire.deleted = 0 AND tx_org_repertoire.hidden = 0'
+    . ' AND tx_org_repertoire.sys_language_uid=###REC_FIELD_sys_language_uid### '
+    . 'ORDER BY tx_org_repertoire.title'
+    ,
+    'items' => array(
+      '0' => array(
+        '0' => '',
+        '1' => '',
+      ),
+    ),
+    'selectedListStyle' => 'width:500px;',
+    'itemListStyle' => 'width:500px;',
+  ),
+);
 
 if ( $bool_wizards_wo_add_and_list )
 {
