@@ -202,7 +202,7 @@ $TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ] = array(
     'foreign_table' => 'tx_org_repertoire',
     'foreign_table_where' => 'AND tx_org_repertoire.' . $str_store_record_conf
     . ' AND tx_org_repertoire.deleted = 0 AND tx_org_repertoire.hidden = 0'
-    . ' AND tx_org_repertoire.sys_language_uid=###REC_FIELD_sys_language_uid### '
+    //. ' AND tx_org_repertoire.sys_language_uid=###REC_FIELD_sys_language_uid### '
     . 'ORDER BY tx_org_repertoire.title'
     ,
     'items' => array(
