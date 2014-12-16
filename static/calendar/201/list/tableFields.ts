@@ -9,6 +9,10 @@ plugin.tx_browser_pi1 {
                   // link to tx_org_repertoire
                 tx_org_repertoire < .default
               }
+                // tx_org_cal.subtitle
+              21 {
+                field := prependString(tx_org_repertoire.teaser_subtitle // tx_org_repertoire.subtitle // )
+              }
                 // image
               39 {
                 10 {
