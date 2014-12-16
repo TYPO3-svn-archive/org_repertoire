@@ -127,19 +127,17 @@ switch ( true )
 {
   case($llStatic == 'de'):
     // German
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/', '+Org-Repertoire: Basis (immer einbinden!)' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/', '+Org-Repertoire: Kalender' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/expired', '+Org-Repertoire: +Kalender Archiv' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/211/', '+Org-Repertoire: Kalender - Rand' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/', '+Org-Repertoire: Repertoire' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/',            'Org-Repertoire: Basis (immer einbinden!)' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/',    'Org-Repertoire: +Org Kalender' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/211/',    'Org-Repertoire: +Org Kalender - Rand' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/',  'Org-Repertoire: Repertoire' );
     break;
   default:
     // English
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/', '+Org-Repertoire: Basis (obligate!)' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/', '+Org-Repertoire: Calendar' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/expired', '+Org-Repertoire: +Calendar expired' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/211/', '+Org-Repertoire: Calendar - Margin' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/', '+Org-Repertoire: Repertoire' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/',            'Org-Repertoire: Basis (obligate!)' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/',    'Org-Repertoire: +Org Calendar' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/211/',    'Org-Repertoire: +Org Calendar - Margin' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/',  'Org-Repertoire: Repertoire' );
 }
 // Case $llStatic
 // Enables the Include Static Templates
