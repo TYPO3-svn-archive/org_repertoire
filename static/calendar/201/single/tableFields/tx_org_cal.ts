@@ -12,12 +12,29 @@ plugin.tx_browser_pi1 {
           title {
             20 {
               0 {
+                10 >
+                  // bookmarks, header, bodytext
+                10 = COA
                 10 {
+                    // socialmedia_bookmarks
+                  10 = TEXT
+                  10 {
+                    value = ###SOCIALMEDIA_BOOKMARKS###
+                    wrap = <div class="show-for-large-up socialbookmarks">|</div>
+                  }
+                    // header
+                  20 = TEXT
                   20 {
                     field = := prependString(tx_org_repertoire.title // )
+                    wrap = <h1>|</h1>
                   }
+                    // bodytext
+                  30 = TEXT
                   30 {
                     field = := prependString(tx_org_repertoire.bodytext // )
+                    stdWrap {
+                      parseFunc < lib.parseFunc_RTE
+                    }
                   }
                 }
               }
