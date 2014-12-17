@@ -32,12 +32,14 @@ plugin.tx_browser_pi1 {
                   21 = TEXT
                   21 {
                     field = tx_org_repertoire.subtitle // tx_org_cal.subtitle
-                    wrap = <h1>|</h1>
+                    wrap = <h2>|</h2>
+                    required = 1
                   }
                     // bodytext
                   30 = TEXT
                   30 {
                     field = tx_org_repertoire.bodytext // tx_org_cal.bodytext
+                    required = 1
                     stdWrap {
                       parseFunc < lib.parseFunc_RTE
                     }
