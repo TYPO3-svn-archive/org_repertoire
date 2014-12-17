@@ -1,0 +1,17 @@
+plugin.tx_browser_pi1 {
+  templates {
+    singleview {
+      image {
+        0 {
+          file        := prependString(tx_org_repertoire.image // )
+          height      = tx_org_cal.imageheight //
+          width       = tx_org_cal.imagewidth //
+          seo         = tx_org_cal.imageseo //
+          caption     = tx_org_cal.imagecaption //
+          imageorient = tx_org_cal.imageorient //
+          imagecols   = tx_org_cal.imagecols //
+        }
+      }
+    }
+  }
+}
