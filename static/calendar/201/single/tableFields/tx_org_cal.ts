@@ -25,13 +25,19 @@ plugin.tx_browser_pi1 {
                     // header
                   20 = TEXT
                   20 {
-                    field := prependString(tx_org_repertoire.title // )
+                    field tx_org_repertoire.title // tx_org_cal.bodytext
+                    wrap = <h1>|</h1>
+                  }
+                    // subtitle
+                  21 = TEXT
+                  21 {
+                    field tx_org_repertoire.subtitle // tx_org_cal.subtitle
                     wrap = <h1>|</h1>
                   }
                     // bodytext
                   30 = TEXT
                   30 {
-                    field := prependString(tx_org_repertoire.bodytext // )
+                    field tx_org_repertoire.bodytext // tx_org_cal.bodytext
                     stdWrap {
                       parseFunc < lib.parseFunc_RTE
                     }
