@@ -27,43 +27,13 @@ plugin.tx_browser_pi1 {
               40 {
                   // link to tx_org_repertoire
                 tx_org_repertoire < .default
-              }
-            }
-              // margin: datesheet
-            20 {
-              10 {
-                  // 10: date isn't expired
-                10 {
-                    // name of weekday
+                tx_org_repertoire {
                   10 {
-                    tx_org_repertoire < .default
+                    field := prependString(tx_org_repertoire.teaser_short // tx_org_repertoire.bodytext // )
                   }
-                    // day of month as number
-                  20 {
-                    tx_org_repertoire {
-                      strftime  = %d
-                      wrap      = <li class="day_of_month">|</li>
-                    }
-                  }
-                    // month year
-                  30 {
-                    tx_org_repertoire {
-                      strftime  = %b %y
-                      wrap      = <li class="month">|</li>
-                    }
-                  }
-                }
-                  // 20: date is expired
-                20 < .10
-                20 {
-                  if {
-                    negate = 1
-                  }
-                  wrap = <ul class="vcard datesheet datesheet_expired">|</ul><!-- vcard -->
                 }
               }
             }
-            wrap = <div class="row">|</div>
           }
         }
       }

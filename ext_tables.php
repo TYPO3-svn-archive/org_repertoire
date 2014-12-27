@@ -129,14 +129,12 @@ switch ( true )
     // German
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/',            'Org-Repertoire [1]: Basis (immer einbinden!)' );
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/',    'Org-Repertoire [2]: +Org Kalender' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/211/',    'Org-Repertoire [2]: +Org Kalender - Rand' );
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/',  'Org-Repertoire [3]: Repertoire' );
     break;
   default:
     // English
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/',            'Org-Repertoire [1]: Basis (obligate!)' );
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/',    'Org-Repertoire [2]: +Org Calendar' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/211/',    'Org-Repertoire [2]: +Org Calendar - Margin' );
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/',  'Org-Repertoire [3]: Repertoire' );
 }
 // Case $llStatic
