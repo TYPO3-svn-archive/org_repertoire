@@ -127,15 +127,15 @@ switch ( true )
 {
   case($llStatic == 'de'):
     // German
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/',            'Org-Repertoire [1]: Basis (immer einbinden!)' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/',    'Org-Repertoire [2]: +Org Kalender' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/',  'Org-Repertoire [3]: Repertoire' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/',            'Org-Repertoire [1] Basis (immer einbinden!)' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/',    'Org-Repertoire [2] +Org Kalender' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/',  'Org-Repertoire [3] Repertoire' );
     break;
   default:
     // English
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/',            'Org-Repertoire [1]: Basis (obligate!)' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/',    'Org-Repertoire [2]: +Org Calendar' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/',  'Org-Repertoire [3]: Repertoire' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/base/',            'Org-Repertoire [1] Basis (obligate!)' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/calendar/201/',    'Org-Repertoire [2] +Org Calendar' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/repertoire/331/',  'Org-Repertoire [3] Repertoire' );
 }
 // Case $llStatic
 // Enables the Include Static Templates

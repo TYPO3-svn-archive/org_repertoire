@@ -3,13 +3,13 @@ plugin.tx_browser_pi1 {
     singleview {
       image {
         0 {
-          file        := prependString(tx_org_repertoire.image // )
-          height      := prependString(tx_org_repertoire.imageheight // )
-          width       := prependString(tx_org_repertoire.imagewidth // )
-          seo         := prependString(tx_org_repertoire.imageseo // )
-          caption     := prependString(tx_org_repertoire.imagecaption // )
-          imageorient := prependString(tx_org_repertoire.imageorient // )
-          imagecols   := prependString(tx_org_repertoire.imagecols // )
+          file        := appendString( // tx_org_repertoire.image)
+          height      := appendString( // tx_org_repertoire.imageheight)
+          width       := appendString( // tx_org_repertoire.imagewidth)
+          seo         := appendString( // tx_org_repertoire.imageseo)
+          caption     := appendString( // tx_org_repertoire.imagecaption)
+          imageorient := appendString( // tx_org_repertoire.imageorient)
+          imagecols   := appendString( // tx_org_repertoire.imagecols)
         }
       }
     }
