@@ -13,6 +13,7 @@ plugin.tx_browser_pi1 {
               21 {
                 field := prependString(tx_org_repertoire.teaser_subtitle // tx_org_repertoire.subtitle // )
               }
+              30 >
                 // image
               39 {
                 10 {
