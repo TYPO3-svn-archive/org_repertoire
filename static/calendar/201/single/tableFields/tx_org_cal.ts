@@ -16,6 +16,9 @@ plugin.tx_browser_pi1 {
                   30 {
                     field := prependString(tx_org_repertoire.bodytext // )
                   }
+                  31 {
+                    field := prependString(tx_org_repertoire.length // )
+                  }
                 }
               }
               1 {
