@@ -595,13 +595,13 @@ $TCA['tx_org_repertoire'] = array (
     'pages'     => $conf_pages,
     'fe_group'  => $conf_fegroup,
     'keywords'  => array (
-      'label'     => 'LLL:EXT:org/locallang_db.xml:tca_phrase.keywords',
+      'label'     => 'LLL:EXT:org/locallang_db.xml:tca_phrase.seo_keywords',
       'l10n_mode' => 'prefixLangTitle',
       'exclude'   => $bool_exclude_default,
       'config'    => $conf_input_80_trim,
     ),
     'description' => array (
-      'label'     => 'LLL:EXT:org/locallang_db.xml:tca_phrase.description',
+      'label'     => 'LLL:EXT:org/locallang_db.xml:tca_phrase.seo_description',
       'l10n_mode' => 'prefixLangTitle',
       'exclude'   => $bool_exclude_default,
       'config'    => $conf_text_50_10,
