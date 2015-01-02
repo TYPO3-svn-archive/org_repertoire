@@ -1,0 +1,2 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/Configuration/TypoScript/Org/Calendar/201/single/sql.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/Configuration/TypoScript/Org/Calendar/201/single/tableFields/_setup.ts">

@@ -1,2 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/static/calendar/201/list/_setup.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/static/calendar/201/single/_setup.ts">
