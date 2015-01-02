@@ -147,22 +147,22 @@ switch ( true )
 {
   case($llStatic == 'de'):
     // German
-    $TCA[ 'pages' ][ 'columns' ][ 'module' ][ 'config' ][ 'items' ][] = array( 'Org: Repertoire', 'org_reptr', t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon/repertoire.gif' );
+    $TCA[ 'pages' ][ 'columns' ][ 'module' ][ 'config' ][ 'items' ][] = array( 'Org: Repertoire', 'org_reptr', t3lib_extMgm::extRelPath( $_EXTKEY ) . 'Resources/Public/Images/repertoire.gif' );
     break;
   default:
     // English
-    $TCA[ 'pages' ][ 'columns' ][ 'module' ][ 'config' ][ 'items' ][] = array( 'Org: Repertoire', 'org_reptr', t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon/repertoire.gif' );
+    $TCA[ 'pages' ][ 'columns' ][ 'module' ][ 'config' ][ 'items' ][] = array( 'Org: Repertoire', 'org_reptr', t3lib_extMgm::extRelPath( $_EXTKEY ) . 'Resources/Public/Images/repertoire.gif' );
 }
 // Case $llStatic
 //  @see #34858, 120719, uherrmann
-t3lib_SpriteManager::addTcaTypeIcon( 'pages', 'contains-org_reptr', t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon/repertoire.gif' );
+t3lib_SpriteManager::addTcaTypeIcon( 'pages', 'contains-org_reptr', t3lib_extMgm::extRelPath( $_EXTKEY ) . 'Resources/Public/Images/repertoire.gif' );
 
 // Add pagetree icons
 /////////////////////////////////////////////////
 //
 // Add default page and user TSconfig
 
-t3lib_extMgm::addPageTSConfig( '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/tsConfig/' . $llStatic . '/page.txt">' );
+t3lib_extMgm::addPageTSConfig( '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TsConfig/Page/TxLinkhandler/' . $llStatic . '/page.txt">' );
 // Add default page and user TSconfig
 ////////////////////////////////////////////////////////////////////////////
 //
@@ -170,7 +170,7 @@ t3lib_extMgm::addPageTSConfig( '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTK
 t3lib_div::loadTCA( 'tx_org_cal' );
 
 // typeicons: Add type_icon
-$TCA[ 'tx_org_cal' ][ 'ctrl' ][ 'typeicons' ][ 'tx_org_repertoire' ] = '../typo3conf/ext/org_repertoire/ext_icon/repertoire.gif';
+$TCA[ 'tx_org_cal' ][ 'ctrl' ][ 'typeicons' ][ 'tx_org_repertoire' ] = '../typo3conf/ext/org_repertoire/Resources/Public/Images/repertoire.gif';
 // typeicons: Add type_icon
 // showRecordFieldList: Add field tx_org_repertoire
 $showRecordFieldList = $TCA[ 'tx_org_cal' ][ 'interface' ][ 'showRecordFieldList' ];
@@ -223,7 +223,7 @@ $TCA[ 'tx_org_cal' ][ 'columns' ][ 'type' ][ 'config' ][ 'items' ][ 'tx_org_repe
   (
   '0' => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_cal.type.tx_org_repertoire',
   '1' => 'tx_org_repertoire',
-  '2' => 'EXT:org_repertoire/ext_icon/repertoire.gif',
+  '2' => 'EXT:org_repertoire/Resources/Public/Images/repertoire.gif',
 );
 // columns: extend type
 // Insert type [repertoire] with fields to TCAtypes
@@ -264,7 +264,7 @@ $TCA[ 'tx_org_repertoire' ] = array(
     'hideAtCopy' => false,
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'thumbnail' => 'image',
-    'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon/repertoire.gif',
+    'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'Resources/Public/Images/repertoire.gif',
     'searchFields' => 'title,subtitle,producer,length,staff,bodytext,' .
     'teaser_title,teaser_subtitle,teaser_short,' .
     'documents_from_path,documents,documentscaption,documentslayout,documentssize,' .

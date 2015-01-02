@@ -3,7 +3,10 @@
   Feature
   * #i0006: Fields for backend search are added
   Improvement
-  * #i0007: static is moved to Configuration/TypoScript
+  * #i0007: * ext_icon is moved to Resources/Public/Images
+            * res/realurl_conf.php is moved to Resources/Private/RealUrl
+            * tsConfig is moved to Configuration/TsConfig/Page/TxLinkhandler
+            * static is moved to Configuration/TypoScript
   Upgrade for Org 6.0.7
   * #i0005: Removed: relations to fe_users: actor, advisor, assistant, dancer, director,
                       garment, light, makeup, musician, narrator, others, otherslabel,
