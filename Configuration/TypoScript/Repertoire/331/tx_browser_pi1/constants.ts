@@ -40,14 +40,20 @@ plugin.tx_browser_pi1 {
     singleview {
       image {
         0 {
-          default   = EXT:org/res/icons/defaults/tx_org_repertoire_300x200.png
-          file      = tx_org_repertoire.image
-          #height    =
-          #layoutKey = picture
-          #listNum   =
-          path      = uploads/tx_org/
-          #seo       = tx_org_repertoire.imageseo
-          #width     =
+          caption     = tx_org_repertoire.imagecaption
+          file        = tx_org_repertoire.image
+          height      = tx_org_repertoire.imageheight
+          imagecols   = tx_org_repertoire.imagecols
+          imageorient = tx_org_repertoire.imageorient
+          path        = uploads/tx_org/
+          seo         = tx_org_repertoire.imageseo
+          width       = tx_org_repertoire.imagewidth
+        }
+      }
+      text {
+        0 {
+          header    = tx_org_repertoire.title
+          bodytext  = tx_org_repertoire.bodytext // tx_org_repertoire.teaser_short
         }
       }
     }
