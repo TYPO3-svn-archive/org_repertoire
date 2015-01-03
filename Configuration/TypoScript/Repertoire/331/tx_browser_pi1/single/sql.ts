@@ -24,8 +24,10 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.image_compression,
 
           tx_org_repertoire.length,
+          tx_org_repertoire.producer,
           tx_org_repertoire.seo_description,
           tx_org_repertoire.seo_keywords,
+          tx_org_repertoire.staff,
           tx_org_repertoire.subtitle,
           tx_org_repertoire.teaser_subtitle,
           tx_org_repertoire.teaser_title,

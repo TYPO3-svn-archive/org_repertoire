@@ -19,6 +19,31 @@ plugin.tx_browser_pi1 {
                   wrap = <h2>|</h2>
                   required = 1
                 }
+                  // producer
+                22 = TEXT
+                22 {
+                  10 = TEXT
+                  10 {
+                    value = By
+                    lang {
+                      de = Von
+                      en = By
+                    }
+                    noTrimWrap = || |
+                  }
+                  20 = TEXT
+                  20 {
+                    field = tx_org_repertoire.producer
+                  }
+                  if {
+                    isTrue {
+                      field = tx_org_repertoire.producer
+                    }
+                  }
+                  stdWrap {
+                    parseFunc < lib.parseFunc_RTE
+                  }
+                }
                   // length
                 31 = COA
                 31 {
@@ -44,42 +69,69 @@ plugin.tx_browser_pi1 {
                     parseFunc < lib.parseFunc_RTE
                   }
                 }
+                  // staff
+                32 = TEXT
+                32 {
+                  field = tx_org_repertoire.staff
+                  required = 1
+                  stdWrap {
+                    parseFunc < lib.parseFunc_RTE
+                  }
+                }
               }
               1 {
                 21 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.21
+                22 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.22
                 31 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.31
+                32 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.32
               }
               2 {
                 21 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.21
+                22 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.22
                 31 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.31
+                32 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.32
               }
               8 {
                 21 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.21
+                22 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.22
                 31 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.31
+                32 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.32
               }
               9 {
                 21 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.21
+                22 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.22
                 31 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.31
+                32 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.32
               }
               10 {
                 21 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.21
+                22 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.22
                 31 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.31
+                32 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.32
               }
               17 {
                 21 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.21
+                22 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.22
                 31 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.31
+                32 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.32
               }
               18 {
                 21 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.21
+                22 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.22
                 31 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.31
+                32 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.32
               }
               25 {
                 21 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.21
+                22 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.22
                 31 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.31
+                32 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.32
               }
               26 {
                 21 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.21
+                22 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.22
                 31 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.31
+                32 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.20.0.32
               }
             }
             wrap = <div class="row">|</div>
