@@ -12,7 +12,7 @@ plugin.tx_browser_pi1 {
       }
       image {
         0 {
-          default   = EXT:org/res/icons/defaults/tx_org_repertoire_300x200.png
+          default   = EXT:org_repertoire/Resources/Public/Images/Default/org_repertoire_defaults_300x200.png
           file      = tx_org_repertoire.image
           height    = 95c
           path      = uploads/tx_org/
