@@ -1,59 +1,52 @@
 plugin.tx_browser_pi1 {
-  jQuery {
-    plugin {
-      jstree {
-        tablefield_01 = tx_org_eventcat.title
-      }
-    }
-  }
   navigation {
-    showUid = eventUid
+    showUid = repertoireUid
   }
 
   templates {
     listview {
       header {
         0 {
-          field   = tx_org_event.teaser_title // tx_org_event.title
+          field   = tx_org_repertoire.teaser_title // tx_org_repertoire.title
         }
       }
       image {
         0 {
-          default   = EXT:org/res/icons/defaults/tx_org_event_300x200.png
-          file      = tx_org_event.image
+          default   = EXT:org/res/icons/defaults/tx_org_repertoire_300x200.png
+          file      = tx_org_repertoire.image
           height    = 95c
           path      = uploads/tx_org/
-          seo       = tx_org_event.imageseo
+          seo       = tx_org_repertoire.imageseo
           width     = 95c
         }
       }
       text {
         0 {
           crop    = 200 | ... | 1
-          field   = tx_org_event.teaser_short // tx_org_event.bodytext
+          field   = tx_org_repertoire.teaser_short // tx_org_repertoire.bodytext
         }
       }
       url {
         0 {
-          key       = tx_org_event.type // type
-          page      = tx_org_event.page // page
-          record    = tx_org_event.uid  // uid
-          showUid   = eventUid
+          key       = tx_org_repertoire.type // type
+          page      = tx_org_repertoire.page // page
+          record    = tx_org_repertoire.uid  // uid
+          showUid   = repertoireUid
           #singlePid =
-          url       = tx_org_event.url // url
+          url       = tx_org_repertoire.url // url
         }
       }
     }
     singleview {
       image {
         0 {
-          default   = EXT:org/res/icons/defaults/tx_org_event_300x200.png
-          file      = tx_org_event.image
+          default   = EXT:org/res/icons/defaults/tx_org_repertoire_300x200.png
+          file      = tx_org_repertoire.image
           #height    =
           #layoutKey = picture
           #listNum   =
           path      = uploads/tx_org/
-          #seo       = tx_org_event.imageseo
+          #seo       = tx_org_repertoire.imageseo
           #width     =
         }
       }

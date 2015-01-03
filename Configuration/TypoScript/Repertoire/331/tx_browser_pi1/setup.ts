@@ -1,18 +1,26 @@
 plugin.tx_browser_pi1 {
 
-  displayList {
-    selectBox_orderBy {
-      display = 1
+  template {
+    add_parameter {
+      extensions {
+        org_repertoire = COA
+        org_repertoire {
+            // repertoireUid
+          10 = TEXT
+          10 {
+            dataWrap        = &tx_browser_pi1[repertoireUid]={GPvar:tx_browser_pi1|repertoireUid}&###CHASH###
+            if.isTrue.data  = GPvar:tx_browser_pi1|repertoireUid
+          }
+        }
+      }
     }
   }
 
-  navigation.map.template.file = EXT:browser/Resources/Private/Templates/HTML/Map/map_filter_1.3.tmpl
-
   views {
     list {
-      61826 = +Org: Events
-      61826 {
-        name    = +Org: Events
+      331 = +Org: Repertoire
+      331 {
+        name    = +Org: Repertoire
         showUid = {$plugin.tx_browser_pi1.navigation.showUid}
         navigation < plugin.tx_browser_pi1.navigation
         navigation {
@@ -23,10 +31,10 @@ plugin.tx_browser_pi1 {
       }
     }
     single {
-      61826 = +Org: Events
+      331 = +Org: Repertoire
     }
   }
 }
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org/Configuration/TypoScript/events/61826/tx_browser_pi1/list/_setup.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org/Configuration/TypoScript/events/61826/tx_browser_pi1/single/_setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/Configuration/TypoScript/Repertoire/331/tx_browser_pi1/list/_setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/Configuration/TypoScript/Repertoire/331/tx_browser_pi1/single/_setup.ts">

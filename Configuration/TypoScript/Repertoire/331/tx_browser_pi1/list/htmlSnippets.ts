@@ -1,7 +1,7 @@
 plugin.tx_browser_pi1 {
   views {
     list {
-      61826 {
+      331 {
         htmlSnippets =
         htmlSnippets {
           marker {
@@ -9,7 +9,7 @@ plugin.tx_browser_pi1 {
             filter {
               value (
               <div class="filter">
-                ###TX_ORG_EVENTCAT.TITLE###
+                ###TX_ORG_CAL.DATETIME###
               </div>
 )
             }
@@ -23,7 +23,9 @@ plugin.tx_browser_pi1 {
                     <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
                     <div class="row">
                       <div class="record">
-                        ###TX_ORG_EVENT.TITLE###
+                        ###TX_ORG_REPERTOIRE.SUBTITLE###
+                        ###TX_ORG_REPERTOIRE.TITLE###
+                        ###TX_ORG_REPERTOIRE.TEASER_SHORT###
                       </div>
                     </div><!-- /row --><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
                   </div><!-- /columns --><!-- /listview -->

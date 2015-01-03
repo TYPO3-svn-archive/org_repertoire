@@ -1,9 +1,6 @@
 # INDEX
 # -----
 # tx_org_repertoire
-# tx_org_repertoire_mm_tx_org_cal
-
-# fe_users
 # tx_org_tx_org_cal
 
 
@@ -61,30 +58,6 @@ CREATE TABLE tx_org_repertoire (
 
   PRIMARY KEY (uid),
   KEY parent (pid)
-);
-
-
-
-#
-# Table structure for table 'tx_org_repertoire_mm_tx_org_cal'
-#
-CREATE TABLE tx_org_repertoire_mm_tx_org_cal (
-  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  tablenames varchar(30) DEFAULT '' NOT NULL,
-  sorting         int(11) unsigned DEFAULT '0' NOT NULL,
-  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  KEY uid_local (uid_local),
-  KEY uid_foreign (uid_foreign)
-);
-
-
-
-#
-# Table structure for table 'fe_users'
-#
-CREATE TABLE fe_users (
-  tx_org_repertoire tinytext
 );
 
 

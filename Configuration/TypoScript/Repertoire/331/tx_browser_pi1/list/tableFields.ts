@@ -1,60 +1,165 @@
 plugin.tx_browser_pi1 {
   views {
     list {
-      61826 {
-          // title
-        tx_org_event =
-        tx_org_event {
-            // content, margin
-          title = COA
-          title {
-              // content: bookmarks, title, tx_org_eventcat.title, teaser_short, location
-            10 = COA
+      331 {
+        tx_org_cal {
+          datetime = COA
+          datetime {
+            10 = TEXT
             10 {
-                // socialmedia_bookmarks
-              10 = TEXT
-              10 {
-                value = ###SOCIALMEDIA_BOOKMARKS###
-                wrap = <div style="float:right;">|</div>
+              field = tx_org_cal.datetime
+              strftime = %A, %d. %B, %H:%M
+            }
+            20 = TEXT
+            20 {
+              value = h
+              lang {
+                de = Uhr
+                en = h
               }
-                // title: default, notype, page, url, tx_org_event
-              20 < plugin.tx_browser_pi1.displayList.master_templates.tableFields.header.0
-                // tx_org_event.subtitle
-              21 = TEXT
-              21 {
-                field = tx_org_event.teaser_subtitle // tx_org_event.subtitle
-                wrap = <h3>|</h3>
-                required = 1
+              noTrimWrap = | ||
+            }
+          }
+        }
+        tx_org_repertoire {
+            // teaser_short || bodytext, more
+          teaser_short = COA
+          teaser_short {
+            required    = 1
+            wrap        = <div class="repertoire_teasershort">|</div>
+            20 = TEXT
+            20 {
+              required    = 1
+              field       = tx_org_repertoire.teaser_short // tx_org_repertoire.bodytext
+              stripHtml   = 1
+              crop        = 200 | &nbsp;... | 1
+            }
+            30 = TEXT
+            30 {
+              value   = more &raquo;
+              lang {
+                de = mehr &raquo;
+                en = more &raquo;
               }
-                // tx_org_eventcat.title
-              30 = COA
-              30 {
-                if {
-                  isTrue {
-                    field = tx_org_eventcat.title
+              typolink {
+                parameter {
+                  cObject = COA
+                  cObject {
+                      // url
+                    10 = TEXT
+                    10 {
+                      value = {$plugin.org.pages.repertoire}
+                    }
+                      // target
+                    20 = TEXT
+                    20 {
+                      value       = -
+                      //noTrimWrap  = | "|"|
+                    }
+                      // class
+                    30 = TEXT
+                    30 {
+                      value       = internal-link
+                      noTrimWrap  = | "|"|
+                    }
+                      // title
+                    40 = TEXT
+                    40 {
+                      value = Repertoire
+                      lang {
+                        de = Repertoire
+                        en = Repertoire
+                      }
+                      noTrimWrap  = | "|"|
+                    }
                   }
                 }
-                wrap = <p class="tx_org_eventcat">|</p>
-                  // label
-                10 = TEXT
-                10 {
-                  data = LLL:EXT:org/locallang_db.xml:filter_phrase.eventcat.title
-                  noTrimWrap = ||: |
+                additionalParams {
+                  data  = GP:tx_browser_pi1|tx_org_repertoire.uid
+                  wrap  = &tx_browser_pi1[{$plugin.tx_browser_pi1.navigation.showUid}]=|
                 }
-                20 = TEXT
-                20 {
-                  field = tx_org_eventcat.title
+                useCacheHash = 1
+              }
+              noTrimWrap = | ||
+            }
+          }
+          subtitle = TEXT
+          subtitle {
+            required  = 1
+            field     = tx_org_repertoire.subtitle
+            wrap      = <h3 class="repertoire_subtitle">|</h3>
+          }
+            // title, producer
+          title = COA
+          title {
+            wrap = <h2 class="repertoire_title">|</h2>
+            10 = TEXT
+            10 {
+              required  = 1
+              field     = tx_org_repertoire.title
+              typolink {
+                parameter {
+                  cObject = COA
+                  cObject {
+                      // url
+                    10 = TEXT
+                    10 {
+                      value = {$plugin.org.pages.repertoire}
+                    }
+                      // target
+                    20 = TEXT
+                    20 {
+                      value       = -
+                      //noTrimWrap  = | "|"|
+                    }
+                      // class
+                    30 = TEXT
+                    30 {
+                      value       = internal-link
+                      noTrimWrap  = | "|"|
+                    }
+                      // title
+                    40 = TEXT
+                    40 {
+                      value = Repertoire
+                      lang {
+                        de = Repertoire
+                        en = Repertoire
+                      }
+                      noTrimWrap  = | "|"|
+                    }
+                  }
+                }
+                additionalParams {
+                  data  = GP:tx_browser_pi1|tx_org_repertoire.uid
+                  wrap  = &tx_browser_pi1[{$plugin.tx_browser_pi1.navigation.showUid}]=|
+                }
+                useCacheHash = 1
+              }
+            }
+            20 = COA
+            20 {
+              if {
+                isTrue {
+                  field = tx_org_repertoire.producer
                 }
               }
-              39 = COA
-              39 {
-                  // image
-                10 < plugin.tx_browser_pi1.displayList.master_templates.tableFields.image.0
-                wrap = <div style="float:left;padding-right:1em;">|</div>
+              10 = TEXT
+              10 {
+                value = by
+                lang {
+                  de  = von
+                  en  = by
+                }
+                noTrimWrap = || |
               }
-                // teaser_short: default, notype, page, url, tx_org_event
-              40 < plugin.tx_browser_pi1.displayList.master_templates.tableFields.text.0
-              wrap = <div class="columns">|</div>
+              20 = TEXT
+              20 {
+                field = tx_org_repertoire.producer
+              }
+              stdWrap {
+                noTrimWrap = | <span class="repertoire_producer">|</span>|
+              }
             }
           }
         }
@@ -62,4 +167,3 @@ plugin.tx_browser_pi1 {
     }
   }
 }
-
