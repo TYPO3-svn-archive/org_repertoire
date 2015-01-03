@@ -1,5 +1,25 @@
 plugin.tx_browser_pi1 {
   templates {
+    listview {
+      image {
+        0 {
+          file  := appendString( // tx_org_repertoire.image)
+          seo   := appendString( // tx_org_repertoire.imageseo)
+        }
+      }
+      text {
+        0 {
+          field := prependString( tx_org_repertoire.teaser_short // tx_org_repertoire.bodytext )
+        }
+      }
+      url {
+        0 {
+          key   := prependString( tx_org_repertoire.type // )
+          page  := prependString( tx_org_repertoire.page // )
+          url   := prependString( tx_org_repertoire.url // )
+        }
+      }
+    }
     singleview {
       image {
         0 {

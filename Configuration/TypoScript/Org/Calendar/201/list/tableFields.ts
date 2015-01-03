@@ -5,17 +5,17 @@ plugin.tx_browser_pi1 {
         tx_org_cal {
           title {
             10 {
-              20 {
+              XXX20 {
                   // link to tx_org_repertoire
                 tx_org_repertoire < .default
               }
                 // tx_org_cal.subtitle
-              21 {
+              XXX21 {
                 field := prependString(tx_org_repertoire.teaser_subtitle // tx_org_repertoire.subtitle // )
               }
-              30 >
+              XXX30 >
                 // image
-              39 {
+              XXX39 {
                 10 {
                   tx_org_repertoire < .default
                   tx_org_repertoire {
@@ -25,7 +25,7 @@ plugin.tx_browser_pi1 {
                   }
                 }
               }
-              40 {
+              XXX40 {
                   // link to tx_org_repertoire
                 tx_org_repertoire < .default
                 tx_org_repertoire {
