@@ -25,10 +25,15 @@ plugin.tx_browser_pi1 {
           page  := prependString( tx_org_repertoire.page // )
           url   := prependString( tx_org_repertoire.url // )
         }
-        6 {
+        XXX6 {
           key   := prependString( tx_org_repertoire.type // )
           page  := prependString( tx_org_repertoire.page // )
           url   := prependString( tx_org_repertoire.url // )
+        }
+        6 {
+          key       = tx_org_repertoire.type // type
+          page      = tx_org_repertoire.page // page
+          url       = tx_org_repertoire.url // url
         }
       }
     }
