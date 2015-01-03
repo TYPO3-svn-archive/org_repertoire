@@ -1,2 +1,3 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/Configuration/TypoScript/Repertoire/331/org/constants.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/Configuration/TypoScript/Repertoire/331/tx_browser_pi1/constants.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:org_repertoire/Configuration/TypoScript/Repertoire/331/tx_seodynamictag_pi1/constants.ts">
