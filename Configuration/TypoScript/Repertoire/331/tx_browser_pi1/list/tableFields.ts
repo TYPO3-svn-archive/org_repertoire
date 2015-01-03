@@ -75,7 +75,7 @@ plugin.tx_browser_pi1 {
                   }
                 }
                 additionalParams {
-                  data  = GP:tx_browser_pi1|tx_org_repertoire.uid
+                  field = tx_org_repertoire.uid
                   wrap  = &tx_browser_pi1[{$plugin.tx_browser_pi1.navigation.showUid}]=|
                 }
                 useCacheHash = 1
@@ -131,7 +131,7 @@ plugin.tx_browser_pi1 {
                   }
                 }
                 additionalParams {
-                  data  = GP:tx_browser_pi1|tx_org_repertoire.uid
+                  field = tx_org_repertoire.uid
                   wrap  = &tx_browser_pi1[{$plugin.tx_browser_pi1.navigation.showUid}]=|
                 }
                 useCacheHash = 1
