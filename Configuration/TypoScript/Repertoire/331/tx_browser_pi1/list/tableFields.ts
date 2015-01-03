@@ -22,6 +22,7 @@ plugin.tx_browser_pi1 {
           }
         }
         tx_org_repertoire {
+          image < plugin.tx_browser_pi1.displayList.master_templates.tableFields.image.0
             // teaser_short || bodytext, more
           teaser_short = COA
           teaser_short {
