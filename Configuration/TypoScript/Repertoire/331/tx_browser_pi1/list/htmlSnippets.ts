@@ -22,7 +22,7 @@ plugin.tx_browser_pi1 {
                   <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="columns listview listview-content listview-###MODE### listview-content-###MODE###">
                     <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
                     <div class="row">
-                      <div class="record">
+                      <div class="columns record">
                         ###TX_ORG_REPERTOIRE.SUBTITLE###
                         ###TX_ORG_REPERTOIRE.TITLE###
                         ###TX_ORG_REPERTOIRE.TEASER_SHORT###
