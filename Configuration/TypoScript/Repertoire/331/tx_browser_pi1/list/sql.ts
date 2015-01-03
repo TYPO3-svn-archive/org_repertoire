@@ -12,9 +12,9 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.teaser_short,
           tx_org_repertoire.tx_org_cal,
           tx_org_repertoire.uid,
+          tx_org_cal.datetime,
+          tx_org_cal.type
         )
-          //tx_org_cal.datetime,
-          //tx_org_cal.type
         orderBy (
           tx_org_repertoire.title
         )
