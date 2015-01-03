@@ -54,7 +54,7 @@ plugin.tx_browser_pi1 {
                     20 = TEXT
                     20 {
                       value       = -
-                      //noTrimWrap  = | "|"|
+                      noTrimWrap  = | ||
                     }
                       // class
                     30 = TEXT
@@ -110,7 +110,7 @@ plugin.tx_browser_pi1 {
                     20 = TEXT
                     20 {
                       value       = -
-                      //noTrimWrap  = | "|"|
+                      noTrimWrap  = | ||
                     }
                       // class
                     30 = TEXT
