@@ -6,14 +6,26 @@ plugin.tx_browser_pi1 {
           file  := appendString( // tx_org_repertoire.image)
           seo   := appendString( // tx_org_repertoire.imageseo)
         }
+        6 {
+          file  := appendString( // tx_org_repertoire.image)
+          seo   := appendString( // tx_org_repertoire.imageseo)
+        }
       }
       text {
         0 {
           field := prependString( tx_org_repertoire.teaser_short // tx_org_repertoire.bodytext // )
         }
+        6 {
+          field := prependString( tx_org_repertoire.teaser_short // tx_org_repertoire.bodytext // )
+        }
       }
       url {
         0 {
+          key   := prependString( tx_org_repertoire.type // )
+          page  := prependString( tx_org_repertoire.page // )
+          url   := prependString( tx_org_repertoire.url // )
+        }
+        6 {
           key   := prependString( tx_org_repertoire.type // )
           page  := prependString( tx_org_repertoire.page // )
           url   := prependString( tx_org_repertoire.url // )
