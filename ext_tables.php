@@ -269,10 +269,9 @@ $TCA[ 'tx_org_repertoire' ] = array(
     'teaser_title,teaser_subtitle,teaser_short,' .
     'documents_from_path,documents,documentscaption,documentslayout,documentssize,' .
     'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
-    'embeddedcode,print,printcaption,printseo,' .
     'tx_org_cal,' .
     'hidden,pages,fe_group,' .
-    'keywords,description'
+    'seo_keywords,seo_description'
   ),
 );
 // repertoire ///////////////////////////////////////////////////////////////////

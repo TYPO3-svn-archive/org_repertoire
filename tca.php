@@ -242,10 +242,9 @@ $TCA['tx_org_repertoire'] = array (
                               'teaser_title,teaser_subtitle,teaser_short,'.
                               'documents_from_path,documents,documentscaption,documentslayout,documentssize,' .
                               'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
-                              'embeddedcode,print,printcaption,printseo,'.
                               'tx_org_cal,'.
                               'hidden,pages,fe_group,'.
-                              'keywords,description'
+                              'seo_keywords,seo_description'
   ),
   'feInterface' => $TCA['tx_org_repertoire']['feInterface'],
   'columns' => array (
@@ -541,26 +540,6 @@ $TCA['tx_org_repertoire'] = array (
         'default' => 1
       )
     ),
-    'embeddedcode' => array (
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.embeddedcode',
-      'exclude' => $bool_exclude_none,
-      'config'  => $conf_text_50_10,
-    ),
-    'print' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.print',
-      'config'  => $conf_file_image,
-    ),
-    'printcaption' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.imagecaption',
-      'config'  => $conf_text_30_05,
-    ),
-    'printseo' => array (
-      'exclude' => $bool_exclude_none,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.imageseo',
-      'config'  => $conf_text_30_05,
-    ),
     'tx_org_cal' => array(
       'exclude' => $bool_exclude_default,
       'l10n_mode' => 'exclude',
@@ -594,13 +573,13 @@ $TCA['tx_org_repertoire'] = array (
     'hidden'    => $conf_hidden,
     'pages'     => $conf_pages,
     'fe_group'  => $conf_fegroup,
-    'keywords'  => array (
+    'seo_keywords'  => array (
       'label'     => 'LLL:EXT:org/locallang_db.xml:tca_phrase.seo_keywords',
       'l10n_mode' => 'prefixLangTitle',
       'exclude'   => $bool_exclude_default,
       'config'    => $conf_input_80_trim,
     ),
-    'description' => array (
+    'seo_description' => array (
       'label'     => 'LLL:EXT:org/locallang_db.xml:tca_phrase.seo_description',
       'l10n_mode' => 'prefixLangTitle',
       'exclude'   => $bool_exclude_default,
@@ -623,7 +602,7 @@ $TCA['tx_org_repertoire'] = array (
         '--palette--;LLL:EXT:org/locallang_db.xml:palette.appearance;documents_appearance,' .
       '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_calendar,     tx_org_cal,'.
       '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_control,      hidden,pages,fe_group,'.
-      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_seo,          keywords,description'.
+      '--div--;LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire.div_seo,          seo_keywords,seo_description'.
                           ''),
   ),
   'palettes' => array (
