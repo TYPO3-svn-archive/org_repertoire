@@ -16,13 +16,14 @@ plugin.tx_browser_pi1 {
     singleview {
       image {
         0 {
-          file        := appendString( // tx_org_repertoire.image)
-          height      := appendString( // tx_org_repertoire.imageheight)
-          width       := appendString( // tx_org_repertoire.imagewidth)
-          seo         := appendString( // tx_org_repertoire.imageseo)
-          caption     := appendString( // tx_org_repertoire.imagecaption)
-          imageorient := appendString( // tx_org_repertoire.imageorient)
-          imagecols   := appendString( // tx_org_repertoire.imagecols)
+          caption     = tx_org_repertoire.imagecaption // tx_org_cal.imagecaption
+          file        = tx_org_repertoire.image // tx_org_cal.image
+          height      = tx_org_repertoire.imageheight // tx_org_cal.imageheight
+          imagecols   = tx_org_repertoire.imagecols // tx_org_cal.imagecols
+          imageorient = tx_org_repertoire.imageorient // tx_org_cal.imageorient
+          path        = uploads/tx_org/
+          seo         = tx_org_repertoire.imageseo // tx_org_cal.imageseo
+          width       = tx_org_repertoire.imagewidth // tx_org_cal.imagewidth
         }
       }
     }
