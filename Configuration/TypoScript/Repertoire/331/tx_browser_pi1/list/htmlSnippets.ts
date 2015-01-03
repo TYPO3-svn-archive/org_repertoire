@@ -23,6 +23,12 @@ plugin.tx_browser_pi1 {
                     <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
                     <div class="row">
                       <div class="columns record">
+                        <div class="image01">
+                          ###TX_ORG_REPERTOIRE.IMAGE###
+                        </div>
+                        <div class="sbmFloatRight">
+                          ###SOCIALMEDIA_BOOKMARKS###
+                        </div>
                         ###TX_ORG_REPERTOIRE.SUBTITLE###
                         ###TX_ORG_REPERTOIRE.TITLE###
                         ###TX_ORG_REPERTOIRE.TEASER_SHORT###
