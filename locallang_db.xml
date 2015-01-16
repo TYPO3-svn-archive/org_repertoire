@@ -13,7 +13,7 @@
       <label index="fe_users.div_tx_org_repertoire">Repertoire</label>
       <label index="fe_users.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>
-      <label index="tx_org_cal.type.tx_org_repertoire">Take it from the repertoire table</label>
+      <label index="tx_org_cal.type.tx_org_repertoire">single view of a repertoire</label>
 
       <label index="tx_org_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_repertoire">Repertoire</label>
@@ -47,7 +47,7 @@
       <label index="fe_users.div_tx_org_repertoire">Repertoire</label>
       <label index="fe_users.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>
-      <label index="tx_org_cal.type.tx_org_repertoire">Aus dem Repertoire</label>
+      <label index="tx_org_cal.type.tx_org_repertoire">die Detailansicht aus dem Repertoire</label>
 
       <label index="tx_org_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_repertoire">Repertoire</label>
