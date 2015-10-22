@@ -2,12 +2,7 @@ plugin.tx_browser_pi1 {
   views {
     list {
       201 {
-          // map
-        navigation =
         navigation {
-            // configuration
-          map =
-          map < plugin.tx_browser_pi1.navigation.map
           map {
             marker {
               variables {
@@ -17,7 +12,7 @@ plugin.tx_browser_pi1 {
                     20 {
                         // link to tx_org_repertoire
                       tx_org_repertoire < .default
-                      tx_org_repertoire {
+                      XXXtx_org_repertoire {
                         imageLinkWrap {
                           typolink {
                             parameter {
@@ -50,7 +45,7 @@ plugin.tx_browser_pi1 {
                     30 {
                         // link to tx_org_repertoire
                       tx_org_repertoire < .default
-                      tx_org_repertoire {
+                      XXXtx_org_repertoire {
                         typolink {
                           parameter {
                             cObject {
@@ -81,7 +76,7 @@ plugin.tx_browser_pi1 {
                     40 {
                         // link to tx_org_repertoire
                       tx_org_repertoire < .default
-                      tx_org_repertoire {
+                      XXXtx_org_repertoire {
                           // details link
                         20 {
                           typolink {
@@ -115,7 +110,7 @@ plugin.tx_browser_pi1 {
                   url {
                       // link to tx_org_repertoire
                     tx_org_repertoire < .default
-                    tx_org_repertoire {
+                    XXXtx_org_repertoire {
                       typolink {
                         parameter {
                           cObject {
