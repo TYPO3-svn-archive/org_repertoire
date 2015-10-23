@@ -37,7 +37,7 @@ plugin.tx_browser_pi1 {
                             // location
                           20 = TEXT
                           20 {
-                            value       = title
+                            field       = title
                             noTrimWrap  = | (|)|
                             required    = 1
                           }
