@@ -54,31 +54,43 @@ plugin.tx_browser_pi1 {
                       field = {$plugin.tx_browser_pi1.templates.listview.url.5.key}
                     }
                       // link to detail view
-                    default = TEXT
+                    default = COA
                     default {
-                      field = datetime
-                      strftime  = %a., %d. %b. %Y %H:%M Uhr
-                      wrap = <li class="url">|</li>
-                      stdWrap {
-                        noTrimWrap = || &raquo;|
+                        // datetime
+                      20 = TEXT
+                      20 {
+                        field = datetime
+                        strftime  = %a., %d. %b. %Y %H:%M Uhr
+                        wrap = <li class="url">|</li>
+                        stdWrap {
+                          noTrimWrap = || &raquo;|
+                        }
+                        typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
                       }
-                      typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
                     }
                       // no link
-                    notype = TEXT
+                    notype = COA
                     notype {
-                      field   = title
-                      wrap = <li class="url">|</li>
+                        // datetime
+                      20 = TEXT
+                      20 {
+                        field   = title
+                        wrap = <li class="url">|</li>
+                      }
                     }
                       // link to internal page
                     page < .default
                     page {
-                      typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.page
+                      20 {
+                        typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.page
+                      }
                     }
                       // link to external url
                     url < .page
                     url {
-                      typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.url
+                      20 {
+                        typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.url
+                      }
                     }
                   }
                 }
@@ -86,21 +98,29 @@ plugin.tx_browser_pi1 {
                 20 {
                   select {
                     andWhere = tx_org_cal.datetime <= UNIX_TIMESTAMP()
-                    //max = 3
+                    max = 1
                   }
                   renderObj {
                     default {
-                      wrap = <li class="url expired">|</li>
+                      20 {
+                        wrap = <li class="url expired">|</li>
+                      }
                     }
                     notype {
-                      wrap = <li class="url expired">|</li>
+                      20 {
+                        wrap = <li class="url expired">|</li>
+                      }
                     }
                       // link to internal page
                     page {
-                      wrap = <li class="url expired">|</li>
+                      20 {
+                        wrap = <li class="url expired">|</li>
+                      }
                     }
                     url {
-                      wrap = <li class="url expired">|</li>
+                      20 {
+                        wrap = <li class="url expired">|</li>
+                      }
                     }
                   }
                 }

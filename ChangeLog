@@ -1,8 +1,9 @@
 6.1.0
   15-10-23
   Feature
-  * #i0016: Repertoire template is extended with location name and location city
+  * #i0017: Repertoire template is extended with location name and location city
   Improvement
+  * #i0016: Repertoire template: expired calender items are limited to two
   * #i0015: Repertoire template: calender items are ordered by date ASC
 
 6.0.9
