@@ -1,14 +1,14 @@
 plugin.org_repertoire {
 
-  # cat=Org +Repertoire - Pages/105/302; type=+int; label= repertoire:Uid of your repertoire page
+  # cat=Org Repertoire - Pages/105/302; type=+int; label= repertoire:Uid of your repertoire page
   pages.repertoire =
 
-  # cat=Org +Repertoire - Sysfolders/500/303; type=+int; label= repertoire:Uid of the sysfolder with the repertoire data
+  # cat=Org Repertoire - Sysfolders/500/303; type=+int; label= repertoire:Uid of the sysfolder with the repertoire data
   sysfolder.repertoire =
 
   templates {
     repertoire {
-      # cat=Org +Repertoire - Templates//400; type=boolean; label= Location:Extend calendar items with city and location name
+      # cat=Org Repertoire - Templates//400; type=boolean; label= Location:Extend calendar items with city and location name
       plusLocation = 0
     }
   }
