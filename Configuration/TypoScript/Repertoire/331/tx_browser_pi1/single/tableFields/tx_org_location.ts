@@ -29,7 +29,7 @@ plugin.tx_browser_pi1 {
                     }
                   }
                 }
-                XXX10 {
+                10 {
                   renderObj {
                     default {
                       wrap = <li class="url expired">|</li>
