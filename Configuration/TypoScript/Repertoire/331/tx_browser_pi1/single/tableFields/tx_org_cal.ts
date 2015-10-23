@@ -33,6 +33,7 @@ plugin.tx_browser_pi1 {
               }
               20 = COA
               20 {
+                  // calendar items up to date
                 20 = CONTENT
                 20 {
                   table = tx_org_cal
@@ -114,6 +115,7 @@ plugin.tx_browser_pi1 {
                     }
                   }
                 }
+                  // calendar items expired
                 10 < .20
                 10 {
                   select {
