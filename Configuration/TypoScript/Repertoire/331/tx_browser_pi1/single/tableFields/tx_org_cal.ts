@@ -74,20 +74,10 @@ plugin.tx_browser_pi1 {
                         }
                       }
                         // city, location
-                      30 = COA
+                      30 = TEXT
                       30 {
-                          // city
-                        10 = TEXT
-                        10 {
-                          field = uid
-                          noTrimWrap = |, cal-uid: | (for city)|
-                        }
-                          location
-                        20 = TEXT
-                        20 {
-                          value = location name
-                          noTrimWrap = |, ||
-                        }
+                        value = Please include Configuration/TypoScript/Repertoire/331/tx_browser_pi1/single/tableFields/tx_org_location.ts
+                        noTrimWrap = |, ||
                       }
                         // &raquo;
                       40 = TEXT
