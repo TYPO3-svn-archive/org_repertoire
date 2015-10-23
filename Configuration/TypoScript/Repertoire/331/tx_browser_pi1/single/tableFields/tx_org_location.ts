@@ -19,7 +19,7 @@ plugin.tx_browser_pi1 {
                           field = uid
                           noTrimWrap = |, cal-uid: | (for city)|
                         }
-                          location
+                          // location
                         20 = TEXT
                         20 {
                           value = location name
