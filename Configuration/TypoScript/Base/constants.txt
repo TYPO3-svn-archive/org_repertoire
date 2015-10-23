@@ -6,4 +6,10 @@ plugin.org {
   # cat=Organiser Repertoire/page/303; type=+int; label= sysfolder uid repertoire:Uid of the sysfolder with the repertoire data
   sysfolder.repertoire =
 
+  templates {
+    repertoire {
+      # cat=Organiser Repertoire//400; type=boolean; label= Location:Extend calendar items with city and location name
+      plusLocation = 0
+    }
+  }
 }
