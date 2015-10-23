@@ -27,26 +27,41 @@ plugin.tx_browser_pi1 {
                         }
                       }
                     }
+                    notype {
+                      30 >
+                      30 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.40.20.20.renderObj.default.30
+                    }
+                    page {
+                      30 >
+                      30 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.40.20.20.renderObj.default.30
+                    }
+                    url {
+                      30 >
+                      30 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.40.20.20.renderObj.default.30
+                    }
                   }
                 }
                 10 {
                   renderObj {
                     default {
-                      wrap = <li class="url expired">|</li>
+                      30 >
+                      30 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.40.20.20.renderObj.default.30
                     }
                     notype {
-                      wrap = <li class="url expired">|</li>
+                      30 >
+                      30 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.40.20.20.renderObj.default.30
                     }
                       // link to internal page
                     page {
-                      wrap = <li class="url expired">|</li>
+                      30 >
+                      30 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.40.20.20.renderObj.default.30
                     }
                     url {
-                      wrap = <li class="url expired">|</li>
+                      30 >
+                      30 < plugin.tx_browser_pi1.views.single.331.tx_org_repertoire.title.40.20.20.renderObj.default.30
                     }
                   }
                 }
-                wrap = <li class="tx_org_cal">|</li>
               }
             }
           }
