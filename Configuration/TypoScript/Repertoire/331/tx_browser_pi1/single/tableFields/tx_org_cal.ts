@@ -83,9 +83,13 @@ plugin.tx_browser_pi1 {
                         value = location name
                         noTrimWrap = |, ||
                       }
+                      50 = TEXT
+                      50 {
+                        value = &raquo;
+                        noTrimWrap = | ||
+                      }
                       wrap = <li class="url">|</li>
                       stdWrap {
-                        noTrimWrap = || &raquo;|
                         typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
                       }
                     }
