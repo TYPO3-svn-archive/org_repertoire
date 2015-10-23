@@ -125,17 +125,24 @@ plugin.tx_browser_pi1 {
                   }
                   renderObj {
                     default {
-                      wrap = <li class="url circle expired">|</li>
+                      stdWrap {
+                        wrap = <li class="url circle expired">|</li>
+                      }
                     }
                     notype {
-                      wrap = <li class="url circle expired">|</li>
+                      stdWrap {
+                        wrap = <li class="url circle expired">|</li>
+                      }
                     }
-                      // link to internal page
                     page {
-                      wrap = <li class="url circle expired">|</li>
+                      stdWrap {
+                        wrap = <li class="url circle expired">|</li>
+                      }
                     }
                     url {
-                      wrap = <li class="url circle expired">|</li>
+                      stdWrap {
+                        wrap = <li class="url circle expired">|</li>
+                      }
                     }
                   }
                 }
