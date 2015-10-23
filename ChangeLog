@@ -3,6 +3,7 @@
   Feature
   * #i0017: Repertoire template is extended with location name and location city
   Improvement
+  * #i0017: Repertoire template: strftime is localised
   * #i0016: Repertoire template: expired calender items are limited to two
   * #i0015: Repertoire template: calender items are ordered by date ASC
 

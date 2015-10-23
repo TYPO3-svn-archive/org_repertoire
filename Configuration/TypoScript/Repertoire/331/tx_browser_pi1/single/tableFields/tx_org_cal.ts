@@ -60,13 +60,34 @@ plugin.tx_browser_pi1 {
                       20 = TEXT
                       20 {
                         field = datetime
-                        strftime  = %a., %d. %b. %Y %H:%M Uhr
-                        wrap = <li class="url">|</li>
+                        strftime {
+                          stdWrap {
+                            cObject = TEXT
+                            cObject {
+                              value = %a., %d. %b. %Y %H:%M h
+                              lang {
+                                de = %a., %d. %b. %Y %H:%M Uhr
+                                en = %a., %d. %b. %Y %H:%M h
+                              }
+                            }
+                          }
+                        }
                         stdWrap {
                           noTrimWrap = || &raquo;|
                         }
                         typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
                       }
+                      30 = TEXT
+                      30 {
+                        value = city
+                        noTrimWrap = |, ||
+                      }
+                      40 = TEXT
+                      40 {
+                        value = location name
+                        noTrimWrap = |, ||
+                      }
+                      wrap = <li class="url">|</li>
                     }
                       // no link
                     notype = COA
@@ -75,7 +96,6 @@ plugin.tx_browser_pi1 {
                       20 = TEXT
                       20 {
                         field   = title
-                        wrap = <li class="url">|</li>
                       }
                     }
                       // link to internal page
@@ -102,25 +122,17 @@ plugin.tx_browser_pi1 {
                   }
                   renderObj {
                     default {
-                      20 {
-                        wrap = <li class="url expired">|</li>
-                      }
+                      wrap = <li class="url expired">|</li>
                     }
                     notype {
-                      20 {
-                        wrap = <li class="url expired">|</li>
-                      }
+                      wrap = <li class="url expired">|</li>
                     }
                       // link to internal page
                     page {
-                      20 {
-                        wrap = <li class="url expired">|</li>
-                      }
+                      wrap = <li class="url expired">|</li>
                     }
                     url {
-                      20 {
-                        wrap = <li class="url expired">|</li>
-                      }
+                      wrap = <li class="url expired">|</li>
                     }
                   }
                 }
