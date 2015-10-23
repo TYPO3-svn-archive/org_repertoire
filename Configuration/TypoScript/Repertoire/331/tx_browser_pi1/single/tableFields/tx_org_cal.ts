@@ -31,6 +31,7 @@ plugin.tx_browser_pi1 {
                 field = tx_org_repertoire.uid
                 wrap = <li class="tx_org_cal">|</li>
               }
+                // calendar items
               20 = COA
               20 {
                   // calendar items up to date
@@ -115,7 +116,7 @@ plugin.tx_browser_pi1 {
                     }
                   }
                 }
-                  // calendar items expired
+                  // calendar items up to date
                 10 < .20
                 10 {
                   select {
