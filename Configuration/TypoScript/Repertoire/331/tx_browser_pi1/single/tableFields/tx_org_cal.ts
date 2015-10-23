@@ -87,7 +87,7 @@ plugin.tx_browser_pi1 {
                         value = &raquo;
                         noTrimWrap = | ||
                       }
-                      wrap = <li class="url">|</li>
+                      wrap = <li class="url circle">|</li>
                       stdWrap {
                         typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
                       }
@@ -125,17 +125,17 @@ plugin.tx_browser_pi1 {
                   }
                   renderObj {
                     default {
-                      wrap = <li class="url expired">|</li>
+                      wrap = <li class="url circle expired">|</li>
                     }
                     notype {
-                      wrap = <li class="url expired">|</li>
+                      wrap = <li class="url circle expired">|</li>
                     }
                       // link to internal page
                     page {
-                      wrap = <li class="url expired">|</li>
+                      wrap = <li class="url circle expired">|</li>
                     }
                     url {
-                      wrap = <li class="url expired">|</li>
+                      wrap = <li class="url circle expired">|</li>
                     }
                   }
                 }
