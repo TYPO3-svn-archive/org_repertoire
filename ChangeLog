@@ -1,11 +1,15 @@
 6.0.9
   15-10-23
   Improvement
+  * #i0013: map/navigation: Link in the list view links to cal and not longer to repertoire
+  * #i0012: Labelling tabs linkhandler
   * #i0011: Labelling TypoScript templates
   Bugfix
   * #i0010/#t0475: image_zoom was missing in the constants. See:
             * Configuration/TypoScript
-              * Org/Calendar/201/constants.txt
+              * Org/Calendar/201
+                * constants.txt
+                * single/sql.ts
               * Repertoire/331/tx_browser_pi1/constants.ts
 6.0.8
   15-09-21
