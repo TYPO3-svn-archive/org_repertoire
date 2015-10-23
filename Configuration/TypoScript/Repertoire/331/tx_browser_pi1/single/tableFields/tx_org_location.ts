@@ -11,36 +11,42 @@ plugin.tx_browser_pi1 {
                     default {
                       30 >
                         // location items
-                      30 = CONTENT
+                      30 = COA
                       30 {
-                        table = tx_org_location
-                        select {
-                          pidInList = {$plugin.org.sysfolder.location}
-                          join = tx_org_mm_all ON tx_org_mm_all.uid_foreign = tx_org_location.uid
-                          where {
-                            field = uid
-                            noTrimWrap = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_cal' AND tx_org_mm_all.table_foreign = 'tx_org_location'|
+                        10 = CONTENT
+                        10 {
+                          table = tx_org_location
+                          select {
+                            pidInList = {$plugin.org.sysfolder.location}
+                            join = tx_org_mm_all ON tx_org_mm_all.uid_foreign = tx_org_location.uid
+                            where {
+                              field = uid
+                              noTrimWrap = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_cal' AND tx_org_mm_all.table_foreign = 'tx_org_location'|
+                            }
+                            //max = 1
                           }
-                          //max = 1
+                            // city, location
+                          renderObj = COA
+                          renderObj {
+                              // city
+                            10 = TEXT
+                            10 {
+                              //field = uid
+                              field       = mail_city // mail_postcode
+                              noTrimWrap  = |, ||
+                              required    = 1
+                            }
+                              // location
+                            20 = TEXT
+                            20 {
+                              field       = title
+                              noTrimWrap  = | (|)|
+                              required    = 1
+                            }
+                          }
                         }
-                          // city, location
-                        renderObj = COA
-                        renderObj {
-                            // city
-                          10 = TEXT
-                          10 {
-                            //field = uid
-                            field       = mail_city
-                            noTrimWrap  = |, ||
-                            required    = 1
-                          }
-                            // location
-                          20 = TEXT
-                          20 {
-                            field       = title
-                            noTrimWrap  = | (|)|
-                            required    = 1
-                          }
+                        if {
+                          isTrue = {$plugin.org-repertoire.templates.repertoire.plusLocation}
                         }
                       }
                     }
