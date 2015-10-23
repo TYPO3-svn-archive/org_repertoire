@@ -64,27 +64,34 @@ plugin.tx_browser_pi1 {
                           stdWrap {
                             cObject = TEXT
                             cObject {
-                              value = %a., %d. %b. %Y %H:%M h
+                              value = %a., %d.%b.%Y %H:%M h
                               lang {
-                                de = %a., %d. %b. %Y %H:%M Uhr
-                                en = %a., %d. %b. %Y %H:%M h
+                                de = %a., %d.%b.%Y %H:%M Uhr
+                                en = %a., %d.%b.%Y %H:%M h
                               }
                             }
                           }
                         }
                       }
-                      30 = TEXT
+                        // city, location
+                      30 = COA
                       30 {
-                        value = city
-                        noTrimWrap = |, ||
+                          // city
+                        10 = TEXT
+                        10 {
+                          field = uid
+                          noTrimWrap = |, cal-uid: | (for city)|
+                        }
+                          location
+                        20 = TEXT
+                        20 {
+                          value = location name
+                          noTrimWrap = |, ||
+                        }
                       }
+                        // &raquo;
                       40 = TEXT
                       40 {
-                        value = location name
-                        noTrimWrap = |, ||
-                      }
-                      50 = TEXT
-                      50 {
                         value = &raquo;
                         noTrimWrap = | ||
                       }
@@ -94,12 +101,11 @@ plugin.tx_browser_pi1 {
                       }
                     }
                       // no link
-                    notype = COA
+                    notype < .default
                     notype {
-                        // datetime
-                      20 = TEXT
-                      20 {
-                        field   = title
+                      50 >
+                      stdWrap {
+                        typolink >
                       }
                     }
                       // link to internal page
