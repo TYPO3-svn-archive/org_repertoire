@@ -10,20 +10,37 @@ plugin.tx_browser_pi1 {
                   renderObj {
                     default {
                       30 >
-                        // city, location
-                      30 = COA
+                        // location items
+                      30 = CONTENT
                       30 {
-                          // city
-                        10 = TEXT
-                        10 {
-                          field = uid
-                          noTrimWrap = |, cal-uid: | (for city)|
+                        table = tx_org_location
+                        select {
+                          pidInList = {$plugin.org.sysfolder.location}
+                          join = tx_org_mm_all ON tx_org_mm_all.uid_foreign = tx_org_location.uid
+                          where {
+                            field = uid
+                            noTrimWrap = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_cal' AND tx_org_mm_all.table_foreign = 'tx_org_location'|
+                          }
+                          //max = 1
                         }
-                          // location
-                        20 = TEXT
-                        20 {
-                          value = location name
-                          noTrimWrap = |, ||
+                          // city, location
+                        renderObj = COA
+                        renderObj {
+                            // city
+                          10 = TEXT
+                          10 {
+                            //field = uid
+                            field       = mail_city
+                            noTrimWrap  = |, ||
+                            required    = 1
+                          }
+                            // location
+                          20 = TEXT
+                          20 {
+                            value       = title
+                            noTrimWrap  = | (|)|
+                            required    = 1
+                          }
                         }
                       }
                     }
