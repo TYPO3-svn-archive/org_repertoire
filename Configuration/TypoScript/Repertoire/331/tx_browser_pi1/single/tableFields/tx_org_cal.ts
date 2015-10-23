@@ -72,8 +72,6 @@ plugin.tx_browser_pi1 {
                             }
                           }
                         }
-                        noTrimWrap = || &raquo;|
-//                        typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
                       }
                       30 = TEXT
                       30 {
@@ -87,6 +85,7 @@ plugin.tx_browser_pi1 {
                       }
                       wrap = <li class="url">|</li>
                       stdWrap {
+                        noTrimWrap = || &raquo;|
                         typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
                       }
                     }
@@ -102,14 +101,14 @@ plugin.tx_browser_pi1 {
                       // link to internal page
                     page < .default
                     page {
-                      20 {
+                      stdWrap {
                         typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.page
                       }
                     }
                       // link to external url
                     url < .page
                     url {
-                      20 {
+                      stdWrap {
                         typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.url
                       }
                     }
