@@ -46,7 +46,7 @@ plugin.tx_browser_pi1 {
                           }
                         }
                         if {
-                          isTrue = {$plugin.org.templates.repertoire.plusLocation}
+                          isTrue = {$plugin.org_repertoire.templates.repertoire.plusLocation}
                         }
                       }
                     }

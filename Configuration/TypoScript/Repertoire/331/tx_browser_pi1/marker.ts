@@ -9,7 +9,7 @@ plugin.tx_browser_pi1 {
           en = Repertoire
         }
         typolink {
-          parameter = {$plugin.org.pages.repertoire}
+          parameter = {$plugin.org_repertoire.pages.repertoire}
         }
       }
     }
