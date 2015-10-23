@@ -44,7 +44,7 @@ plugin.tx_browser_pi1 {
                       noTrimWrap = |tx_org_mm_all.uid_foreign = | AND tx_org_mm_all.table_local = 'tx_org_cal' AND tx_org_mm_all.table_foreign = 'tx_org_repertoire'|
                     }
                     andWhere = tx_org_cal.datetime > UNIX_TIMESTAMP()
-                    orderBy = tx_org_cal.datetime DESC
+                    orderBy = tx_org_cal.datetime ASC
                     //max = 3
                   }
                     // tx_org_cal.title croped and linked
