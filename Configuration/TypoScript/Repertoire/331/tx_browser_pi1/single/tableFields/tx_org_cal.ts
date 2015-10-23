@@ -33,8 +33,8 @@ plugin.tx_browser_pi1 {
               }
               20 = COA
               20 {
-                10 = CONTENT
-                10 {
+                20 = CONTENT
+                20 {
                   table = tx_org_cal
                   select {
                     pidInList = {$plugin.org.sysfolder.calendar}
@@ -94,8 +94,8 @@ plugin.tx_browser_pi1 {
                     }
                   }
                 }
-                20 < .10
-                20 {
+                10 < .20
+                10 {
                   select {
                     andWhere = tx_org_cal.datetime <= UNIX_TIMESTAMP()
                     max = 1
