@@ -1,9 +1,9 @@
 plugin.org {
 
-  # cat=Organiser - Pages/105/302; type=+int; label= page uid repertoire:Uid of your repertoire page
+  # cat=Organiser - Pages/105/302; type=+int; label= repertoire:Uid of your repertoire page
   pages.repertoire =
 
-  # cat=Organiser - Sysfolders/500/303; type=+int; label= sysfolder uid repertoire:Uid of the sysfolder with the repertoire data
+  # cat=Organiser - Sysfolders/500/303; type=+int; label= repertoire:Uid of the sysfolder with the repertoire data
   sysfolder.repertoire =
 
   templates {
