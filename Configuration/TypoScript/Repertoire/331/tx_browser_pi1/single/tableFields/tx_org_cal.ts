@@ -73,7 +73,7 @@ plugin.tx_browser_pi1 {
                           }
                         }
                         noTrimWrap = || &raquo;|
-                        typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
+//                        typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
                       }
                       30 = TEXT
                       30 {
@@ -86,6 +86,9 @@ plugin.tx_browser_pi1 {
                         noTrimWrap = |, ||
                       }
                       wrap = <li class="url">|</li>
+                      stdWrap {
+                        typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.5.default
+                      }
                     }
                       // no link
                     notype = COA
