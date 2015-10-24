@@ -121,6 +121,7 @@ plugin.tx_browser_pi1 {
                 10 {
                   select {
                     andWhere = tx_org_cal.datetime <= UNIX_TIMESTAMP()
+                    orderBy = tx_org_cal.datetime DESC
                     max = 1
                   }
                   renderObj {
