@@ -1,7 +1,8 @@
 6.1.0
-  15-10-23
+  15-10-26
   Feature
-  * #i0017: Repertoire template is extended with location name and location city
+  * #i0019: repertoire gets a relation to staff and staff gets a relation to repertoire
+  * #i0018: Repertoire template is extended with location name and location city
   Improvement
   * #i0017: Repertoire template: strftime is localised
   * #i0016: Repertoire template: expired calender items are limited to two

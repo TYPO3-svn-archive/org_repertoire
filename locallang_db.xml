@@ -10,8 +10,6 @@
       <label index="filter_phrase.schedule">Playing schedule</label>
       <label index="tca_phrase.repertoire">Repertoire</label>
 
-      <label index="fe_users.div_tx_org_repertoire">Repertoire</label>
-      <label index="fe_users.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_cal.type.tx_org_repertoire">single view of a repertoire</label>
 
@@ -34,6 +32,8 @@
       <label index="tx_org_repertoire.teaser_subtitle">Subheader</label>
       <label index="tx_org_repertoire.teaser_short">Short</label>
       <label index="tx_org_repertoire.tx_org_cal">Calendar</label>
+      <label index="tx_org_staff.div_tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_staff.tx_org_repertoire">Repertoire</label>
 
       <label index="wizard.tx_org_repertoire.add">Add a new repertoire</label>
       <label index="wizard.tx_org_repertoire.edit">Edit the selected repertoire</label>
@@ -44,8 +44,6 @@
       <label index="filter_phrase.schedule">Spielplan</label>
       <label index="tca_phrase.repertoire">Repertoire</label>
 
-      <label index="fe_users.div_tx_org_repertoire">Repertoire</label>
-      <label index="fe_users.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_cal.type.tx_org_repertoire">die Detailansicht aus dem Repertoire</label>
 
@@ -71,6 +69,9 @@
       <label index="wizard.tx_org_repertoire.add"><![CDATA[Neue Produktion / neues Stück hinzufügen]]></label>
       <label index="wizard.tx_org_repertoire.edit"><![CDATA[Ausgewählte Produktion / ausgewähltes Stück bearbeiten]]></label>
       <label index="wizard.tx_org_repertoire.list"><![CDATA[Tabelle mit Produktionen / Stücken anzeigen]]></label>
+
+      <label index="tx_org_staff.div_tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_staff.tx_org_repertoire">Repertoire</label>
     </languageKey>
   </data>
 </T3locallang>

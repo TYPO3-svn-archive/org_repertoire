@@ -51,6 +51,7 @@ CREATE TABLE tx_org_repertoire (
   teaser_subtitle tinytext,
   teaser_short mediumtext,
   tx_org_cal tinytext,
+  tx_org_staff tinytext,
 
   PRIMARY KEY (uid),
   KEY parent (pid)
@@ -63,4 +64,11 @@ CREATE TABLE tx_org_repertoire (
 #
 CREATE TABLE tx_org_cal (
   tx_org_repertoire tinytext
+);
+
+#
+# Table structure for table 'tx_org_cal'
+#
+CREATE TABLE tx_org_cal (
+  tx_org_staff tinytext
 );

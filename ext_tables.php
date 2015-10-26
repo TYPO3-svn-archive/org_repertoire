@@ -127,15 +127,15 @@ switch ( true )
 {
   case($llStatic == 'de'):
     // German
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Base/',              'Org +Repertoire [1.1] Basis (immer einbinden!)' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Repertoire/331/',    'Org +Repertoire [1.2] Repertoire' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Org/Calendar/201/',  'Org [4.1.99] +Kalender Repertoire' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Base/', 'Org +Repertoire [1.1] Basis (immer einbinden!)' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Repertoire/331/', 'Org +Repertoire [1.2] Repertoire' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Org/Calendar/201/', 'Org [4.1.99] +Kalender Repertoire' );
     break;
   default:
     // English
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Base/',              'Org +Repertoire [1.1] Basis (obligate!)' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Repertoire/331/',    'Org +Repertoire [1.2] Repertoire' );
-    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Org/Calendar/201/',  'Org [2.1.99] +Calendar Repertoire' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Base/', 'Org +Repertoire [1.1] Basis (obligate!)' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Repertoire/331/', 'Org +Repertoire [1.2] Repertoire' );
+    t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Org/Calendar/201/', 'Org [2.1.99] +Calendar Repertoire' );
 }
 // Case $llStatic
 // Enables the Include Static Templates
@@ -240,8 +240,6 @@ $TCA[ 'tx_org_cal' ][ 'types' ][ 'tx_org_repertoire' ][ 'showitem' ] = ''
         ''
 ;
 
-// Insert div [repertoire] with fields to TCAtypes
-// tx_org_cal
 // Configure third party tables
 ////////////////////////////////////////////////////////////////////////////
 //
