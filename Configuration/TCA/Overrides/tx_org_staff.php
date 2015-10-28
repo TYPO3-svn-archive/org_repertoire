@@ -7,8 +7,8 @@ if ( !defined( 'TYPO3_MODE' ) )
 
 $temporaryColumns = array(
   'tx_org_repertoire' => array(
-    'exclude' => $bool_exclude_default,
-    'label' => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_staff.tx_org_repertoire',
+    'exclude' => 1,
+    'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_staff.tx_org_repertoire',
     'config' => array(
       'type' => 'select',
       'size' => 20,
@@ -24,7 +24,13 @@ $temporaryColumns = array(
         'table_foreign' => 'tx_org_repertoire'
       ),
       'foreign_table' => 'tx_org_repertoire',
-      'foreign_table_where' => 'AND tx_org_repertoire.' . $str_store_record_conf
+//#i0019: TODO:
+//      'foreign_table_where' => 'AND tx_org_repertoire.' . $str_store_record_conf
+//      . ' AND tx_org_repertoire.deleted = 0 AND tx_org_repertoire.hidden = 0'
+//      //. ' AND tx_org_repertoire.sys_language_uid=###REC_FIELD_sys_language_uid###'
+//      . ' ORDER BY tx_org_repertoire.title'
+//      ,
+      'foreign_table_where' => ''
       . ' AND tx_org_repertoire.deleted = 0 AND tx_org_repertoire.hidden = 0'
       //. ' AND tx_org_repertoire.sys_language_uid=###REC_FIELD_sys_language_uid###'
       . ' ORDER BY tx_org_repertoire.title'
@@ -46,5 +52,5 @@ $temporaryColumns = array(
         'tx_org_staff', $temporaryColumns, 1
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-        'tx_org_staff', '--div--;LLL:EXT:org_repertoire/locallang_db.xml:div_tx_org_repertoire,tx_org_repertoire', null, 'after:tx_org_headquarters'
+        'tx_org_staff', '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_staff.div_tx_org_repertoire,tx_org_repertoire', '', 'after:tx_org_headquarters'
 );

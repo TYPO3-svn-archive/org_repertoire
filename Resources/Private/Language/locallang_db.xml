@@ -21,6 +21,7 @@
       <label index="tx_org_repertoire.div_calendar">Calendar</label>
       <label index="tx_org_repertoire.div_control">Controlling</label>
       <label index="tx_org_repertoire.div_seo">Search Engines</label>
+      <label index="tx_org_repertoire.div_staff">Staff</label>
       <label index="tx_org_repertoire.title">Title of the Repertoire</label>
       <label index="tx_org_repertoire.bodytext">Bodytext</label>
       <label index="tx_org_repertoire.documents">Documents</label>
@@ -32,6 +33,8 @@
       <label index="tx_org_repertoire.teaser_subtitle">Subheader</label>
       <label index="tx_org_repertoire.teaser_short">Short</label>
       <label index="tx_org_repertoire.tx_org_cal">Calendar</label>
+      <label index="tx_org_repertoire.tx_org_staff">Staff</label>
+
       <label index="tx_org_staff.div_tx_org_repertoire">Repertoire</label>
       <label index="tx_org_staff.tx_org_repertoire">Repertoire</label>
 
@@ -55,6 +58,7 @@
       <label index="tx_org_repertoire.div_calendar">Spieltermine</label>
       <label index="tx_org_repertoire.div_control">Steuerung</label>
       <label index="tx_org_repertoire.div_seo">Suchmaschinen</label>
+      <label index="tx_org_repertoire.div_staff">Personen</label>
       <label index="tx_org_repertoire.title">Bezeichnung der Produktion</label>
       <label index="tx_org_repertoire.bodytext">Text</label>
       <label index="tx_org_repertoire.documents">Dokumente</label>
@@ -66,6 +70,7 @@
       <label index="tx_org_repertoire.teaser_subtitle">Untertitel / Dachzeile (für Listenansichten)</label>
       <label index="tx_org_repertoire.teaser_short">Text (für Listenansichten)</label>
       <label index="tx_org_repertoire.tx_org_cal">Spieltermine</label>
+      <label index="tx_org_repertoire.tx_org_staff">Personen</label>
       <label index="wizard.tx_org_repertoire.add"><![CDATA[Neue Produktion / neues Stück hinzufügen]]></label>
       <label index="wizard.tx_org_repertoire.edit"><![CDATA[Ausgewählte Produktion / ausgewähltes Stück bearbeiten]]></label>
       <label index="wizard.tx_org_repertoire.list"><![CDATA[Tabelle mit Produktionen / Stücken anzeigen]]></label>

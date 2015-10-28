@@ -19,8 +19,6 @@ if ( !defined( 'TYPO3_MODE' ) )
 // Configure third party tables
 // draft field tx_org_repertoire
 //    tx_org_cal
-// TCA tables
-//    org_repertoire
 ////////////////////////////////////////////////////////////////////////////
 //
 // Set TYPO3 version
@@ -180,7 +178,7 @@ $TCA[ 'tx_org_cal' ][ 'interface' ][ 'showRecordFieldList' ] = $showRecordFieldL
 // columns: Add field tx_org_repertoire
 $TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ] = array(
   'exclude' => $bool_exclude_default,
-  'label' => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_cal.tx_org_repertoire',
+  'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_cal.tx_org_repertoire',
   'config' => array(
     'type' => 'select',
     'size' => 20,
@@ -221,7 +219,7 @@ if ( $bool_wizards_wo_add_and_list )
 // columns: extend type
 $TCA[ 'tx_org_cal' ][ 'columns' ][ 'type' ][ 'config' ][ 'items' ][ 'tx_org_repertoire' ] = array
   (
-  '0' => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_cal.type.tx_org_repertoire',
+  '0' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_cal.type.tx_org_repertoire',
   '1' => 'tx_org_repertoire',
   '2' => 'EXT:org_repertoire/Resources/Public/Images/repertoire.gif',
 );
@@ -241,37 +239,3 @@ $TCA[ 'tx_org_cal' ][ 'types' ][ 'tx_org_repertoire' ][ 'showitem' ] = ''
 ;
 
 // Configure third party tables
-////////////////////////////////////////////////////////////////////////////
-//
-// TCA tables
-// repertoire ///////////////////////////////////////////////////////////////////
-$TCA[ 'tx_org_repertoire' ] = array(
-  'ctrl' => array(
-    'title' => 'LLL:EXT:org_repertoire/locallang_db.xml:tx_org_repertoire',
-    'label' => 'title',
-    'tstamp' => 'tstamp',
-    'crdate' => 'crdate',
-    'cruser_id' => 'cruser_id',
-    'default_sortby' => 'ORDER BY title',
-    'delete' => 'deleted',
-    'enablecolumns' => array(
-      'disabled' => 'hidden',
-      'fe_group' => 'fe_group',
-    ),
-    'dividers2tabs' => true,
-    'hideAtCopy' => false,
-    'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
-    'thumbnail' => 'image',
-    'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'Resources/Public/Images/repertoire.gif',
-    'searchFields' => 'title,subtitle,producer,length,staff,bodytext,' .
-    'teaser_title,teaser_subtitle,teaser_short,' .
-    'documents_from_path,documents,documentscaption,documentslayout,documentssize,' .
-    'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
-    'tx_org_cal,' .
-    'hidden,pages,fe_group,' .
-    'seo_keywords,seo_description'
-  ),
-);
-// repertoire ///////////////////////////////////////////////////////////////////
-// TCA tables //////////////////////////////////////////////////////////////
-?>
