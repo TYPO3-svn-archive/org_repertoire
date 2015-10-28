@@ -371,7 +371,7 @@ return array(
         'type' => 'select',
         'size' => 1,
         'MM' => 'tx_org_mm_all',
-        'MM_opposite_field' => 'tx_org_repertoire',
+        //'MM_opposite_field' => 'tx_org_repertoire',
         'foreign_table' => 'tx_org_cal',
         'foreign_table_where' => 'AND tx_org_cal.' . $str_store_record_conf
         . ' AND tx_org_cal.deleted = 0'
@@ -421,7 +421,7 @@ return array(
         'type' => 'select',
         'size' => 1,
         'MM' => 'tx_org_mm_all',
-        'MM_opposite_field' => 'tx_org_repertoire',
+        //'MM_opposite_field' => 'tx_org_repertoire',
         'foreign_table' => 'tx_org_staff',
         'foreign_table_where' => ''
         . 'AND tx_org_staff.' . $str_store_record_conf . ' '
