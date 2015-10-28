@@ -10,6 +10,7 @@
       <label index="filter_phrase.schedule">Playing schedule</label>
       <label index="tca_phrase.repertoire">Repertoire</label>
 
+      <label index="tx_org_cal.div_repertoire">Repertoire</label>
       <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>
       <label index="tx_org_cal.type.tx_org_repertoire">single view of a repertoire</label>
 

@@ -116,11 +116,11 @@ switch ( $confArr[ 'store_records' ] )
     $str_store_record_conf = 'pid=###CURRENT_PID###';
 }
 // Store record configuration
-// Configuration of the extension manager
-////////////////////////////////////////////////////////////////////////////
-//
-// Enables the Include Static Templates
-// Case $llStatic
+
+
+/*
+ * Store static language
+ */
 switch ( true )
 {
   case($llStatic == 'de'):
@@ -135,12 +135,11 @@ switch ( true )
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Repertoire/331/', 'Org +Repertoire [1.2] Repertoire' );
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Org/Calendar/201/', 'Org [2.1.99] +Calendar Repertoire' );
 }
-// Case $llStatic
-// Enables the Include Static Templates
-////////////////////////////////////////////////////////////////////////////
-//
-// Add pagetree icons
-// Case $llStatic
+
+
+/*
+ * Add pagetree icons
+ */
 switch ( true )
 {
   case($llStatic == 'de'):
@@ -151,91 +150,30 @@ switch ( true )
     // English
     $TCA[ 'pages' ][ 'columns' ][ 'module' ][ 'config' ][ 'items' ][] = array( 'Org: Repertoire', 'org_reptr', t3lib_extMgm::extRelPath( $_EXTKEY ) . 'Resources/Public/Images/repertoire.gif' );
 }
-// Case $llStatic
-//  @see #34858, 120719, uherrmann
 t3lib_SpriteManager::addTcaTypeIcon( 'pages', 'contains-org_reptr', t3lib_extMgm::extRelPath( $_EXTKEY ) . 'Resources/Public/Images/repertoire.gif' );
 
-// Add pagetree icons
-/////////////////////////////////////////////////
-//
-// Add default page and user TSconfig
 
+/*
+ * Add default page and user TSconfig
+ */
 t3lib_extMgm::addPageTSConfig( '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TsConfig/Page/TxLinkhandler/' . $llStatic . '/page.txt">' );
-// Add default page and user TSconfig
-////////////////////////////////////////////////////////////////////////////
-//
-// Configure third party tables
-t3lib_div::loadTCA( 'tx_org_cal' );
 
-// typeicons: Add type_icon
-$TCA[ 'tx_org_cal' ][ 'ctrl' ][ 'typeicons' ][ 'tx_org_repertoire' ] = '../typo3conf/ext/org_repertoire/Resources/Public/Images/repertoire.gif';
-// typeicons: Add type_icon
-// showRecordFieldList: Add field tx_org_repertoire
-$showRecordFieldList = $TCA[ 'tx_org_cal' ][ 'interface' ][ 'showRecordFieldList' ];
-$showRecordFieldList = $showRecordFieldList . ',tx_org_repertoire';
-$TCA[ 'tx_org_cal' ][ 'interface' ][ 'showRecordFieldList' ] = $showRecordFieldList;
-// showRecordFieldList: Add field tx_org_repertoire
-// columns: Add field tx_org_repertoire
-$TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ] = array(
-  'exclude' => $bool_exclude_default,
-  'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_cal.tx_org_repertoire',
-  'config' => array(
-    'type' => 'select',
-    'size' => 20,
-    'minitems' => 0,
-    'maxitems' => 1,
-    'MM' => 'tx_org_mm_all',
-    "MM_match_fields" => array(
-      'table_local' => 'tx_org_cal',
-      'table_foreign' => 'tx_org_repertoire'
-    ),
-    "MM_insert_fields" => array(
-      'table_local' => 'tx_org_cal',
-      'table_foreign' => 'tx_org_repertoire'
-    ),
-    'foreign_table' => 'tx_org_repertoire',
-    'foreign_table_where' => 'AND tx_org_repertoire.' . $str_store_record_conf
-    . ' AND tx_org_repertoire.deleted = 0 AND tx_org_repertoire.hidden = 0'
-    //. ' AND tx_org_repertoire.sys_language_uid=###REC_FIELD_sys_language_uid###'
-    . ' ORDER BY tx_org_repertoire.title'
-    ,
-    'items' => array(
-      '0' => array(
-        '0' => '',
-        '1' => '',
-      ),
-    ),
-    'selectedListStyle' => 'width:500px;',
-    'itemListStyle' => 'width:500px;',
-  ),
-);
 
-if ( $bool_wizards_wo_add_and_list )
-{
-  unset( $TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ][ 'config' ][ 'wizards' ][ 'add' ] );
-  unset( $TCA[ 'tx_org_cal' ][ 'columns' ][ 'tx_org_repertoire' ][ 'config' ][ 'wizards' ][ 'list' ] );
-}
-// columns: Add field tx_org_repertoire
-// columns: extend type
-$TCA[ 'tx_org_cal' ][ 'columns' ][ 'type' ][ 'config' ][ 'items' ][ 'tx_org_repertoire' ] = array
-  (
-  '0' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_cal.type.tx_org_repertoire',
-  '1' => 'tx_org_repertoire',
-  '2' => 'EXT:org_repertoire/Resources/Public/Images/repertoire.gif',
-);
-// columns: extend type
-// Insert type [repertoire] with fields to TCAtypes
+/*
+ * Add the types item tx_org_repertoire to tx_org_cal
+ */
 $TCA[ 'tx_org_cal' ][ 'types' ][ 'tx_org_repertoire' ][ 'showitem' ] = ''
-        . '--div--;LLL:EXT:org/Configuration/Tca/Locallang/tx_org_cal.xml:tx_org_cal.div_calendar,'
+        . '--div--;LLL:EXT:org/Resources/Private/Language/tx_org_cal.xml:tx_org_cal.div_calendar,'
         . '  type,'
         . '  title,subtitle,'
-        . '  --palette--;LLL:EXT:org/Configuration/Tca/Locallang/tx_org_cal.xml:palette.datetime_datetimeend;datetime_datetimeend,'
-        . '  tx_org_caltype,tx_org_repertoire,' .
-        '--div--;LLL:EXT:org/Configuration/Tca/Locallang/tx_org_cal.xml:tx_org_cal.div_teaser,      teaser_title,teaser_subtitle,teaser_short,' .
-        '--div--;LLL:EXT:org/Configuration/Tca/Locallang/tx_org_cal.xml:tx_org_cal.div_marginal,    marginal_title,marginal_subtitle,marginal_short,' .
-        '--div--;LLL:EXT:org/Configuration/Tca/Locallang/tx_org_cal.xml:tx_org_cal.div_event,       tx_org_location,tx_org_calentrance,' .
-        '--div--;LLL:EXT:org/Configuration/Tca/Locallang/tx_org_cal.xml:tx_org_cal.div_control,     hidden;;1;;,pages,fe_group,' .
-        ''
+        . '  --palette--;LLL:EXT:org/Resources/Private/Language/tx_org_cal.xml:palette.datetime_datetimeend;datetime_datetimeend,'
+        . '  tx_org_caltype,'
+        . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_cal.div_repertoire,tx_org_repertoire,'
+        . '  tx_org_repertoire,'
+        . '--div--;LLL:EXT:org/Resources/Private/Language/tx_org_cal.xml:tx_org_cal.div_teaser,      teaser_title,teaser_subtitle,teaser_short,'
+        . '--div--;LLL:EXT:org/Resources/Private/Language/tx_org_cal.xml:tx_org_cal.div_marginal,    marginal_title,marginal_subtitle,marginal_short,'
+        . '--div--;LLL:EXT:org/Resources/Private/Language/tx_org_cal.xml:tx_org_cal.div_event,       tx_org_location,tx_org_calentrance,'
+        . '--div--;LLL:EXT:org/Resources/Private/Language/tx_org_cal.xml:tx_org_cal.div_control,     hidden;;1;;,pages,fe_group,'
 ;
 
-// Configure third party tables
+
