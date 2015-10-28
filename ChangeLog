@@ -1,6 +1,7 @@
 6.1.0
-  15-10-26
+  15-10-28
   Feature
+  * #i0020: Backend filter for tx_org_cal and tx_org_staff
   * #i0019: repertoire gets a relation to staff and staff gets a relation to repertoire
   * #i0018: Repertoire template is extended with location name and location city
   Improvement
