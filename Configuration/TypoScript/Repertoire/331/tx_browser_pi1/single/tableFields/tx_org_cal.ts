@@ -14,7 +14,7 @@ plugin.tx_browser_pi1 {
                   field = tx_org_repertoire.tx_org_cal
                 }
               }
-              wrap = <div class="columns"><ul class="vcard tx_org_repertoire tx_org_cal">|</ul><!-- vcard --></div><!-- /columns -->
+              wrap = <div class="columns large-8"><ul class="vcard tx_org_repertoire tx_org_cal">|</ul><!-- vcard --></div><!-- /columns -->
                 // header
               10 = TEXT
               10 {
@@ -24,12 +24,6 @@ plugin.tx_browser_pi1 {
                   en = Events
                 }
                 wrap = <li class="header">|</li>
-              }
-                // tx_org_repertoire.uid
-              XXX19 = TEXT
-              XXX19 {
-                field = tx_org_repertoire.uid
-                wrap = <li class="tx_org_cal">|</li>
               }
                 // calendar items
               20 = COA

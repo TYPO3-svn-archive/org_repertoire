@@ -9,7 +9,9 @@ plugin.org_repertoire {
   templates {
     repertoire {
       # cat=Org Repertoire - Templates/templates/400; type=boolean; label= Location:Extend calendar items with city and location name
-      plusLocation = 0
+      plusLocation = 1
+      # cat=Org Repertoire - Templates/templates/401; type=boolean; label= Staff:Extend calendar items with staff
+      plusStaff = 1
     }
   }
 }

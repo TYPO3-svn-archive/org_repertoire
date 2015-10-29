@@ -24,25 +24,29 @@ return array(
     'hideAtCopy' => false,
     'thumbnail' => 'image',
     'iconfile' => '../typo3conf/ext/org_repertoire/Resources/Public/Images/repertoire.gif',
-    'searchFields' => 'title,subtitle,producer,length,staff,bodytext,' .
-    'teaser_title,teaser_subtitle,teaser_short,' .
-    'documents_from_path,documents,documentscaption,documentslayout,documentssize,' .
-    'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
-    'tx_org_cal,' .
-    'hidden,pages,fe_group,' .
-    'seo_keywords,seo_description',
+    'searchFields' => ''
+    . 'title,subtitle,producer,length,staff,bodytext,'
+    . 'teaser_title,teaser_subtitle,teaser_short,'
+    . 'documents_from_path,documents,documentscaption,documentslayout,documentssize,'
+    . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,'
+    . 'tx_org_cal,'
+    . 'tx_org_staff,'
+    . 'hidden,pages,fe_group,'
+    . 'seo_keywords,seo_description'
+    ,
     // #69250, 150821, dwildt, 1+
     'filter' => 'filter_for_all_fields',
   ),
   'interface' => array(
-    'showRecordFieldList' => 'title,subtitle,producer,length,staff,bodytext,' .
-    'teaser_title,teaser_subtitle,teaser_short,' .
-    'documents_from_path,documents,documentscaption,documentslayout,documentssize,' .
-    'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
-    'tx_org_cal,' .
-    'tx_org_staff,' .
-    'hidden,pages,fe_group,' .
-    'seo_keywords,seo_description'
+    'showRecordFieldList' => ''
+    . 'title,subtitle,producer,length,staff,bodytext,'
+    . 'teaser_title,teaser_subtitle,teaser_short,'
+    . 'documents_from_path,documents,documentscaption,documentslayout,documentssize,'
+    . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,'
+    . 'tx_org_cal,'
+    . 'tx_org_staff,'
+    . 'hidden,pages,fe_group,'
+    . 'seo_keywords,seo_description'
   ),
   'columns' => array(
     'title' => array(
