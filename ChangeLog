@@ -1,10 +1,13 @@
-6.1.0
-  15-10-28
+7.6.0
+  15-10-29
   Feature
+  * #i0021: organiser staff single view is extended with the repertoire list
+            New template: Org [9.1.99] +People Repertoire
   * #i0020: Backend filter for tx_org_cal and tx_org_staff
   * #i0019: repertoire gets a relation to staff and staff gets a relation to repertoire
   * #i0018: Repertoire template is extended with location name and location city
   Improvement
+  * #71132: Get an ID for including a JavaScript inline
   * #i0017: Repertoire template: strftime is localised
   * #i0016: Repertoire template: expired calender items are limited to two
   * #i0015: Repertoire template: calender items are ordered by date ASC
