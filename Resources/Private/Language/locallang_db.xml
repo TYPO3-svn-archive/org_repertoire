@@ -15,6 +15,7 @@
       <label index="tx_org_cal.type.tx_org_repertoire">single view of a repertoire</label>
 
       <label index="tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_repertoire.div_marginal">Marginal</label>
       <label index="tx_org_repertoire.div_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_teaser">Teaser</label>
       <label index="tx_org_repertoire.div_doc">Documents</label>
@@ -30,9 +31,12 @@
       <label index="tx_org_repertoire.producer">Producer</label>
       <label index="tx_org_repertoire.staff">Staff</label>
       <label index="tx_org_repertoire.subtitle">Subheader</label>
-      <label index="tx_org_repertoire.teaser_title">Title of the Repertoire</label>
-      <label index="tx_org_repertoire.teaser_subtitle">Subheader</label>
-      <label index="tx_org_repertoire.teaser_short">Short</label>
+      <label index="tx_org_repertoire.marginal_title">Header (in marginal views)</label>
+      <label index="tx_org_repertoire.marginal_subtitle">Subheader (in marginal views)</label>
+      <label index="tx_org_repertoire.marginal_short">Short (in marginal views)</label>
+      <label index="tx_org_repertoire.teaser_title">Header (in list views)</label>
+      <label index="tx_org_repertoire.teaser_subtitle">Subheader (in list views)</label>
+      <label index="tx_org_repertoire.teaser_short">Short (in list views)</label>
       <label index="tx_org_repertoire.tx_org_cal">Calendar</label>
       <label index="tx_org_repertoire.tx_org_staff">Staff</label>
 
@@ -52,6 +56,7 @@
       <label index="tx_org_cal.type.tx_org_repertoire">die Detailansicht aus dem Repertoire</label>
 
       <label index="tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_repertoire.div_marginal">Randspalte</label>
       <label index="tx_org_repertoire.div_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_teaser">Kurztitel</label>
       <label index="tx_org_repertoire.div_doc">Dokumente</label>
@@ -67,9 +72,12 @@
       <label index="tx_org_repertoire.producer">Autor</label>
       <label index="tx_org_repertoire.staff">Beteiligte</label>
       <label index="tx_org_repertoire.subtitle">Untertitel / Dachzeile</label>
-      <label index="tx_org_repertoire.teaser_title">Bezeichnung der Produktion</label>
-      <label index="tx_org_repertoire.teaser_subtitle">Untertitel / Dachzeile (für Listenansichten)</label>
-      <label index="tx_org_repertoire.teaser_short">Text (für Listenansichten)</label>
+      <label index="tx_org_repertoire.marginal_title">Überschrift (in Randspalten)</label>
+      <label index="tx_org_repertoire.marginal_subtitle">Untertitel / Dachzeile (in Randspalten)</label>
+      <label index="tx_org_repertoire.marginal_short">Text (in Randspalten)</label>
+      <label index="tx_org_repertoire.teaser_title">Überschrift (in Listen-Ansichten)</label>
+      <label index="tx_org_repertoire.teaser_subtitle">Untertitel / Dachzeile (in Listen-Ansichten)</label>
+      <label index="tx_org_repertoire.teaser_short">Text (in Listen-Ansichten)</label>
       <label index="tx_org_repertoire.tx_org_cal">Spieltermine</label>
       <label index="tx_org_repertoire.tx_org_staff">Personen</label>
       <label index="wizard.tx_org_repertoire.add"><![CDATA[Neue Produktion / neues Stück hinzufügen]]></label>

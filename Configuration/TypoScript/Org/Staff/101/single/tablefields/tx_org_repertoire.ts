@@ -78,8 +78,8 @@ plugin.tx_browser_pi1 {
                 default {
                   10 = TEXT
                   10 {
-                    field = teaser_title // title
-                    crop  = 24 | ... | 1
+                    field = marginal_title // teaser_title // title
+                    crop  = 30 | ... &raquo; | 1
                     stdWrap {
                       noTrimWrap = || &raquo;|
                     }

@@ -27,6 +27,7 @@ return array(
     'searchFields' => ''
     . 'title,subtitle,producer,length,staff,bodytext,'
     . 'teaser_title,teaser_subtitle,teaser_short,'
+    . 'marginal_title,marginal_subtitle,marginal_short'
     . 'documents_from_path,documents,documentscaption,documentslayout,documentssize,'
     . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,'
     . 'tx_org_cal,'
@@ -41,6 +42,7 @@ return array(
     'showRecordFieldList' => ''
     . 'title,subtitle,producer,length,staff,bodytext,'
     . 'teaser_title,teaser_subtitle,teaser_short,'
+    . 'marginal_title,marginal_subtitle,marginal_short'
     . 'documents_from_path,documents,documentscaption,documentslayout,documentssize,'
     . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,'
     . 'tx_org_cal,'
@@ -94,6 +96,24 @@ return array(
     'teaser_short' => array(
       'exclude' => $bool_exclude_default,
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.teaser_short',
+      'config' => $conf_text_50_10,
+    ),
+    'marginal_title' => array(
+      'exclude' => $bool_exclude_default,
+      'l10n_mode' => 'prefixLangTitle',
+      'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.marginal_title',
+      'config' => $conf_input_30_trim,
+    ),
+    'marginal_subtitle' => array(
+      'exclude' => $bool_exclude_default,
+      'l10n_mode' => 'prefixLangTitle',
+      'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.marginal_subtitle',
+      'config' => $conf_input_30_trim,
+    ),
+    'marginal_short' => array(
+      'exclude' => $bool_exclude_default,
+      'l10n_mode' => 'prefixLangTitle',
+      'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.marginal_short',
       'config' => $conf_text_50_10,
     ),
     'documents_from_path' => array(
@@ -478,21 +498,24 @@ return array(
     '0' => array( 'showitem' =>
       '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_repertoire, '
       . '  title;;;;1-1-1,subtitle,producer,length,staff;;;richtext[]:rte_transform[mode=ts];,bodytext;;;richtext[]:rte_transform[mode=ts];,'
-      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_teaser,       teaser_title,teaser_subtitle,teaser_short,'
-      . '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
-      '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
-      '--palette--;LLL:EXT:org/locallang_db.xml:palette.image_accessibility;image_accessibility,' .
-      '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,' .
-      '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,' .
-      '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,' .
-      '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.media,' .
-      '--palette--;LLL:EXT:cms/locallang_ttc.xml:media;documents_upload,' .
-      '--palette--;LLL:EXT:org/locallang_db.xml:palette.appearance;documents_appearance,' .
-      '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_calendar,    tx_org_cal,' .
-      '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_staff,       tx_org_staff,' .
-      '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_control,     hidden,pages,fe_group,' .
-      '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_seo,         seo_keywords,seo_description' .
-      '' ),
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_teaser,'
+      . '  teaser_title,teaser_subtitle,teaser_short,'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_marginal,'
+      . '  marginal_title;;;;6-6-6, marginal_subtitle, marginal_short,'
+      . '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,'
+      . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,'
+      . '--palette--;LLL:EXT:org/locallang_db.xml:palette.image_accessibility;image_accessibility,'
+      . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,'
+      . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,'
+      . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,'
+      . '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.media,'
+      . '--palette--;LLL:EXT:cms/locallang_ttc.xml:media;documents_upload,'
+      . '--palette--;LLL:EXT:org/locallang_db.xml:palette.appearance;documents_appearance,'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_calendar,    tx_org_cal,'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_staff,       tx_org_staff,'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_control,     hidden,pages,fe_group,'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_seo,         seo_keywords,seo_description'
+    ),
   ),
   'palettes' => array(
     '1' => array( 'showitem' => 'starttime,endtime,' ),
