@@ -69,7 +69,7 @@ return array(
       'exclude' => $bool_exclude_default,
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.staff',
       'config' => $conf_text_rte,
-      // #69250, 150821, dwildt, 1+
+    // #69250, 150821, dwildt, 1+
     ),
     'bodytext' => array(
       'exclude' => $bool_exclude_default,
@@ -371,7 +371,15 @@ return array(
         'type' => 'select',
         'size' => 1,
         'MM' => 'tx_org_mm_all',
-        //'MM_opposite_field' => 'tx_org_repertoire',
+        'MM_opposite_field' => 'tx_org_repertoire',
+        "MM_match_fields" => array(
+          'table_local' => 'tx_org_cal',
+          'table_foreign' => 'tx_org_repertoire'
+        ),
+        "MM_insert_fields" => array(
+          'table_local' => 'tx_org_cal',
+          'table_foreign' => 'tx_org_repertoire'
+        ),
         'foreign_table' => 'tx_org_cal',
         'foreign_table_where' => 'AND tx_org_cal.' . $str_store_record_conf
         . ' AND tx_org_cal.deleted = 0'
@@ -421,7 +429,15 @@ return array(
         'type' => 'select',
         'size' => 1,
         'MM' => 'tx_org_mm_all',
-        //'MM_opposite_field' => 'tx_org_repertoire',
+        'MM_opposite_field' => 'tx_org_repertoire',
+        "MM_match_fields" => array(
+          'table_local' => 'tx_org_staff',
+          'table_foreign' => 'tx_org_repertoire'
+        ),
+        "MM_insert_fields" => array(
+          'table_local' => 'tx_org_staff',
+          'table_foreign' => 'tx_org_repertoire'
+        ),
         'foreign_table' => 'tx_org_staff',
         'foreign_table_where' => ''
         . 'AND tx_org_staff.' . $str_store_record_conf . ' '
