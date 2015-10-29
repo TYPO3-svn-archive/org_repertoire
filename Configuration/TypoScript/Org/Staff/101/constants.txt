@@ -1,0 +1,37 @@
+plugin.tx_browser_pi1 {
+  templates {
+    listview {
+      header {
+        1 {
+          field   = tx_org_repertoire.teaser_title // tx_org_repertoire.title
+          tag     = h4
+        }
+      }
+      image {
+        1 {
+          default   = EXT:org_repertoire/Resources/Public/Images/Default/org_repertoire_defaults_300x200.png
+          file      = tx_org_repertoire.image
+          height    = 56c
+          path      = uploads/tx_org/
+          seo       = tx_org_repertoire.imageseo
+          width     = 56
+        }
+      }
+      text {
+        1 {
+          field     = tx_org_repertoire.teaser_short // tx_org_repertoire.bodytext
+        }
+      }
+      url {
+        1 {
+          key       = tx_org_repertoire.type // type
+          page      = tx_org_repertoire.page // page
+          record    = tx_org_repertoire.uid // uid
+          showUid   = repertoireUid
+          #singlePid =
+          url       = tx_org_repertoire.url // url
+        }
+      }
+    }
+  }
+}
