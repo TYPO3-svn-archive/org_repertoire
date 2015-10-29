@@ -64,7 +64,7 @@ plugin.tx_browser_pi1 {
                   field = tx_org_staff.uid
                   noTrimWrap = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_staff' AND tx_org_mm_all.table_foreign = 'tx_org_repertoire'|
                 }
-                orderBy = tx_org_repertoire.title
+                orderBy = tx_org_repertoire.marginal_title, tx_org_repertoire.teaser_title, tx_org_repertoire.title
                 max = 3
               }
                 // tx_org_staff.title croped and linked
