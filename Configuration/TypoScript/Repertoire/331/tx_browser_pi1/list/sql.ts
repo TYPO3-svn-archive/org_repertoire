@@ -13,6 +13,9 @@ plugin.tx_browser_pi1 {
 
           tx_org_repertoire.producer,
           tx_org_repertoire.subtitle,
+          tx_org_repertoire.marginal_subtitle,
+          tx_org_repertoire.marginal_title,
+          tx_org_repertoire.marginal_short,
           tx_org_repertoire.teaser_subtitle,
           tx_org_repertoire.teaser_title,
           tx_org_repertoire.teaser_short
