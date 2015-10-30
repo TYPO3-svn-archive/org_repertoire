@@ -45,7 +45,7 @@ return array(
       )
     ),
     'title_lang_ol' => array(
-      'exclude' => 0,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoiretargetgroup.title_lang_ol',
       'config' => array(
         'type' => 'input',
@@ -54,7 +54,7 @@ return array(
       )
     ),
     'uid_parent' => array(
-      'exclude' => 0,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoiretargetgroup.uid_parent',
       'config' => array(
         'type' => 'select',
@@ -72,13 +72,13 @@ return array(
       ),
     ),
     'icons' => array(
-      'exclude' => $bool_exclude_default,
+      'exclude' => 1,
 //      'l10n_mode' => 'exclude',
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoiretargetgroup.icons',
       'config' => $conf_file_image,
     ),
     'icon_offset_x' => array(
-      'exclude' => 0,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoiretargetgroup.icon_offset_x',
       'config' => array(
         'type' => 'input',
@@ -89,7 +89,7 @@ return array(
       ),
     ),
     'icon_offset_y' => array(
-      'exclude' => 0,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoiretargetgroup.icon_offset_y',
       'config' => array(
         'type' => 'input',
@@ -100,7 +100,7 @@ return array(
       ),
     ),
     'hidden' => array(
-      'exclude' => 1,
+      'exclude' => 0,
       'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
       'config' => array(
         'type' => 'check',

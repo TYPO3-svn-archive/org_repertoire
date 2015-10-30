@@ -64,17 +64,17 @@ return array(
       'config' => $conf_input_30_trim,
     ),
     'producer' => array(
-      'exclude' => $bool_exclude_default,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.producer',
       'config' => $conf_input_30_trim,
     ),
     'length' => array(
-      'exclude' => $bool_exclude_default,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.length',
       'config' => $conf_input_30_trim,
     ),
     'staff' => array(
-      'exclude' => $bool_exclude_default,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.staff',
       'config' => $conf_text_rte,
     // #69250, 150821, dwildt, 1+
@@ -119,7 +119,7 @@ return array(
       'config' => $conf_text_50_10,
     ),
     'documents_from_path' => array(
-      'exclude' => $bool_exclude_default,
+      'exclude' => 1,
       'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.code',
       'config' => array(
         'type' => 'input',
@@ -129,17 +129,17 @@ return array(
       ),
     ),
     'documents' => array(
-      'exclude' => $bool_exclude_default,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org/locallang_db.xml:tca_phrase.documents',
       'config' => $conf_file_document,
     ),
     'documentscaption' => array(
-      'exclude' => $bool_exclude_default,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org/locallang_db.xml:tca_phrase.documentscaption',
       'config' => $conf_text_30_05,
     ),
     'documentslayout' => array(
-      'exclude' => $bool_exclude_default,
+      'exclude' => 1,
       'label' => 'LLL:EXT:org/locallang_db.xml:tca_phrase.documentslayout',
       'config' => array(
         'type' => 'select',
@@ -153,7 +153,7 @@ return array(
       )
     ),
     'documentssize' => array(
-      'exclude' => $bool_exclude_default,
+      'exclude' => 1,
       'label' => 'LLL:EXT:cms/locallang_ttc.xml:filelink_size',
       'config' => array(
         'type' => 'check',
