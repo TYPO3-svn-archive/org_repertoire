@@ -18,7 +18,9 @@ plugin.tx_browser_pi1 {
           tx_org_repertoire.marginal_short,
           tx_org_repertoire.teaser_subtitle,
           tx_org_repertoire.teaser_title,
-          tx_org_repertoire.teaser_short
+          tx_org_repertoire.teaser_short,
+
+          tx_org_repertoiretargetgroup.uid
         )
         orderBy (
           tx_org_repertoire.title

@@ -44,24 +44,24 @@ plugin.tx_browser_pi1 {
                 if =
                 if {
                   isTrue {
-                    field = tx_org_staffgroup.uid
+                    field = tx_org_repertoiretargetgroup.uid
                   }
                 }
-                  // tx_org_staffgroup
+                  // tx_org_repertoiretargetgroup
                 20 = CONTENT
                 20 {
-                  table = tx_org_staffgroup
+                  table = tx_org_repertoiretargetgroup
                   select {
-                    pidInList = {$plugin.org.sysfolder.staff}
-                    //selectFields = tx_org_staffgroup.title
-                    join = tx_org_mm_all ON tx_org_mm_all.uid_foreign = tx_org_staffgroup.uid
+                    pidInList = {$plugin.org.sysfolder.repertoire}
+                    //selectFields = tx_org_repertoiretargetgroup.title
+                    join = tx_org_mm_all ON tx_org_mm_all.uid_foreign = tx_org_repertoiretargetgroup.uid
                     where {
-                      field = tx_org_staff.uid
-                      noTrimWrap = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_staff' AND tx_org_mm_all.table_foreign = 'tx_org_staffgroup'|
+                      field = tx_org_repertoire.uid
+                      noTrimWrap = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_repertoire' AND tx_org_mm_all.table_foreign = 'tx_org_repertoiretargetgroup'|
                     }
-                    orderBy = tx_org_staffgroup.title
+                    orderBy = tx_org_repertoiretargetgroup.title
                   }
-                    // tx_org_staff.title
+                    // tx_org_repertoiretargetgroup.title
                   renderObj = TEXT
                   renderObj {
                     field = title
@@ -83,7 +83,7 @@ plugin.tx_browser_pi1 {
               }
               30 = TEXT
               30 {
-                field     = tx_org_staff.marginal_subtitle
+                field     = tx_org_repertoire.marginal_subtitle
                 required  = 1
                 wrap      = <li class="bullet-item">|</li>
               }

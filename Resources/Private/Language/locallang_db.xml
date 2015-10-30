@@ -15,6 +15,7 @@
       <label index="tx_org_cal.type.tx_org_repertoire">single view of a repertoire</label>
 
       <label index="tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_repertoire.div_categories">Categories</label>
       <label index="tx_org_repertoire.div_marginal">Marginal</label>
       <label index="tx_org_repertoire.div_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_teaser">Teaser</label>
@@ -38,7 +39,18 @@
       <label index="tx_org_repertoire.teaser_subtitle">Subheader (in list views)</label>
       <label index="tx_org_repertoire.teaser_short">Short (in list views)</label>
       <label index="tx_org_repertoire.tx_org_cal">Calendar</label>
+      <label index="tx_org_repertoire.tx_org_repertoiretargetgroup">Target group</label>
       <label index="tx_org_repertoire.tx_org_staff">Staff</label>
+      <label index="tx_org_repertoiretargetgroup">Repertoire: Target group</label>
+      <label index="tx_org_repertoiretargetgroup.div_control">Controlling</label>
+      <label index="tx_org_repertoiretargetgroup.div_icons">Icons</label>
+      <label index="tx_org_repertoiretargetgroup.div_targetgroup">Target group</label>
+      <label index="tx_org_repertoiretargetgroup.icons">Icons (1st: default. 2nd: big size)</label>
+      <label index="tx_org_repertoiretargetgroup.icon_offset_x">X-offset of the icon in a map</label>
+      <label index="tx_org_repertoiretargetgroup.icon_offset_y">Y-offset of the icon in a map</label>
+      <label index="tx_org_repertoiretargetgroup.title">Target group</label>
+      <label index="tx_org_repertoiretargetgroup.title_lang_ol">Translations (i.e. fr:Traduction|de:Übersetzung)</label>
+      <label index="tx_org_repertoiretargetgroup.uid_parent">Superior category</label>
 
       <label index="tx_org_staff.div_tx_org_repertoire">Repertoire</label>
       <label index="tx_org_staff.tx_org_repertoire">Repertoire</label>
@@ -46,6 +58,9 @@
       <label index="wizard.tx_org_repertoire.add">Add a new repertoire</label>
       <label index="wizard.tx_org_repertoire.edit">Edit the selected repertoire</label>
       <label index="wizard.tx_org_repertoire.list">Display the repertoire table</label>
+      <label index="wizard.tx_org_repertoiretargetgroup.add">Add a new target group</label>
+      <label index="wizard.tx_org_repertoiretargetgroup.edit"> Edit the current target group</label>
+      <label index="wizard.tx_org_repertoiretargetgroup.list">Display the target group table</label>
     </languageKey>
     <languageKey index="de" type="array">
       <label index="dummy.language">de</label>
@@ -56,6 +71,7 @@
       <label index="tx_org_cal.type.tx_org_repertoire">die Detailansicht aus dem Repertoire</label>
 
       <label index="tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_repertoire.div_categories">Kategorien</label>
       <label index="tx_org_repertoire.div_marginal">Randspalte</label>
       <label index="tx_org_repertoire.div_repertoire">Repertoire</label>
       <label index="tx_org_repertoire.div_teaser">Kurztitel</label>
@@ -79,13 +95,28 @@
       <label index="tx_org_repertoire.teaser_subtitle">Untertitel / Dachzeile (in Listen-Ansichten)</label>
       <label index="tx_org_repertoire.teaser_short">Text (in Listen-Ansichten)</label>
       <label index="tx_org_repertoire.tx_org_cal">Spieltermine</label>
+      <label index="tx_org_repertoire.tx_org_repertoiretargetgroup">Zielgruppe</label>
       <label index="tx_org_repertoire.tx_org_staff">Personen</label>
-      <label index="wizard.tx_org_repertoire.add"><![CDATA[Neue Produktion / neues Stück hinzufügen]]></label>
-      <label index="wizard.tx_org_repertoire.edit"><![CDATA[Ausgewählte Produktion / ausgewähltes Stück bearbeiten]]></label>
-      <label index="wizard.tx_org_repertoire.list"><![CDATA[Tabelle mit Produktionen / Stücken anzeigen]]></label>
+      <label index="tx_org_repertoiretargetgroup">Repertoire: Zielgruppe</label>
+      <label index="tx_org_repertoiretargetgroup.div_control">Steuerung</label>
+      <label index="tx_org_repertoiretargetgroup.div_icons">Piktogramme</label>
+      <label index="tx_org_repertoiretargetgroup.div_targetgroup">Zielgruppe</label>
+      <label index="tx_org_repertoiretargetgroup.icons">Piktogramm (1.: Standard. 2.: Großes Format)</label>
+      <label index="tx_org_repertoiretargetgroup.icon_offset_x">X-Offset des Piktogramms in einer Karte</label>
+      <label index="tx_org_repertoiretargetgroup.icon_offset_y">Y-Offset des Piktogramms in einer Karte</label>
+      <label index="tx_org_repertoiretargetgroup.title">Zielgruppe</label>
+      <label index="tx_org_repertoiretargetgroup.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>
+      <label index="tx_org_repertoiretargetgroup.uid_parent">Übergeordnete Kategorie</label>
 
       <label index="tx_org_staff.div_tx_org_repertoire">Repertoire</label>
       <label index="tx_org_staff.tx_org_repertoire">Repertoire</label>
+
+      <label index="wizard.tx_org_repertoire.add"><![CDATA[Neue Produktion / neues Stück hinzufügen]]></label>
+      <label index="wizard.tx_org_repertoire.edit"><![CDATA[Ausgewählte Produktion / ausgewähltes Stück bearbeiten]]></label>
+      <label index="wizard.tx_org_repertoire.list"><![CDATA[Tabelle mit Produktionen / Stücken anzeigen]]></label>
+      <label index="wizard.tx_org_repertoiretargetgroup.add">Neue Zielgruppe erstellen</label>
+      <label index="wizard.tx_org_repertoiretargetgroup.edit">Markierte Zielgruppe bearbeiten</label>
+      <label index="wizard.tx_org_repertoiretargetgroup.list">Tabelle mit Zielgruppen öffnen</label>
     </languageKey>
   </data>
 </T3locallang>

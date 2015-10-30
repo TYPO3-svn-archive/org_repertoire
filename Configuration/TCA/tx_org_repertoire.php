@@ -31,6 +31,7 @@ return array(
     . 'documents_from_path,documents,documentscaption,documentslayout,documentssize,'
     . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,'
     . 'tx_org_cal,'
+    . 'tx_org_repertoiretargetgroup,'
     . 'tx_org_staff,'
     . 'hidden,pages,fe_group,'
     . 'seo_keywords,seo_description'
@@ -46,6 +47,7 @@ return array(
     . 'documents_from_path,documents,documentscaption,documentslayout,documentssize,'
     . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,'
     . 'tx_org_cal,'
+    . 'tx_org_repertoiretargetgroup,'
     . 'tx_org_staff,'
     . 'hidden,pages,fe_group,'
     . 'seo_keywords,seo_description'
@@ -419,6 +421,95 @@ return array(
         ),
       ),
     ),
+    'tx_org_repertoiretargetgroup' => array(
+      'l10n_mode' => 'exclude',
+      'exclude' => 0,
+      'l10n_mode' => 'exclude',
+      'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/tx_org_repertoire.xml:tx_org_repertoire.tx_org_repertoiretargetgroup',
+      'config' => array(
+        'type' => 'select',
+        'size' => 10,
+        'minitems' => 0,
+        'maxitems' => 99,
+        'MM' => 'tx_org_mm_all',
+        "MM_match_fields" => array(
+          'table_local' => 'tx_org_repertoire',
+          'table_foreign' => 'tx_org_repertoiretargetgroup'
+        ),
+        "MM_insert_fields" => array(
+          'table_local' => 'tx_org_repertoire',
+          'table_foreign' => 'tx_org_repertoiretargetgroup'
+        ),
+        'foreign_table' => 'tx_org_repertoiretargetgroup',
+        'foreign_table_where' => 'AND tx_org_repertoiretargetgroup.' . $str_store_record_conf . '  AND tx_org_repertoiretargetgroup.deleted = 0 AND tx_org_repertoiretargetgroup.hidden = 0 ORDER BY tx_org_repertoiretargetgroup.title',
+        'form_type' => 'user',
+        'userFunc' => 'tx_cpstcatree->getTree',
+        'treeView' => 1,
+        'expandable' => 1,
+        'expandFirst' => 0,
+        'expandAll' => 0,
+        'items' => array(
+          '0' => array(
+            '0' => '---',
+            '1' => '',
+          ),
+        ),
+        'wizards' => array(
+          '_PADDING' => 2,
+          '_VERTICAL' => 0,
+          'add' => array(
+            'type' => 'script',
+            'title' => 'LLL:EXT:org_repertoire/Resources/Private/Language/tx_org_repertoire.xml:wizard.tx_org_repertoiretargetgroup.add',
+            'icon' => 'add.gif',
+            'params' => array(
+              'table' => 'tx_org_repertoiretargetgroup',
+              'pid' => $str_marker_pid,
+              'setValue' => 'prepend'
+            ),
+            'script' => 'wizard_add.php',
+          ),
+          'list' => array(
+            'type' => 'script',
+            'title' => 'LLL:EXT:org_repertoire/Resources/Private/Language/tx_org_repertoire.xml:wizard.tx_org_repertoiretargetgroup.list',
+            'icon' => 'list.gif',
+            'params' => array(
+              'table' => 'tx_org_repertoiretargetgroup',
+              'pid' => $str_marker_pid,
+            ),
+            'script' => 'wizard_list.php',
+          ),
+          'edit' => array(
+            'type' => 'popup',
+            'title' => 'LLL:EXT:org_repertoire/Resources/Private/Language/tx_org_repertoire.xml:wizard.tx_org_repertoiretargetgroup.edit',
+            'script' => 'wizard_edit.php',
+            'popup_onlyOpenIfSelected' => 1,
+            'icon' => 'edit2.gif',
+            'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
+          ),
+        ),
+      ),
+      'config_filter' => array(
+        'type' => 'select',
+        'size' => 1,
+        'MM' => 'tx_org_mm_all',
+        "MM_match_fields" => array(
+          'table_local' => 'tx_org_repertoire',
+          'table_foreign' => 'tx_org_repertoiretargetgroup'
+        ),
+        "MM_insert_fields" => array(
+          'table_local' => 'tx_org_repertoire',
+          'table_foreign' => 'tx_org_repertoiretargetgroup'
+        ),
+        'foreign_table' => 'tx_org_repertoiretargetgroup',
+        'foreign_table_where' => 'AND tx_org_repertoiretargetgroup.' . $str_store_record_conf . '  AND tx_org_repertoiretargetgroup.deleted = 0 AND tx_org_repertoiretargetgroup.hidden = 0 ORDER BY tx_org_repertoiretargetgroup.title',
+        'items' => array(
+          'empty' => array(
+            '0' => '',
+            '1' => '',
+          ),
+        ),
+      ),
+    ),
     'tx_org_staff' => array(
       'exclude' => $bool_exclude_default,
       'l10n_mode' => 'exclude',
@@ -498,6 +589,8 @@ return array(
     '0' => array( 'showitem' =>
       '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_repertoire, '
       . '  title;;;;1-1-1,subtitle,producer,length,staff;;;richtext[]:rte_transform[mode=ts];,bodytext;;;richtext[]:rte_transform[mode=ts];,'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_categories,'
+      . '  tx_org_repertoiretargetgroup,'
       . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_teaser,'
       . '  teaser_title,teaser_subtitle,teaser_short,'
       . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_marginal,'

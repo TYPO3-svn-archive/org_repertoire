@@ -54,12 +54,37 @@ CREATE TABLE tx_org_repertoire (
   teaser_subtitle tinytext,
   teaser_short mediumtext,
   tx_org_cal tinytext,
+  tx_org_repertoiretargetgroup tinytext,
   tx_org_staff tinytext,
 
   PRIMARY KEY (uid),
   KEY parent (pid)
 );
 
+
+
+#
+# tx_org_repertoiretargetgroup
+#
+CREATE TABLE tx_org_repertoiretargetgroup (
+  uid int(11) NOT NULL auto_increment,
+  pid int(11) NOT NULL DEFAULT '0',
+  uid_parent int(11) NOT NULL DEFAULT '0',
+  tstamp int(11) NOT NULL DEFAULT '0',
+  crdate int(11) NOT NULL DEFAULT '0',
+  cruser_id int(11) NOT NULL DEFAULT '0',
+  deleted tinyint(4) NOT NULL DEFAULT '0',
+  hidden tinyint(4) NOT NULL DEFAULT '0',
+  icons text,
+  icon_offset_x int(11) NOT NULL DEFAULT '0',
+  icon_offset_y int(11) DEFAULT '0' NOT NULL
+  title tinytext,
+  title_lang_ol tinytext,
+  thirdparty_id tinytext,
+
+  PRIMARY KEY (uid),
+  KEY parent (pid)
+);
 
 
 #
