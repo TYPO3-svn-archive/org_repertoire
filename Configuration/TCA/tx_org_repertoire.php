@@ -425,7 +425,7 @@ return array(
       'l10n_mode' => 'exclude',
       'exclude' => 0,
       'l10n_mode' => 'exclude',
-      'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/tx_org_repertoire.xml:tx_org_repertoire.tx_org_repertoiretargetgroup',
+      'label' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.tx_org_repertoiretargetgroup',
       'config' => array(
         'type' => 'select',
         'size' => 10,
@@ -459,7 +459,7 @@ return array(
           '_VERTICAL' => 0,
           'add' => array(
             'type' => 'script',
-            'title' => 'LLL:EXT:org_repertoire/Resources/Private/Language/tx_org_repertoire.xml:wizard.tx_org_repertoiretargetgroup.add',
+            'title' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:wizard.tx_org_repertoiretargetgroup.add',
             'icon' => 'add.gif',
             'params' => array(
               'table' => 'tx_org_repertoiretargetgroup',
@@ -470,7 +470,7 @@ return array(
           ),
           'list' => array(
             'type' => 'script',
-            'title' => 'LLL:EXT:org_repertoire/Resources/Private/Language/tx_org_repertoire.xml:wizard.tx_org_repertoiretargetgroup.list',
+            'title' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:wizard.tx_org_repertoiretargetgroup.list',
             'icon' => 'list.gif',
             'params' => array(
               'table' => 'tx_org_repertoiretargetgroup',
@@ -480,7 +480,7 @@ return array(
           ),
           'edit' => array(
             'type' => 'popup',
-            'title' => 'LLL:EXT:org_repertoire/Resources/Private/Language/tx_org_repertoire.xml:wizard.tx_org_repertoiretargetgroup.edit',
+            'title' => 'LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:wizard.tx_org_repertoiretargetgroup.edit',
             'script' => 'wizard_edit.php',
             'popup_onlyOpenIfSelected' => 1,
             'icon' => 'edit2.gif',
