@@ -1,7 +1,8 @@
 # INDEX
 # -----
 # tx_org_repertoire
-# tx_org_tx_org_cal
+# tx_org_repertoiretargetgroup
+# tx_org_cal
 
 
 
@@ -92,11 +93,4 @@ CREATE TABLE tx_org_repertoiretargetgroup (
 #
 CREATE TABLE tx_org_cal (
   tx_org_repertoire tinytext
-);
-
-#
-# Table structure for table 'tx_org_cal'
-#
-CREATE TABLE tx_org_cal (
-  tx_org_staff tinytext
 );

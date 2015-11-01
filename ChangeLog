@@ -1,7 +1,8 @@
 7.6.0
   15-10-29
   Feature
-  * #i0023: New table: 
+  * #i0024: Repertoire view got filter for targetgroup and staff
+  * #i0023: New table: tx_org_repertoiretargetgroup
   * #i0023: New template: Org +Repertoire [1.2.1] +list wiew with columns
   * #i0022: Repertoire got marginal fields
   * #i0021: organiser staff single view is extended with the repertoire list

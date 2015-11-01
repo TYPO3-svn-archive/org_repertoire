@@ -8,6 +8,8 @@
     <languageKey index="default" type="array">
       <label index="dummy.language">default</label>
       <label index="filter_phrase.schedule">Playing schedule</label>
+      <label index="filter_phrase.tx_org_repertoiretargetgroup">Targetgroup</label>
+      <label index="filter_phrase.tx_org_staff">People</label>
       <label index="tca_phrase.repertoire">Repertoire</label>
 
       <label index="tx_org_cal.div_repertoire">Repertoire</label>
@@ -65,6 +67,8 @@
     <languageKey index="de" type="array">
       <label index="dummy.language">de</label>
       <label index="filter_phrase.schedule">Spielplan</label>
+      <label index="filter_phrase.tx_org_repertoiretargetgroup">Zielgruppe</label>
+      <label index="filter_phrase.tx_org_staff">Person</label>
       <label index="tca_phrase.repertoire">Repertoire</label>
 
       <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>

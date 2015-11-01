@@ -4,6 +4,17 @@ plugin.tx_browser_pi1 {
       331 {
         htmlSnippets =
         htmlSnippets {
+          marker {
+            filter = TEXT
+            filter {
+              value (
+              <div class="filter">
+                ###TX_ORG_REPERTOIRETARGETGROUP.TITLE###
+                ###TX_ORG_STAFF.TITLE###
+              </div>
+)
+            }
+          }
           subparts {
             listview = TEXT
             listview {
