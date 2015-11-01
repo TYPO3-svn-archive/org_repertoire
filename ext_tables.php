@@ -179,8 +179,6 @@ $TCA[ 'tx_org_cal' ][ 'types' ][ 'tx_org_repertoire' ][ 'showitem' ] = ''
         . '  tx_org_location,tx_org_calentrance,'
         . '--div--;LLL:EXT:org/Resources/Private/Language/tx_org_cal.xml:tx_org_cal.div_control,'
         . '  hidden;;1;;,pages,fe_group,'
-        . '--div--;LLL:EXT:org/Resources/Private/Language/tx_org_cal.xml:tx_org_cal.div_seo,'
-        . '  seo_keywords,seo_description'
 ;
 
 
