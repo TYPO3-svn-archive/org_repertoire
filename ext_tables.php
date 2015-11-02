@@ -180,5 +180,4 @@ $TCA[ 'tx_org_cal' ][ 'types' ][ 'tx_org_repertoire' ][ 'showitem' ] = ''
         . '--div--;LLL:EXT:org/Resources/Private/Language/tx_org_cal.xml:tx_org_cal.div_control,'
         . '  hidden;;1;;,pages,fe_group,'
 ;
-
-
+$TCA[ 'tx_org_cal' ][ 'ctrl' ][ 'typeicons' ][ 'tx_org_repertoire' ] = '../typo3conf/ext/org_repertoire/Resources/Public/Images/repertoire.gif';
