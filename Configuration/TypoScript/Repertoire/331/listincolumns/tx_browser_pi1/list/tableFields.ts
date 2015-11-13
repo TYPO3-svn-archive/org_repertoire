@@ -2,7 +2,6 @@ plugin.tx_browser_pi1 {
   views {
     list {
       331 {
-        tx_org_repertoire °
           // title
         tx_org_repertoire =
         tx_org_repertoire {
