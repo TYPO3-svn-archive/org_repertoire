@@ -1,5 +1,5 @@
 plugin.org {
-  # cat=Organiser - Pages*//211; type=+int; label= repertoire: Uid of your repertoire page
+  # cat=Organiser - Pages//211; type=+int; label= repertoire: Uid of your repertoire page
   pages.repertoire =
 }
 
