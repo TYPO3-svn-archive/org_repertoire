@@ -1,7 +1,9 @@
-plugin.org_repertoire {
-
-  # cat=Org Repertoire - Pages*/pages/302; type=+int; label= repertoire*:*[OBLIGATE] Uid of your repertoire page
+plugin.org {
+  # cat=Organiser - Pages*//211; type=+int; label= repertoire: Uid of your repertoire page
   pages.repertoire =
+}
+
+plugin.org_repertoire {
 
   # cat=Org Repertoire - Sysfolders*/pages/303; type=+int; label= repertoire*:*[OBLIGATE] Uid of the sysfolder with the repertoire data
   sysfolder.repertoire =
