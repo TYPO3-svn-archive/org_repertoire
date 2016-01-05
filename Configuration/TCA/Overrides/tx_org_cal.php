@@ -55,5 +55,5 @@ $relativePosition = '';
         'tx_org_cal', $temporaryColumns, 1
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-        'tx_org_cal', '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_staff.div_tx_org_repertoire,tx_org_repertoire', 'tx_org_repertoire', 'after:tx_org_headquarters'
+        'tx_org_cal', '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_cal.div_tx_org_repertoire,tx_org_repertoire', 'tx_org_repertoire', 'after:tx_org_headquarters'
 );

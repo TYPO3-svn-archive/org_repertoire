@@ -54,6 +54,9 @@
       <label index="tx_org_repertoiretargetgroup.title_lang_ol">Translations (i.e. fr:Traduction|de:Übersetzung)</label>
       <label index="tx_org_repertoiretargetgroup.uid_parent">Superior category</label>
 
+      <label index="tx_org_cal.div_tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>
+
       <label index="tx_org_staff.div_tx_org_repertoire">Repertoire</label>
       <label index="tx_org_staff.tx_org_repertoire">Repertoire</label>
 
@@ -111,6 +114,9 @@
       <label index="tx_org_repertoiretargetgroup.title">Zielgruppe</label>
       <label index="tx_org_repertoiretargetgroup.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>
       <label index="tx_org_repertoiretargetgroup.uid_parent">Übergeordnete Kategorie</label>
+
+      <label index="tx_org_cal.div_tx_org_repertoire">Repertoire</label>
+      <label index="tx_org_cal.tx_org_repertoire">Repertoire</label>
 
       <label index="tx_org_staff.div_tx_org_repertoire">Repertoire</label>
       <label index="tx_org_staff.tx_org_repertoire">Repertoire</label>
