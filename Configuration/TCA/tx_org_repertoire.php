@@ -587,7 +587,8 @@ return array(
   ),
   'types' => array(
     '0' => array( 'showitem' =>
-      '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_repertoire, '
+      ''
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_repertoire, '
       . '  title;;;;1-1-1,subtitle,producer,length,staff;;;richtext[]:rte_transform[mode=ts];,bodytext;;;richtext[]:rte_transform[mode=ts];,'
       . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_categories,'
       . '  tx_org_repertoiretargetgroup,'
@@ -604,10 +605,14 @@ return array(
       . '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.media,'
       . '--palette--;LLL:EXT:cms/locallang_ttc.xml:media;documents_upload,'
       . '--palette--;LLL:EXT:org/locallang_db.xml:palette.appearance;documents_appearance,'
-      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_calendar,    tx_org_cal,'
-      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_staff,       tx_org_staff,'
-      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_control,     hidden,pages,fe_group,'
-      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_seo,         seo_keywords,seo_description'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_calendar,'
+      . '  tx_org_cal,'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_staff,'
+      . '  tx_org_staff,'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_control,'
+      . '  hidden,pages,fe_group,'
+      . '--div--;LLL:EXT:org_repertoire/Resources/Private/Language/locallang_db.xml:tx_org_repertoire.div_seo,'
+      . '  seo_keywords,seo_description'
     ),
   ),
   'palettes' => array(
